@@ -1,0 +1,183 @@
+
+<table>
+<tr>
+<td valign=top style="width:200px;">
+			<div id="navmenu">
+				&nbsp; <BR>
+				<ul class="ulindex">
+					<li id='purchase:purchaseBook'><a
+						href="javascript:orderID=-1;indexMenuPurchase('purchaseBookInit')">Bestellbuch</a></li>
+					<li><hr></li>
+					<li id='purchase:purchaseBook'><a
+						href="javascript:indexMenuPurchase('purchaseSourceSupplyInit')">Bezugsquellen</a></li>
+					<li><hr></li>
+					<li id='purchase:purchaseRequisition'><a
+						href="javascript:indexMenuPurchase('purchaseRequisitionInit')">Bedarfsmeldung</a></li>
+					<li id='selling:sellingKK'><a
+						href="javascript:indexMenuPurchase('purchaseKKInit')">KK Auftrag</a></li>
+					<!-- @todo: 
+					<li id='purchase:purchaseRequisition'><a
+						href="javascript:indexMenuPurchase('purchaseEnquiryInit')">Anfrage</a></li>-->
+					<li><hr></li>
+					
+					</ul>
+			</div>
+</td>
+<td style="height:500px;border-left-style:solid;border-left-color:#000;border-left-width:1px;">&nbsp;</td>
+<td valign=top>
+	<div class="modulContent"></div>
+</td>	
+</tr>
+</table>
+
+<div id="dialogPurchasePrintDiv" title="Druckvorschau" style="display: none;">
+<form id=dialogPurchasePrint>
+<input type=hidden name=orderID>
+	<table width=100%>
+		<tr>
+			<td valign=top width=66%>
+				<table style="width: 100%">
+					<tr>
+						<td colspan=2 id=ajax-loading style="display: none;" align=center><img
+							src=./web/images/ajax-loader.gif></td>
+					</tr>
+
+					<tr>
+						<td>
+						<div id="previewDocumentPurchasePrint">
+						<iframe id="previewFilePurchasePrint" style="width: 100%; height: 600px"></iframe>
+						</div>
+						</td>
+					</tr>
+
+				</table>
+			</td>
+			<td valign=top>
+				<table>
+					<tr>
+						<td>Formular</td>
+						<td><select name=printForm>
+								<option value='UeBW'>ÜBW</option>
+								<option value='GETIN'>GET-IN</option>
+						</select></td>
+					</tr>
+
+					<tr>
+						<td>Sprache</td>
+						<td><select name="printLang">
+								<option value='de'>deutsch</option>
+								<option value='en'>englisch</option>
+						</select></td>
+					</tr>
+					<tr>
+						<td colspan=2><HR></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" name="cb_BM" value="1"></td>
+						<td>Bedarfsmeldung</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" name="cb_AN" value="1"></td>
+						<td>Anfrage</td>
+					</tr>
+					<tr>
+						<td colspan=2><HR></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" name="cb_BE" value="1"></td>
+						<td>Bestellung</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" name="cb_TV" value="1"></td>
+						<td>Terminverfogung</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" name="cb_WE" value="1"></td>
+						<td>Wareneingangsmeldung</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" name="cb_ES" value="1"></td>
+						<td>Empfangsschein/Retour</td>
+					</tr>
+					<tr>
+						<td colspan=2><HR></td>
+					</tr>
+					<tr>
+						<td>Brief</td>
+						<td><select name="cb_GB"></select></td>
+					</tr>
+					<tr>
+						<td colspan=2>
+							<div id=purchaseSendAttachmentDiv style="display:none">
+							<input type=file id=purchaseAttachment></td>
+							</div>
+					</tr>
+					<tr>
+						<td colspan=2><HR></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><input type=button class=inputButton name=button value='Vorschau'
+							onclick=javascript:purchaseBookDialogPrintPreview()></td>
+					</tr>
+					<tr>
+						<td colspan=2 id=_debugId style="display:none">
+							<table>
+							<tr>
+							<td><input type="checkbox" name="_debug" value="1"></td>
+							<td>debug</td>
+							</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+
+			</td>
+		</tr>
+	</table>
+</form>
+</div>
+
+
+<div id="dialogPurchaseExamDiv" title="E-Mail" style="display: none;">
+<form id=dialogPurchaseExam>
+	<table width=100%>
+		<tr>
+		<td valign=top>Exam-Modul</td>
+		</tr>
+	</table>
+</form>
+</div>
+
+<div id="dialogPurchaseBankDiv" title="E-Mail" style="display: none;">
+<form id=dialogPurchaseBank>
+	<table width=100%>
+		<tr>
+		<td valign=top>
+			<table>
+			<thead>
+				<tr>
+				<td style="text-align:left">Datum</td>
+				<td style="text-align:right">Soll</td>
+				<td style="text-align:right">Haben</td>
+				<td style="text-align:left">Verwendungszweck</td>
+				<td style="text-align:center">KA</td>
+				</tr>
+				<tr>
+				<td colspan=5><hr></td>
+			</thead>
+			<tbody id=dialogPurchaseBankJournalRows>
+				<tr>
+				<td>{dateSql2German('[date]')}</td>
+				<td style="text-align:right">{germanDezimal([soll])}</td>
+				<td style="text-align:right">{germanDezimal([haben])}</td>
+				<td style="text-align:left">[reason]</td>
+				<td style="text-align:center">[statementNo]</td>
+				</tr>
+			</tbody>
+			</table>
+		</td>
+		</tr>
+	</table>
+</form>
+</div>

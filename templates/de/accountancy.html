@@ -1,0 +1,138 @@
+<table>
+<tr>
+<td valign=top>
+			<div id="navmenu">
+				&nbsp; <BR>
+				<ul class="ulindex">
+					<li id='accountancy:impersonalAccounts'><a
+						href="javascript:indexMenuAccountancy('accountancyAccountsInit')">Konten</a></li>					
+					<li><hr></li>
+					<li id='selling:sellingBook'><a
+						href="javascript:indexMenuAccountancy('sellingBookInit')">Sachkontenbuchungen</a></li>
+					<li id='selling:sellingKK'><a
+						href="javascript:indexMenuAccountancy('sellingKKInit')">Anlagebuchungen</a></li>
+					<li><hr></li>
+					<li id='accountancy:overview'><a
+						href="javascript:indexMenuAccountancy('accountancyOverviewInit')">Auswertungen</a></li>					
+					<li><hr></li>
+						<li id='selling:sellingBook'><a
+						href="javascript:indexMenuAccountancy('accountancyBankInit')">Bankjournal</a></li>					
+						<li id='selling:sellingBook'><a
+						href="javascript:goEurobank()">=> euroBank direkt</a></li>					
+					</li>
+					</ul>
+			</div>
+</td>
+<td valign=top>
+	<div class="modulContent"></div>
+</td>	
+</tr>
+</table>
+
+<div id="dialogAccountancyPrintDiv" title="Druckvorschau" style="display: none;width:100%">
+<form id=dialogAccountancyPrint>
+
+	<table width=100%>
+		<tr>
+			<td valign=top width=70%>
+				<table style="width: 100%">
+					<tr>
+						<td colspan=2 id=ajax-loading style="display: none;text-align=center;width:100%"">
+						<img src=./web/images/ajax-loader.gif></td>
+					</tr>
+
+					<tr>
+						<td>
+						<div id="previewDocumentAccountancyPrint">
+						<iframe id="previewFileAccountancy" style="width: 100%; height: 600px"></iframe>
+						</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+			<td valign=top>
+			<table>
+					<tr>
+						<td>Formular</td>
+						<td><select name=accountancyPrintFormSelect>
+								<option value='Journal'>Journal</option>
+								<option value='Ledger'>Hauptkonten</option>
+								<option value='Outstanding'>Offene Posten</option>
+								<option value='Balance'>Summen Salden Liste</option>
+						</select></td>
+					</tr>
+					<tr>
+					<td colspan=2 id=accountancyPrintFormDiv></td>
+					</tr>
+					<tr>
+					<td colspan=2><hr></td>
+					</tr>
+					<tr>
+					<td colspan=2><input class=inputButton name=printButton value=Druckvorschau style="width:150px"></td>
+					</tr>
+			
+			</table>
+			</td>
+		</tr>
+	</table>
+</form>
+</div>
+
+<div id=accountancyPrintJournal style="display:none;">
+				<table>
+					<tr>
+						<td colspan=4>Druckvorschau Journal</td>
+					<tr>
+						<td colspan=4><hr></td>
+					</tr>
+					<tr>
+						<td colspan=2>Konten</td>
+						<td colspan=2>Zeitraum</td>
+					</tr>
+					<tr>
+						<td class=fieldname>von</td>
+						<td><input class=inputLeft name=accountFrom size=8 tabindex=1></td>
+						<td class=fieldname>von</td>
+						<td><input class=inputLeft name=dateFrom size=8 tabindex=3></td>
+					</tr>
+					<tr>
+						<td class=fieldname>bis</td>
+						<td><input class=inputLeft name=accountTo size=8 tabindex=2></td>
+						<td class=fieldname>bis</td>
+						<td><input class=inputLeft name=dateTo size=8 tabindex=4></td>
+					</tr>
+					<tr>
+						<td class=fieldname>SB</td>
+						<td colspan=3><select name=userID></select></td>
+					</tr>
+					<tr>
+						<td class=fieldname>Klasse</td>
+						<td colspan=3><select name=classID></select></td>
+					</tr>
+				</table>
+
+</div>
+<div id=accountancyPrintOutstanding style="display:none;">
+				<table>
+					<tr>
+						<td>Offene Posten</td>
+					</tr>
+				</table>
+
+</div>
+<div id=accountancyPrintLedger style="display:none;">
+				<table>
+					<tr>
+						<td>Hauptbuch</td>
+					</tr>
+				</table>
+
+</div>
+<div id=accountancyPrintBalance style="display:none;">
+				<table>
+					<tr>
+						<td>SuSa</td>
+					</tr>
+				</table>
+
+</div>

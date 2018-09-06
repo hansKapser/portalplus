@@ -1,0 +1,38 @@
+function articleVariationsListInit() {
+		dialogObj=
+		{
+			"divId": "#dialogArticleVariationsDiv",
+		    "dialogId" : "form#dialogArticleVariations",
+			"gridId": "#gridArticleVariations",
+			"dialogBox": {
+					"width": "500",
+					"modal": true,
+					"autoopen": false
+			},
+			"editDialog": {
+	  		   "title" : "Edit Record",
+	  		   "phpSaveModul" : "/articleVariationsSave"
+			   "dialogId" : "form#dialogArticleVariations",
+			   "select": [
+		            {
+	          		"field": "variation_group_id",
+			        "label" : "name",
+			        "value" : "variation_group_id",	       
+			        "rows": array_data['rowsCategories'],
+			        "blank" : {"label" : '',"value" : ''}
+			        }
+		            ]
+		     },
+			"deleteDialog": {
+				"dialogId" : "form#dialogArticleVariations",
+				"field" : "id",
+				"modul" : "/articleVariationsDelete"
+			 }
+		        
+		}
+
+$gridClass= new _myGrid("#gridArticleVariations",array_data["rowGrid"],dialogObj);
+		
+	
+	}
+

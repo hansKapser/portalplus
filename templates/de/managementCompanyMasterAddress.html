@@ -1,0 +1,156 @@
+<form id="dialog-address">
+	<table>
+		<tr>
+			<td colspan=2><img id=imageLogo src='' style='width: 700px'></td>
+
+		</tr>
+
+		<tr>
+			<td valign=top>
+				<table>
+					<tr>
+						<td colspan=4 style="background-color: #eee; font-weight: bold;"
+							class=thd>Adresse</td>
+					</tr>
+					<tr>
+						<td class=fieldname>FirmID</td>
+						<td colspan=3><input type=text name=firmID size=10 disabled></td>
+					</tr>
+					<tr>
+						<td class=fieldname>Firma</td>
+						<td colspan=3><input type=text name=company size=10></td>
+					</tr>
+					<tr>
+						<td class=fieldname></td>
+						<td colspan=3><input type=text name=company2 size=10></td>
+					</tr>
+					<tr>
+						<td class=fieldname>Straße</td>
+						<td colspan=3><input type=text name=street size=10></td>
+					</tr>
+					<tr>
+						<td class=fieldname>Land/PLZ/Ort</td>
+						<td><input type=text name=country size=1></td>
+						<td><input type=text name=postcode size=2></td>
+						<td><input type=text name=city size=10></td>
+					</tr>
+					<tr>
+						<td colspan=4 style="background-color: #eee; font-weight: bold;"
+							class=thd>Kommunikation</td>
+					</tr>
+					<tr>
+						<td class=fieldname>Geschäftsführer</td>
+						<td colspan=3><input type=text name=manager_first_name
+							size=10>&nbsp; <input type=text name=manager_name size=10></td>
+					</tr>
+
+					<tr>
+						<td class=fieldname>Telefon</td>
+						<td colspan=3><input type=text name=phone size=10></td>
+					</tr>
+					<tr>
+						<td class=fieldname>E-Mail</td>
+						<td colspan=3><input type=text name=email size=10></td>
+					</tr>
+					<tr>
+						<td class=fieldname>Password</td>
+						<td colspan=3><input type=text name=emailPass size=10></td>
+					</tr>
+				</table>
+			</td>
+			<td valign=top>
+				<table>
+					<tr>
+						<td colspan=4 style="background-color: #eee; font-weight: bold;"
+							class=thd>Bürozeiten</td>
+					</tr>
+					<tr>
+						<td colspan=4>
+							<input type=hidden name=id value=-1>
+							<table>
+								<thead>
+									<tr>
+										<td><select name=dow>
+												<option value=1>Montag</option>
+												<option value=2>Dienstag</option>
+												<option value=3>Mittwoch</option>
+												<option value=4>Donnerstag</option>
+												<option value=5>Freitag</option>
+												<option value=6>Samstag</option>
+										</select></td>
+										<td><input type=text name=bt_from size=3></td>
+										<td><input type=text name=bt_to size=3></td>										<td><input type=button class=inputButton name=buttonSave
+										 	onclick=WBTimeSaveRecord()
+										 	value=add>
+										 </td>
+										 <td>
+										 	<div id=buttonESC style="display: none"> 
+										 	<a href='javascript:WBTESC()'>ESC</a>
+										 	</div>
+										 </td>
+									</tr>
+								</thead>
+								<tbody id=rowsWBTime>
+									<tr>
+										<td>{cdow([dow])}</td>
+										<td>[bt_from]</td>
+										<td>[bt_to]</td>
+										<td><a href="javascript:WBTimeDeleteRecord([id])">delete</a></td>
+										<td><a href="javascript:WBTimeEditRecord([id])">edit</a></td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td colspan=4 style="background-color: #eee; font-weight: bold;"
+							class=thd>Bankverbindung</td>
+					</tr>
+					<tr>
+						<td>Bank</td>
+						<td colspan=3><input type=text name=bank size=20></td>
+					</tr>
+					<tr>
+						<td>IBAN</td>
+						<td colspan=3><input type=text name=IBAN size=10></td>
+					</tr>
+
+					<tr>
+						<td>GETIN</td>
+						<td colspan=3><input type=text name=getin_bank
+							value='GETIN Bank' size=20></td>
+					</tr>
+					<tr>
+						<td>IBAN</td>
+						<td colspan=3><input type=text name=getin_IBAN size=10></td>
+					</tr>
+					<tr>
+						<td colspan=4><HR></td>
+					</tr>
+
+					<tr>
+						<td colspan=4 align=center><input class=inputButton
+							type=button onclick=addressSaveRecord() value='save'></td>
+					</tr>
+
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td colspan=2>
+				<table>
+					<tr>
+						<td colspan=3><HR></td>
+					</tr>
+					<tr>
+						<td class="fieldname">Logo</td>
+						<td><input type=file id=image></td>
+						<td><input class=inputButton type=button onclick=managementCompanyMasterAddressUpload()
+							value='upload'></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+
+	</table>
+</form>

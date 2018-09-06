@@ -1,0 +1,195 @@
+<table>
+	<tr>
+	<td>
+	<form id="dialogSellingOrderInvoice" action="">
+	<input type=hidden name=orderID>
+	<table>
+	<tr>
+		<td id=_invoiceDiv style="width:70%"></td>
+		<td id=_totalDiv valign=top></td>
+	
+	</tr>
+	</table>
+	</form>
+	</td>
+	</tr>
+	<tr>
+		<td id=_positionsDiv></td>
+	</tr>
+</table>
+
+<div id=totalDiv style="display: none;">
+	<table style="width: 100%">
+		<tr>
+			<td></td>
+			<td style='text-align: right;'>19%</td>
+			<td style='text-align: right;'>7%</td>
+		</tr>
+		<tr>
+			<td class="fieldname">Warenwert</td>
+			<td style='text-align: right;'><input class="inputRight"
+				type="text" name="merchandiseNetVn" size="8" disabled></td>
+			<td style='text-align: right;'><input class="inputRight"
+				type="text" name="merchandiseNetVr" size="8" disabled></td>
+		</tr>
+		<tr>
+			<td class="fieldname">Verpackung</td>
+			<td style='text-align: right;'><input class="inputRight"
+				type="text" name="packageNetVn" size="8" disabled></td>
+			<td style='text-align: right;'><input class="inputRight"
+				type="text" name="packageNetVr" size="8" disabled></td>
+		</tr>
+		<tr>
+			<td class="fieldname">Versand</td>
+			<td style='text-align: right;'><input class="inputRight"
+				type="text" name="dispatchNetVn" size="8" disabled></td>
+			<td style='text-align: right;'><input class="inputRight"
+				type="text" name="dispatchNetVr" size="8" disabled></td>
+		</tr>
+		<tr>
+			<td class="fieldname">MwSt.</td>
+			<td style='text-align: right;'><input class="inputRight"
+				type="text" name="VATn" size="8" disabled></td>
+			<td style='text-align: right;'><input class="inputRight"
+				type="text" name="VATr" size="8" disabled></td>
+		</tr>
+		<tr>
+			<td class="fieldname"><strong>brutto</strong></td>
+			<td style='text-align: right;'><input class="inputRight"
+				type="text" name="grossValue" size="8" disabled></td>
+		</tr>
+		<tr>
+			<td class="fieldname">Skonto</td>
+			<td style='text-align: right;'><input class="inputRight"
+				type="text" name="tradeDiscount" size="8" disabled></td>
+		</tr>
+		<tr>
+			<td class="fieldname"><strong>Zahlungsbetrag</strong></td>
+			<td style='text-align: right;'><input class="inputRight"
+				type="text" name="paymentAmount" size="8" disabled></td>
+		</tr>
+	</table>
+	<!--- invoice sum Positions --->
+
+</div>
+<div id=positionsDiv style="display: none">
+	<form id=dialogSellingOrderInvoicePositions>
+		<table style="width: 100%;">
+			<thead>
+				<tr style="background-color: #aaa;">
+					<td></td>
+					<td>Nummer</td>
+					<td>Bezeichnung</td>
+					<td colspan=2>Variation</td>
+					<td style='text-align: right;'>Menge</td>
+					<td style='text-align: left;'>EH</td>
+					<td style='text-align: right;'>Einzelpreis</td>
+					<td style='text-align: right;'>Rabatt</td>
+					<td style='text-align: right;'>gesamt</td>
+					<td style='text-align: right;'>USt</td>
+
+				</tr>
+			</thead>
+
+			<tbody id="tbodyOrderInvoicePositions">
+				<tr>
+					<td style="text-align: left;"></td>
+					<td style="text-align: left;">[article_code]</td>
+					<td style="text-align: left;">[name]</td>
+					<td style="text-align: left;">[variation1]</td>
+					<td style="text-align: left;">[variation2]</td>
+					<td style="text-align: right;">{germanDezimal([quantity])}</td>
+					<td style="text-align: left;">[quantity_unit]</td>
+					<td style="text-align: right;">{germanDezimal([price])}</td>
+					<td style="text-align: right;">{germanDezimal([discount])}</td>
+					<td style="text-align: right;">{germanDezimal([sumPosition])}</td>
+					<td style="text-align: right;">{germanDezimal([percentage]*100)}%</td>
+
+				</tr>
+			</tbody>
+
+		</table>
+	</form>
+</div>
+
+<div id=invoiceDiv style="display: none;">
+
+
+	<table style="width: 100%">
+		<tbody>
+			<tr>
+				<td width="100px" class="fieldname">Rechnungsdatum</td>
+				<td><input type="text" name="invoiceDate" size="8"></td>
+				<td width="150px" class="fieldname">Rechnungsnummer</td>
+				<td><input type="text" name="invoiceNo" size="10"
+					maxlength="20"></td>
+			</tr>
+			<tr>
+				<td width="100px" class="fieldname">Warenversand</td>
+				<td><input type="text" name="dispatchDate" size="8" disabled></td>
+				<td width="150px" class="fieldname">Lieferschein</td>
+				<td><input type="text" name="deliveryNo" size="10"
+					maxlength="25" disabled></td>
+			</tr>
+			<tr>
+				<td width="100px" class="fieldname">KundenNr.</td>
+				<td><input type="text" name="debitor" size="8" disabled></td>
+				<td width="150px" class="fieldname">Kunde</td>
+				<td colspan=2>
+					<div class="ui-widget">
+						<input type="text" name="customer_company" size="25"
+							maxlength="50" disabled>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="5"><HR></td>
+			</tr>
+			<tr>
+				<td width="100px" class="fieldname">AuftragsNr.</td>
+				<td><input type="text" name="orderNo" size="10" maxlength="25"
+					disabled></td>
+				<td width="100px" class="fieldname">Versandbedingung</td>
+				<td><select name="deliveryCondition" disabled>
+						<option value='frei'>frei Haus</option>
+						<option value='unfrei'>unfrei</option>
+				</select></td>
+				<td rowspan=3 valign=top><select name="termPayment">
+				</select></td>
+
+			</tr>
+			<tr>
+				<td width="100px" class="fieldname">Auftragsdatum</td>
+				<td><input type="text" name="orderDate" size="8" disabled></td>
+				<td width="100px" class="fieldname">Versandart</td>
+				<td><select name="dispatch" disabled>
+						<option value='DHL'>DHL</option>
+						<option value='baySped'>Spedition</option>
+						<option value='truck'>Werkverkehr</option>
+				</select></td>
+
+			</tr>
+			<tr>
+				<td width="100px" class="fieldname">Preisgrundlage</td>
+				<td><select name="basisPrice" disabled>
+						<option value='K'>Katalog</option>
+						<option value='A'>persönliches Angebot</option>
+						<option value='S'>Sonderangebot</option>
+				</select></td>
+				<td width="100px" class="fieldname">Versandkosten</td>
+				<td><input type="text" name="shippingCosts" size="8"></td>
+
+			</tr>
+			<tr>
+				<td width="100px" class="fieldname">Angebot vom</td>
+				<td><input type="text" name="offerDate" size="8" disabled></td>
+				<td width="100px" class="fieldname">Verpackungskosten</td>
+				<td><input type="text" name="packingCost" size="8"></td>
+				<td style='text-align: right;'><input class="inputButton"
+					type="button" name="saveInvoice" value='save'></td>
+			</tr>
+
+		</tbody>
+	</table>
+
+</div>

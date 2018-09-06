@@ -1,0 +1,226 @@
+	<form id="dialogPurchaseOrderInvoice" action="">
+	<input type=hidden name=orderID>
+		<table>
+			<tr>
+				<td valign="top" colspan="3">
+					<!--- left --->
+					<table>
+						<tr>
+							<td colspan="3">
+								<!--- left 1st order  --->
+								<table style="width: 100%">
+									<tbody>
+										<tr>
+											<td width="100px" class="fieldname">ticket#</td>
+											<td colspan="3"><input type="text" name="ticketID"
+												size="8" disabled></td>
+										</tr>
+										<tr>
+											<td width="100px" class="fieldname">Rechnungsdatum</td>
+											<td><input type="text" name="invoiceDate" size="8"></td>
+											<td width="150px" class="fieldname">Rechnungsnummer</td>
+											<td><input type="text" name="invoiceNo" size="15"
+												maxlength="20"></td>
+										</tr>
+										<tr>
+											<td width="100px" class="fieldname">Rechnungseingang</td>
+											<td><input type="text" name="invoiceInDate" size="8"></td>
+											<td width="150px" class="fieldname">intern. Rechnungsnr.</td>
+											<td><input type="text" name="invoiceNoInternal"
+												size="15" maxlength="20"></td>
+										</tr>
+										<tr>
+											<td width="100px" class="fieldname">Wareneingang</td>
+											<td><input type="text" name="incomingDate" size="8"
+												disabled></td>
+											<td width="150px" class="fieldname">Lieferschein</td>
+											<td><input type="text" name="deliveryNo" size="15"
+												maxlength="25" disabled></td>
+										</tr>
+										<tr>
+											<td width="100px" class="fieldname">LiefererNr.</td>
+											<td><input type="text" name="creditor" size="8" disabled></td>
+											<td width="150px" class="fieldname">Lieferant</td>
+											<td>
+												<div class="ui-widget">
+													<input type="text" name="supplier_company" size="25"
+														maxlength="50" disabled>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td colspan="4"><HR></td>
+										</tr>
+									</tbody>
+								</table> <!--- left 1st order end --->
+							</td>
+						</tr>
+
+						<tr>
+							<!--- left 2nd conditions  --->
+
+							<td style="background-color: #eee;" class="thd" width="25%">Verkauf</td>
+							<td style="background-color: #eee;" class="thd" width="25%">Versand</td>
+							<td style="background-color: #eee;" class="thd" width="25%">Zahlungsbedingung</td>
+						</tr>
+						<tr>
+							<td valign="top">
+								<table>
+									<tr>
+										<td width="100px" class="fieldname">BestellNr.</td>
+										<td><input type="text" name="purchaseNo" size="15"
+											maxlength="25" disabled></td>
+									</tr>
+									<tr>
+										<td width="100px" class="fieldname">Bestelldatum</td>
+										<td><input type="text" name="purchaseDate" size="8"
+											disabled></td>
+									</tr>
+									<tr>
+										<td width="100px" class="fieldname">Preisgrundlage</td>
+										<td><select name="basisPrice" disabled>
+												<option value='K'>Katalog</option>
+												<option value='A'>persönliches Angebot</option>
+												<option value='S'>Sonderangebot</option>
+										</select></td>
+									</tr>
+									<tr>
+										<td width="100px" class="fieldname">Angebot vom</td>
+										<td><input type="text" name="offerDate" size="8" disabled></td>
+									</tr>
+								</table>
+							</td>
+
+							<td valign="top">
+								<table>
+									<tr>
+										<td width="100px" class="fieldname">Versandbedingung</td>
+										<td><select name="deliveryCondition" disabled>
+												<option value='frei'>frei Haus</option>
+												<option value='unfrei'>unfrei</option>
+										</select></td>
+									</tr>
+									<tr>
+										<td width="100px" class="fieldname">Versandart</td>
+										<td><select name="dispatch" disabled>
+												<option value='DHL'>DHL</option>
+												<option value='BaySped'>Spedition</option>
+												<option value='LKW'>firmeneigener LKW</option>
+										</select></td>
+									</tr>
+									<tr>
+										<td width="100px" class="fieldname">Versandkosten</td>
+										<td><input type="text" name="shippingCosts" size="8"></td>
+									</tr>
+									<tr>
+										<td width="100px" class="fieldname">Verpackungskosten</td>
+										<td><input type="text" name="packingCost" size="8"></td>
+									</tr>
+								</table>
+							</td>
+
+							<td valign="top">
+								<table>
+									<tr>
+										<td><select name="termPayment">
+												<option value='1'>20 Tg 2% Skonto 90 Tg netto</option>
+												<option value='2'>20 Tg 3% Skonto 90 Tg netto</option>
+										</select></td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="3">
+								<!--- left 3rd positions  --->
+
+								<div id="bestellpositionen">
+								
+									<table style="width: 100%">
+										<tr>
+											<td style="background-color: #eee; font-weight: bold;"
+												class=thd>Rechnungspositionen</td>
+										</tr>
+									</table>
+
+									<table style="width: 100%;">
+										<thead>
+											<tr style="background-color: #aaa;">
+												<td></td>
+												<td>Nummer</td>
+												<td>Bezeichnung</td>
+												<td colspan=2>Variation</td>
+												<td style='text-align: right;'>Menge</td>
+												<td style='text-align: left;'>EH</td>
+												<td style='text-align: right;'>Einzelpreis</td>
+												<td style='text-align: right;'>Rabatt</td>
+												<td style='text-align: right;'>gesamt</td>
+												<td style='text-align: right;'>USt</td>
+												<td style='text-align: right;'>OK</td>
+											</tr>
+										</thead>
+
+										<tbody id="tbodyPurchaseOrderPositions">
+											<tr>
+												<td style="text-align: left;"></td>
+												<td style="text-align: left;">[article_code]</td>
+												<td style="text-align: left;">[name]</td>
+												<td style="text-align: left;">[variation1]</td>
+												<td style="text-align: left;">[variation2]</td>
+												<td style="text-align: right;">{germanDezimal([quantity])}</td>
+												<td style="text-align: left;">[quantity_unit]</td>
+												<td style="text-align: right;">{germanDezimal([price])}</td>
+												<td style="text-align: right;">{germanDezimal([discount])}</td>
+												<td style="text-align: right;">{germanDezimal([sumPosition])}</td>
+												<td style="text-align: right;">{germanDezimal([percentage])}</td>
+												<td><input type="checkbox" name="cb_[id]" value=1></td>
+											</tr>
+										</tbody>
+
+									</table>
+									
+								</div>
+							</td>
+						</tr>
+					</table>
+
+				</td>
+				<td valign="top">
+					<!--- right --->
+					<table>
+						<tr>
+							<td>
+								<table
+									style="border-style: solid; border-width: 1px; border-color: #aaa; padding: 10px;">
+									<tr>
+										<td><input type="checkbox" name="factCorrect"></td>
+										<td>sachlich richtig</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" name="calcCorrect"></td>
+										<td>rechnerisch richtig</td>
+									</tr>
+									<tr>
+										<td colspan="2">Kommentar</td>
+									</tr>
+									<tr>
+										<td colspan="2"><textarea name="invoiceComment" rows="4"
+												cols="30"></textarea></td>
+									</tr>
+									<tr>
+										<td colspan="2"><input class="inputButton" type="button"
+											value="save" name="save_order" onclick="javascript:purchaseOrderInvoiceSave()"></td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td id=baseTotalSumDiv></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</form>
+
+

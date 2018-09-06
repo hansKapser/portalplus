@@ -1,0 +1,119 @@
+	<form id="dialogPurchaseOrderBooking" action="">
+		<table>
+		<tr>
+			<td valign="top">
+				<table style="width: 100%">
+					<tr>
+						<td width="100px" class="fieldname">ticket#</td>
+						<td><input type="text" name="ticketID" size=4
+							disabled></td>
+						<td class="fieldname">Zahlung</td>
+						<td id=paymentInfo>[paymentInfo]</td>
+						<td width="100px" class="fieldname">Versandkosten</td>
+						<td><input class="inputRight" type="text"
+							name="shippingCosts" size=4 disabled></td>
+					</tr>
+					<tr>
+						<td width="100px" class="fieldname">Rechnungsdatum</td>
+						<td><input type="text" name="invoiceDate" size=4 disabled></td>
+						<td width="100px" class="fieldname">Rechnungsnummer</td>
+						<td><input type="text" name="invoiceNo" size=10
+							maxlength="25" disabled></td>
+						<td width="100px" class="fieldname">Verpackungskosten</td>
+						<td><input class="inputRight" type="text" name="packingCost"
+							size=4 disabled></td>
+					</tr>
+					<tr>
+						<td width="100px" class="fieldname">LiefererNr.</td>
+						<td><input type="text" name="creditor" size=4 disabled></td>
+						<td width="100px" class="fieldname">Lieferant</td>
+						<td><input type="text" name="supplier_company" size="25"
+							maxlength="50" disabled></td>
+						<td colspan="3" style='text-align: right;'><select
+							name="termPayment">
+								<option value='1'>20 Tg 2% Skonto 90 Tg netto</option>
+								<option value='2'>20 Tg 3% Skonto 90 Tg netto</option>						
+							</select></td>
+
+					</tr>
+					<tr>
+						<td colspan="6">
+							<table style="width: 100%">
+								<thead>
+									<tr style="background-color: #aaa;">
+										<td>Nummer</td>
+										<td>Bezeichnung</td>
+										<td colspan=2>Variationen</td>
+										<td style='text-align: right;'>Menge</td>
+										<td>EH</td>
+										<td style='text-align: right;'>Einzelpreis</td>
+										<td style='text-align: right;'>Rabatt</td>
+										<td style='text-align: right;'>gesamt</td>
+										<td style='text-align: right;'>USt</td>
+									</tr>
+								</thead>
+								<thead>
+								</thead>
+								<tbody id="tbodyPurchaseOrderPositions">
+									<tr>
+										<td style="text-align: left;">[article_code]</td>
+										<td style="text-align: left;">[name]</td>
+										<td style="text-align: left;">[variation1]</td>
+										<td style="text-align: left;">[variation2]</td>
+										<td style="text-align: right;">{germanDezimal([quantity])}</td>
+										<td style="text-align: left;">[quantity_unit]</td>
+										<td style="text-align: right;">{germanDezimal([price])}</td>
+										<td style="text-align: right;">{germanDezimal([discount])}</td>
+										<td style="text-align: right;">{germanDezimal([sumPosition])}</td>
+										<td style="text-align: right;">{germanDezimal([percentage])}</td>
+									</tr>
+
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="6"><hr></td>
+					</tr>
+				</table>
+			</td>
+			<td rowspan=2 valign=top id=baseTotalSumDiv></td>
+		</tr>
+	</table>
+</form>
+
+<div id=bookingMask class=bookingTables></div>
+
+
+
+<div id="popup-payments" title="payFriend" style="display: none;">
+	<form id="dialog-payments" action="">
+		<table style="width: 100%">
+			<thead>
+				<tr style="background-color: #aaaaaa">
+					<td>Datum</td>
+					<td style="text-align: right;">Soll</td>
+					<td style="text-align: right;">Haben</td>
+					<td>Zahler/Zahlungsempfänger</td>
+					<td>Verwendungszweck</td>
+					<td>KA</td>
+				</tr>
+			<thead>
+			<tbody id=transactions>
+				<tr>
+					<td>[date]</td>
+					<td style="text-align: right;">[soll]</td>
+					<td style="text-align: right;">[haben]</td>
+					<td>[SenderRemittee]</td>
+					<td>[reason]</td>
+					<td>[statementNo]</td>
+				</tr>
+			</tbody>
+
+		</table>
+	</form>
+</div>
+
+	
+
+

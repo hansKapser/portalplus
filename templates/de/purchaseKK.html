@@ -1,0 +1,53 @@
+		<div id="navtabs" style="width:1200px">
+			<ul>
+				<li id="registerPurchaseKKList"><a
+					href="javascript:registerMenuPurchase('purchaseKKListInit')" title="Bestellbuch">Liste</a></li>
+				
+				<li id="registerPurchaseOrder"><span id=wfSBE></span><a
+					href="javascript:registerMenuPurchase('purchaseKKOrderInit')" title="KK Auftrag">KK Auftrag</a></li>
+				<li id="li_icon_menu" style="position:absolute;right:10;"><img
+					src='./web/images/icon_menu.png' style="width:20px;"
+					onclick="javascript:showIconMenu('purchaseKKIconMenu')" alt=""></li>
+
+			</ul>
+			<BR>
+		</div>
+
+<ul id="purchaseKKIconMenu"
+	style='display:none; background-color: #fff; z-index: 1; position: absolute; top: 180px; border-width: 1px; border-style: solid; border-color: #000;'>
+	<li onclick="javascript:purchaseKKIconMenuControl('voucher')">
+		<div>
+			<span class="ui-icon ui-icon-clipboard"></span>Beleg
+		</div>
+	</li>
+	<li onclick="javascript:purchaseKKIconMenuControl('catalogue')">
+		<div>
+			<span class="ui-icon ui-icon-cart"></span>Katalog
+		</div>
+	</li>
+	<li onclick="javascript:purchaseKKIconMenuControl('print')">
+		<div>
+			<span class="ui-icon ui-icon-print"></span>Print
+		</div>
+	</li>
+	<li onclick="javascript:purchaseKKIconMenuControl('email')">
+		<div>
+			<span class="ui-icon ui-icon-mail-open"></span>E-Mail
+		</div>
+	</li>
+	<li onclick="javascript:purchaseKKIconMenuControl('exam')">
+		<div>
+			<span class="ui-icon ui-icon-person"></span>Pr&uuml;fung
+		</div>
+	</li>
+
+	<li class="ui-state-disabled" onclick="javascript:purchaseKKIconMenuControl('export')">
+		<div>
+			<span class="ui-icon ui-icon-disk"></span>Export
+		</div>
+	</li>
+</ul>
+		
+
+
+<div class=contentPurchase style="position: relative ;top: 0px"></div>

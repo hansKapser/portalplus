@@ -1,0 +1,197 @@
+<table>
+	<tr>
+		<td style="background-color: #eee; font-weight: bold;" class=thd>Empfangsschein</td>
+	</tr>
+	<tr>
+		<td valign=top>
+			<form id="dialogPurchaseOrderIncoming">
+
+				<table>
+					<tr>
+						<td width=100px class=fieldname>Wareneingang</td>
+						<td><input type=text name=incomingDate size=8></td>
+						<td width=100px class=fieldname></td>
+						<td></td>
+
+					</tr>
+
+					<tr>
+						<td width=100px class=fieldname>Warenversand</td>
+						<td><input type=text name=deliveryDate size=8></td>
+						<td width=100px class=fieldname>LieferscheinNr.</td>
+						<td><input type=text name=deliveryNo size=10></td>
+					</tr>
+					<tr>
+						<td width=100px class=fieldname>Versandbedingung</td>
+						<td><select name=deliveryCondition>
+								<option value='frei'>frei Haus</option>
+								<option value='unfrei'>unfrei</option>
+						</select></td>
+						<td width=100px class=fieldname>Versandart</td>
+						<td><select name=dispatch>
+								<option value='DHL'>DHL</option>
+								<option value='BaySped'>Spedition</option>
+								<option value='LKW'>firmeneigener LKW</option>
+						</select></td>
+					</tr>
+					<tr>
+						<td width=100px class=fieldname>Empfangsbestätigung</td>
+						<td><input type=text name=receiptDate size=8></td>
+						<td></td>
+						<td><input class=inputButton type=button name=saveOrder
+							value='save' onclick=_saveOrder()></td>
+					</tr>
+				</table>
+			</form>
+		</td>
+		<!---<td style="width:20px;"></td>--->
+	</tr>
+	<tr>
+		<td style="background-color: #eee; font-weight: bold;" class=thd>Lieferscheinpositionen</td>
+	</tr>
+	<tr>
+		<td valign=top
+			style='border-width: 1px; border-color: #ccc; border-style: solid;'>
+			<form id="dialogPurchaseOrderPositions">
+			<input type=hidden name=id>
+				<table>
+					<thead>
+						<tr style="background-color: #aaa;">
+							<td></td>
+							<td>Nummer</td>
+							<td>Bezeichnung</td>
+							<td colspan=2>Variationen</td>
+							<td style='text-align: right;'>Menge</td>
+							<td>Prüfung</td>
+							<td>Mangel</td>
+							<td colspan=2></td>
+						</tr>
+						<tr style="background-color: #eee;">
+							<td><input type=hidden name=positionID value=-1> <input
+								type=hidden name=article_id value=-1> <input type=hidden
+								name=orderID value=-1> <input type=hidden
+								name=ticketID value=-1> <input type=hidden
+								name=table value="p17_purchase_positions"></td>
+							<td><input type=text name=article_code size=10 maxlength=25></td>
+							<td><input type=text name=name size=20></td>
+							<td><select name=variation1_id>
+							</select></td>
+							<td><select name=variation2_id>
+							</select></td>
+							<td><input class=inputRight type=text name=quantity size=3></td>
+							<td><select name=faultID>
+									<option value=''></option>
+									<option value='1'>OK</option>
+									<option value='2'>Mangel</option>
+							</select></td>
+							<td><input class=inputLeft type=text name=fault size=15
+								maxlength=50></td>
+							<td colspan=2><input type=button name=saveButton value="add"></td>
+						</tr>
+
+					</thead>
+					<tbody id=tbodyPurchaseOrderIncomingPositions>
+						<tr>
+							<td></td>
+							<td>[article_code]</td>
+							<td>[name]</td>
+							<td>[variation1]</td>
+							<td>[variation2]</td>
+							<td style='text-align: right;'>{germanDezimal([quantity])}</td>
+							<td>
+									{[faultID]==1 ?
+												'<span class="ui-icon ui-icon-check"></span>' :
+												[faultID]==2 ?
+												'<span class="ui-icon ui-icon-alert"></span>' :
+												''
+												}
+							</td>
+							<td>[fault]</td>
+							<td style="text-align: left;"><a
+								href="javascript:classPosition._deletePosition([id])">delete</a></td>
+							<td style="text-align: left;"><a
+								href="javascript:classPosition._editPosition([id])">edit</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+	<tr>
+		<td style="background-color: #eee; font-weight: bold;" class=thd>Verpackung
+			- Retour</td>
+	</tr>
+	<tr>
+		<td valign=top
+			style='border-width: 1px; border-color: #ccc; border-style: solid;'>
+			<form id="dialogPurchaseOrderPositionsR">
+				<table>
+					<thead>
+						<tr style="background-color: #aaa;">
+							<td></td>
+							<td>Nummer</td>
+							<td>Bez.</td>
+							<td>Var. 1</td>
+							<td>Var. 2</td>
+							<td style='text-align: right;'>Menge</td>
+							<td style='text-align: right;'>EH</td>
+							<td align=left>Text</td>
+							<td style='text-align: right;'>Einzelwert</td>
+							<td style='text-align: right;'>Gutschrift</td>
+							<td style='text-align: left;'>USt.</td>
+							<td colspan=2></td>
+						</tr>
+
+						<tr style="background-color: #eee;">
+							<td><input type=hidden name=positionID value=-1><input type=hidden 
+								name=id value=-1><input
+								type=hidden name=article_id value=-1> <input type=hidden
+								name=orderID value=-1> <input type=hidden
+								name=ticketID value=-1> <input type=hidden
+								name=table value="p17_purchase_credit_positions">
+								</td>
+							<td><input type=text name=article_code size=10 maxlength=25></td>
+							<td><input type=text name=name size=15 maxlength=30></td>
+							<td><select name=variation1_id>
+							</select></td>
+							<td><select name=variation2_id>
+							</select></td>
+							<td><input class=inputRight type=text name=quantity size=3></td>
+							<td><input class=inputRight type=text name=quantity_unit size=2></td>
+							<td><input type=text name=text size=10 maxlength=30></td>
+
+							<td><input class=inputRight type=text name=retourCredit
+								size=3></td>
+							<td><input class=inputRight type=text name=sumPosition
+								size=3></td>
+							<td><select name=vat_id></select></td>
+							<td colspan=2><input type=button name=saveButton value="add"></td>
+								
+						</tr>
+					<thead>
+					<tbody id=tbodyPurchaseOrderIncomingPositionsR>
+						<tr>
+							<td style="text-align: left;"></td>
+							<td style="text-align: left;">[article_code]</td>
+							<td style="text-align: left;">[name]</td>
+							<td style="text-align: left;">[variation1]</td>
+							<td style="text-align: left;">[variation2]</td>
+							<td style="text-align: right;">[quantity]</td>
+							<td style="text-align: right;">[quantity_unit]</td>
+							<td style="text-align: left;">[text]</td>
+							<td style="text-align: right;">[retourCredit]</td>
+							<td style="text-align: right;">[sumPosition]</td>
+							<td style="text-align: right;">[percentage]</td>
+							<td style="text-align: left;"><a
+								href="javascript:classPositionR._deletePosition([id])">delete</a></td>
+							<td style="text-align: left;"><a
+								href="javascript:classPositionR._editPosition([id])">edit</a></td>
+						</tr>
+					</tbody>
+
+				</table>
+			</form>
+		</td>
+	</tr>
+</table>
+	</form>
+
+

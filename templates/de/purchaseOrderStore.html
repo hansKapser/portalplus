@@ -1,0 +1,368 @@
+<form id="dialogPurchaseOrderStore" action="">
+<table style="width:100%;">
+	<tr>
+		<td style="width:65%;background-color: #eee; font-weight: bold;" class="thd">Bestellpositionen</td>
+		<td style="width: 20px;">
+		<input type="hidden" name="positionID">
+		<input type=hidden name=orderID>
+		<input type=hidden name=disponible>
+		<input type=hidden name=real>
+		
+		</td>
+		<td style="width:35%;text-align:left;">
+				<select name="storeSelect" onchange="javascript:purchaseOrderStoreChange()">
+					<option value='storeHW'>Handelswaren</option>
+					<option value='storePackage'>Verpackungsmaterial</option>
+					<option value='storeAssets'>Anlagenbuchhaltung</option>
+					<option value='storeOthers'>Verbrauchsmaterial</option>
+				</select>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top">
+			<table style="width:100%">
+				<thead>
+					<tr style="background-color: #aaa;">
+						<td>ArtikelNr.</td>
+						<td>Bezeichung</td>
+						<td colspan="2">Variation</td>
+						<td style="text-align: right;">Menge</td>
+						<td>Best</td>
+						<td>Zugang</td>
+						<td style="text-align: right;">EZ-Preis</td>
+					</tr>
+				</thead>
+				<tbody id="tbodyPurchaseOrderStorePositions">
+					<tr onmouseover="" style="cursor: pointer;"
+						onclick=purchasePosition2stock([id])>
+						<td>[article_code]</td>
+						<td>[name]</td>
+						<td>[variation1]</td>
+						<td>[variation2]</td>
+						<td style="text-align: right;">{germanDezimal([quantity])}</td>
+						<td style="text-align: center;">
+												{[stockP]==1 ?
+												'<span class="ui-icon ui-icon-check"></span>' :
+												[stockP]==-1 ?
+												'<span class="ui-icon ui-icon-alert"></span>' :
+												''
+												}
+						</td>
+						<td style="text-align: center;">
+												{[stockI]==1 ?
+												'<span class="ui-icon ui-icon-check"></span>' :
+												[stockI]==-1 ?
+												'<span class="ui-icon ui-icon-alert"></span>' :
+												''
+												}
+						</td>
+						<td style="text-align: right;">{germanDezimal([price])}</td>
+					</tr>
+				</tbody>
+			</table>
+		</td>
+		<td style="width:65%"></td>
+		<td rowspan=2 style="width:35%">
+			<div id=dialogStoreDiv></div>
+		</td>
+		</tr>
+		<tr>
+		<td valign=top style="width:100%;display:none;" id=purchaseOrderStoreBooking>
+			<table style="width:100%">
+				<thead>
+					<tr>
+					<td colspan=11 style="background-color: #eee; font-weight: bold;" class="thd">Lagerbuchungen</td>
+					</tr>
+					<tr style="background-color: #aaa;">
+						<td>ArtikelNr.</td>
+						<td>Bezeichung</td>
+						<td colspan="2">Variation</td>
+						<td style="text-align: right;">Menge</td>
+						<td>Art</td>
+						<td>OK</td>
+						<td>user</td>
+						<td>Datum</td>
+						<td colspan=2></td>
+					</tr>
+				</thead>
+				<tbody id="tbodyOrderStoreTransactionPositions">
+					<tr>
+						<td>[article_code]</td>
+						<td>[name]</td>
+						<td>[variation1]</td>
+						<td>[variation2]</td>
+						<td style="text-align: right;">{germanDezimal([quantity])}</td>
+						<td style="text-align: center;">[transaction]</td>
+						<td style="text-align: center;">{[OK]==1 ?
+												'<span class="ui-icon ui-icon-check"></span>' :
+												'<span class="ui-icon ui-icon-alert"></span>'
+												}
+						</td>
+						<td>[user]</td>
+						<td>{dateSql2German('[date]')}</td>
+						<td><a href=javascript:dialogDeleteId('',[id],'/purchaseOrderStoreDelete','purchaseOrderStoreInit()')>delete</a></td>
+						<td><a href=javascript:purchasePosition2stock([positionID],'purchaseOrderStoreTransactionEdit([id])')>edit</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</td>
+		</tr>
+		
+		</table>
+</form>
+<div id=storeHW style="display:none">
+					<table>
+						<tr>
+							<td>Bestellung</td>
+							<td colspan="2"><input type=hidden name=positionID>
+								<input type=hidden name=article_id> <input type=hidden
+								name=variation1_id> <input type=hidden
+								name=variation2_id> <input type=hidden name=article_code>
+								<input type=hidden name=name> <input type=hidden
+								name=disponibleQuantity> <input type=hidden
+								name=realQuantity> <input type="text" name="purchaseNo"
+								size="10" disabled></td>
+						</tr>
+						<tr>
+							<td>Nummer</td>
+							<td colspan="2"><input type="text" name="article_code"
+								size="10" disabled></td>
+						</tr>
+						<tr>
+							<td>Bezeichnung</td>
+							<td colspan="2"><input type="text" name="name" size="30"
+								disabled></td>
+						</tr>
+						<tr>
+							<td>Variation</td>
+							<td><input type="text" name="variation1" size="10" disabled>
+							</td>
+							<td><input type="text" name="variation2" size="10" disabled>
+							</td>
+						</tr>
+
+						<tr>
+							<td>Lagerbewegung</td>
+							<td colspan="2"><select name="transaction">
+									<option value='P'>Bestellung</option>
+									<option value='I' selected>Zugang</option>
+							</select></td>
+
+						</tr>
+						<tr>
+							<td>Menge</td>
+							<td colspan="2"><input class="inputRight" type="text"
+								name="quantity" size="5"></td>
+						</tr>
+						<tr>
+							<td>verfügbar</td>
+							<td><input class="inputRight" type="text"
+								name="available_quantity" size="5"> <input
+								type="hidden" name="disponible"></td>
+							<td id="disponibleQuantity"></td>
+						</tr>
+						<tr>
+							<td>tatsächlich</td>
+							<td><input class="inputRight" type="text"
+								name="actual_quantity" size="5"> <input type="hidden"
+								name="real"></td>
+							<td id="realQuantity"></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td colspan="2"><input class="inputButton" type="button"
+								onclick="purchaseOrderStoreTransactionSave()" value='save'></td>
+						</tr>
+					</table>
+</div>
+
+<div id="storePackage" style="display: none;">
+
+					<table>
+						<tr>
+							<td>Bestellung</td>
+							<td colspan="2"><input type=hidden name=positionID>
+								<input type=hidden name=disponibleQuantity> <input
+								type=hidden name=realQuantity> <input type="text"
+								name="purchaseNo" size="10" disabled></td>
+						</tr>
+						<tr>
+							<td>Nummer</td>
+							<td colspan="2"><input type=hidden name=article_id>
+								<input type="text" name="article_code" size="10"></td>
+						</tr>
+						<tr>
+							<td>Bezeichnung</td>
+							<td colspan="2"><input type="text" name="name" size="30"></td>
+						</tr>
+						<tr>
+							<td>Variation</td>
+							<td><select name="variation1_id"></select></td>
+							<td><select name="variation2_id"></select></td>
+						</tr>
+
+						<tr>
+							<td>Lagerbewegung</td>
+							<td colspan="2"><select name="transaction">
+									<option value='I'>Zugang</option>
+							</select></td>
+
+						</tr>
+						<tr>
+							<td>Menge</td>
+							<td colspan="2"><input class="inputRight" type="text"
+								name="quantity" size="5"></td>
+						</tr>
+						<tr>
+							<td>verfügbar</td>
+							<td><input class="inputRight" type="text"
+								name="available_quantity" size="5"> <input
+								type="hidden" name="disponible"></td>
+							<td id="disponibleQuantity"></td>
+						</tr>
+						<tr>
+							<td>tatsächlich</td>
+							<td><input class="inputRight" type="text"
+								name="actual_quantity" size="5"> <input type="hidden"
+								name="real"></td>
+							<td id="realQuantity"></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td colspan="2"><input class="inputButton" type="button"
+								onclick="purchaseOrderStoreTransactionSave()" value='save'></td>
+						</tr>
+					</table>
+</div>
+
+
+<div id="storeAssets" style="display: none;">			
+					<table>
+						<tr>
+							<td>Bestellung</td>
+							<td colspan="2"><input type=hidden name=positionID>
+
+								<input type="text" name="purchaseNo" size="10" disabled></td>
+						</tr>
+						<tr>
+							<td>Nummer</td>
+							<td colspan="2"><input type="text" name="article_code"
+								size="10" disabled></td>
+						</tr>
+						<tr>
+							<td>Bezeichnung</td>
+							<td colspan="2"><input type="text" name="name" size="30"
+								disabled></td>
+						</tr>
+						<tr>
+							<td>Variation</td>
+							<td><input type="text" name="variation1" size="10" disabled>
+							</td>
+							<td><input type="text" name="variation2" size="10" disabled>
+							</td>
+						</tr>
+
+						<tr>
+							<td>Lagerbewegung</td>
+							<td colspan="2"><select name="transaction">
+									<option value='I'>Zugang</option>
+							</select></td>
+
+						</tr>
+						<tr>
+							<td>Menge</td>
+							<td><input class="inputRight" type="text" name="quantity"
+								size="5"></td>
+							<td>Datum</td>
+							<td><input type="text" name="acquisitionDate" size="8"></td>
+
+						</tr>
+						<tr>
+							<td></td>
+							<td><input class="inputRight" type="text" name="targetPrice"
+								size="5"></td>
+							<td>Konto</td>
+							<td><select name="account"></select></td>
+						</tr>
+						<tr>
+							<td>ANK</td>
+							<td><input class="inputRight" type="text"
+								name="incidentalCost" size="5"></td>
+							<td>Nutzungsdauer</td>
+							<td><input class="inputRight" type="text" name="lifetime"
+								size="3"></td>
+						</tr>
+						<tr>
+							<td>AK-Minderung -</td>
+							<td><input class="inputRight" type="text"
+								name="reductionCost" size="5"></td>
+							<td>AfA-Methode</td>
+							<td><select name="AfAMethode">
+									<option value='linear'>Linear</option>
+									<option value='degressiv' disabled>degressiv</option>
+							</select></td>
+						</tr>
+						<tr>
+							<td colspan="3"></td>
+							<td><input class="inputButton" type="button"
+								onclick="purchaseOrderStoreTransactionSave()" value='save'></td>
+						</tr>
+					</table>
+</div>
+
+
+<div id="storeOthers" style="display: none;">
+					<table>
+						<tr>
+							<td>Bestellung</td>
+							<td colspan="2"><input type=hidden name=positionID>
+								<input type=hidden name=name> <input type="text"
+								name="purchaseNo" size="10" disabled></td>
+						</tr>
+						<tr>
+							<td>Nummer</td>
+							<td colspan="2"><input type="text" name="article_code"
+								size="10" disabled></td>
+						</tr>
+						<tr>
+							<td>Bezeichnung</td>
+							<td colspan="2"><input type="text" name="name" size="30"
+								disabled></td>
+						</tr>
+						<tr>
+							<td>Variation</td>
+							<td><input type="text" name="variation1" size="10" disabled>
+							</td>
+							<td><input type="text" name="variation2" size="10" disabled>
+							</td>
+						</tr>
+
+						<tr>
+							<td>Lagerbewegung</td>
+							<td colspan="2"><select name="transaction">
+									<option value='I'>Zugang</option>
+							</select></td>
+
+						</tr>
+						<tr>
+							<td>Menge</td>
+							<td colspan="2"><input class="inputRight" type="text"
+								name="quantity" size="5"></td>
+						</tr>
+						<tr>
+							<td>Verbrauch/Monate</td>
+							<td><input class="inputRight" type="text" name="use_month"
+								size="5"></td>
+							<td>(0 sofortiger Verbrauch)</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td colspan="2"><input class="inputButton" type="button"
+								onclick="purchaseOrderStoreTransactionSave()" value='save'></td>
+						</tr>
+					</table>
+</div>
+
+
+
+

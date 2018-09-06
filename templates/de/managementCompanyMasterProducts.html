@@ -1,0 +1,24 @@
+<form id="dialog-products">
+
+	<table>
+		<thead>
+			<tr>
+				<td><input type=text name=name size=70></td>
+				<td colspan=2>
+					<input type=hidden name=id value=-1> 
+					<input
+					class=inputButton type=button name=buttonSave onclick=productsSaveRecord()
+					value='add'></td>
+			</tr>
+		</thead>
+		<tbody id=rowsProducts>
+			<tr>
+				<td>[name]</td>
+				<td><a href=javascript:productsEditRecord([id])>edit</a></td>
+				<td><a href=javascript:productsDeleteRecord([id])>delete</a></td>
+			</tr>
+		</tbody>
+	</table>
+
+</form>
+

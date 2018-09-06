@@ -1,0 +1,151 @@
+<form id="dialogSellingOrderMessages" action="">
+<input type=hidden name=id value=-1>
+<input type=hidden name=orderID>
+	<table style="width: 100%">
+		<tbody>
+			<tr>
+				<td width="100px" class="fieldname">ticket#</td>
+				<td><input type="text" name="ticketID" size="8" disabled></td>
+				<td width="100px" class="fieldname">Projekt</td>
+				<td colspan="2"><select name="projectID"></select></td>
+				<td rowspan="5" width="50%">
+					<table
+						style="border-style: solid; border-color: #aaa; border-width: 1px; width: 100%;">
+						<tr>
+							<td class="fieldname">Straße</td>
+							<td colspan="3"><input type="text" name="street" size="25"></td>
+						</tr>
+						<tr>
+							<td class="fieldname">Land/PLZ/Ort</td>
+							<td><input type="text" name="country" size="2"></td>
+							<td><input type="text" name="postcode" size="5"></td>
+							<td><input type="text" name="city" size="20"></td>
+						</tr>
+						<tr>
+							<td class="fieldname">E-Mail</td>
+							<td colspan="3"><input type="text" name="email" size="30"></td>
+						</tr>
+						<tr>
+							<td class="fieldname">UStID</td>
+							<td colspan="3"><input type="text" name="UStID" size="25"></td>
+						</tr>
+					</table>
+				</td>
+
+			</tr>
+			<tr>
+				<td width="100px" class="fieldname">Auftragsdatum</td>
+				<td><input type="text" name="orderDate" size="8" disabled></td>
+				<td width="100px" class="fieldname">Auftragsnummer</td>
+				<td><input type="text" name="orderNo" size="15"
+					maxlength="25" disabled></td>
+				<td id="newSellingNo" style='font-size: 10px;'></td>
+			</tr>
+			<tr>
+				<td width="100px" class="fieldname">Bestelldatum</td>
+				<td><input type="text" name="purchaseDate" size="8"
+					disabled></td>
+				<td width="100px" class="fieldname">Ihre Bestellnummer</td>
+				<td><input type="text" name="purchaseNo" size="15"
+					maxlength="25" disabled></td>
+				<td style='font-size: 10px;'></td>
+			</tr>
+			<tr>
+				<td width="100px" class="fieldname">KundenNr.</td>
+				<td><input type="text" name="debitor" size="8"></td>
+				<td width="100px" class="fieldname">Kunde</td>
+				<td colspan="2">
+					<div class="ui-widget">
+						<input type="text" name="customer_company" size="25"
+							maxlength="50" disabled>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td width="100px" class="fieldname">Postausgang</td>
+				<td><input type="text" name="postOutDate" size="8" disabled></td>
+				<td width="100px" class="fieldname">E-Mail</td>
+				<td colspan="2"><input type="checkbox" name="postOutEmail"></td>
+			</tr>
+
+			<tr>
+				<td colspan="5">&nbsp;</td>
+			</tr>
+			<tr>
+				<td colspan="6"><HR></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<table>
+		<thead>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Textbaustein</td>
+				<td><select name="kind" size="1">
+						<option value='GB'>Geschäftsbrief</option>
+						<option value='FL'>Falschlieferung</option>
+						<option value='FR'>Rechnungsfehler</option>
+						<option value='LM1'>1. Lieferanmahnung</option>
+						<option value='LM2'>2. Lieferanmahnung</option>
+						<option value='LM3'>Rücktritt</option>
+				</select>
+				</td>
+				<td width="10%" rowspan="4"></td>
+				<td rowspan="4" colspan=2><textarea rows="6" cols="70" name="message"></textarea></td>
+			</tr>
+			<tr>
+				<td>Datum</td>
+				<td><input type="text" name="date" size="8"></td>
+			</tr>
+			<tr>
+				<td>Betreff</td>
+				<td><input type="text" name="subject" size="30"></td>
+			</tr>
+			<tr>
+				<td width="100px" class="fieldname">Postausgang</td>
+				<td><input type="text" name="post_out_date" size="8"></td>
+			</tr>
+			<tr>
+				<td colspan="3"><hr></td>
+				<td style='text-align:left;'><input class="inputButton" type="button" name="newMessage"
+					value='neu'></td>
+				<td style='text-align:right;'><input class="inputButton" type="button" name="saveMessage"
+					value='save'></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<div>
+		<table>
+			<thead>
+				<tr style='background-color: #a4ffa6;'>
+					<th width="10%" align="left">Datum</th>
+					<th width="10%" align="left">Art</th>
+					<th align="left">Betreff</th>
+					<th colspan="2"></th>
+					<th width="50%"></th>
+				</tr>
+			</thead>
+			<thead>
+			</thead>
+			<tbody id="tbodyOrderMessagePositions">
+				<tr>
+					<td>{dateSql2German('[date]')}</td>
+					<td>[kind]</td>
+					<td>[subject]</td>
+					<td><a href="javascript:sellingOrderMessagesDelete([id])">delete</a></td>
+					<td><a href="javascript:sellingOrderMessagesEdit([id])">edit</a></td>
+
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+
+</form>
+
+
+
+

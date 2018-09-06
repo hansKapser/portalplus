@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<title>{% block title %}Portal17{% endblock %}</title>
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('web/css/dashboard.css') }}" />
+<link rel="stylesheet" href="{{ asset('web/css/jquery-ui.min.css') }}" />
+<link rel="stylesheet" href="{{ asset('web/css/jquery.ui.dialog-collapse.css') }}" />
+<link rel="stylesheet" href="{{ asset('web/css/pqgrid.min.css') }}" />
+<link rel="stylesheet" href="{{ asset('web/css/pqgrid.office.css') }}" />
+<link rel="stylesheet" href="{{ asset('web/js/tinymce/skins/lightgray/skin.min.css') }}" />
+
+
+{% endblock %}
+</head>
+<body>
+	{% block body %}
+	{% endblock %}
+	{% block javascripts %}
+	{% endblock %}
+</body>
+
+</html>
+
+<div id=ticketDocuments style="display: none">
+	<form id="dialogFiles">
+		<input type=hidden name=ticketID>
+		<table style="width: 100%">
+			<tr>
+				<td style="width: 70%">
+					<div id="previewDocument">
+						<iframe id="previewFile" style="width: 100%; height: 600px">iframe</iframe>
+					</div>
+				</td>
+				<td valign="top">
+					<table>
+						<tr>
+							<td>
+								<table>
+									<thead>
+										<tr>
+											<td valign="top" colspan=4><b>Dateien</b></td>
+										</tr>
+									</thead>
+									<tbody id=tbodyTicketFiles>
+										<tr>
+											<td>{dateSql2German('[date]')}</td>
+											<td><a style="color:blue" href="javascript:filePreview([id])")>{unescape('[name]')}</a></td>
+											<td><a
+												href="javascript:dialogDeleteId('',[id],'deleteTicketFile','ticketFiles()')")>
+													<div>
+														<span class="ui-icon ui-icon-trash"></span>
+													</div>
+											</a></td>
+											<td><a href="javascript:moveTicketFile([id])">
+													<div>
+														<span class="ui-icon ui-icon-folder-open"></span>
+													</div>
+											</a></td>
+
+										</tr>
+									</tbody>
+								</table>
+							</td>
+						</tr>
+
+						<tr>
+							<td><HR></td>
+						</tr>
+
+						<tr>
+							<td><input type="file" name="file"></td>
+						</tr>
+
+						<tr>
+							<td><input class=inputButton type=button
+								onclick=ticketFileUpload( 'ticketFiles()')
+							value='upload'>
+							</td>
+						</tr>
+
+						<tr>
+							<td><HR></td>
+						</tr>
+
+						<tr>
+							<td>
+								<table>
+									<thead>
+										<tr>
+											<td valign="top" colspan=3><b>Belege Intern</b></td>
+										</tr>
+									</thead>
+									<tbody id=tbodyTicketFilesInternal>
+										<tr>
+											<td>[type]</td>
+											<td>
+											<a style="color:blue" href="javascript:fileInternalPreview([id],'[form]','[division]')")>
+											[voucherNo]</a>
+											</td>
+											<td>{('[sent]'!='') ? '<span
+												class="ui-icon ui-icon-mail-closed"></span>'+dateSql2German('[sent]')
+												: ""}
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</td>
+						</tr>
+
+
+					</table>
+				</td>
+			</tr>
+
+		</table>
+	</form>
+</div>
+<div id=fileView>
+	<div id=srcFile></div>
+</div>
+
+<div id="dialogCatalogue" title="Katalog" style="display: none;">
+	<table style="width: 100%">
+		<tr>
+			<td colspan=2 id=ajax-loading style="display: none;" align=center><img
+				src=./web/images/ajax-loader.gif></td>
+		</tr>
+
+		<tr>
+			<td colspan=2 id=srcCatalogue></td>
+		</tr>
+
+	</table>
+</div>
+<div id="dialogHelp" title="Hinweise" style="display: none;">
+	<table style="width: 100%">
+		<tr>
+			<td colspan=2 id=ajax-loading style="display: none;" align=center><img
+				src=./web/images/ajax-loader.gif></td>
+		</tr>
+
+		<tr>
+			<td colspan=2 id=srcHelp>kommen bald ...</td>
+		</tr>
+
+	</table>
+</div>
+<div id=baseTotalSum style="display:none;">
+				<table style="width: 100%">
+					<tr>
+						<td></td>
+						<td style='text-align: right;'>19%</td>
+						<td style='text-align: right;'>7%</td>
+					</tr>
+					<tr>
+						<td class="fieldname">Warenwert</td>
+						<td style='text-align: right;'><input class="inputRight"
+							type="text" name="merchandiseNetVn" size=4 disabled></td>
+						<td style='text-align: right;'><input class="inputRight"
+							type="text" name="merchandiseNetVr" size=4 disabled></td>
+					</tr>
+					<tr>
+						<td class="fieldname">Verpackung</td>
+						<td style='text-align: right;'><input class="inputRight"
+							type="text" name="packageNetVn" size=4 disabled></td>
+						<td style='text-align: right;'><input class="inputRight"
+							type="text" name="packageNetVr" size=4 disabled></td>
+					</tr>
+					<tr>
+						<td class="fieldname">Versand</td>
+						<td style='text-align: right;'><input class="inputRight"
+							type="text" name="dispatchNetVn" size=4 disabled></td>
+						<td style='text-align: right;'><input class="inputRight"
+							type="text" name="dispatchNetVr" size=4 disabled></td>
+					</tr>
+					<tr>
+						<td class="fieldname">MwSt.</td>
+						<td style='text-align: right;'><input class="inputRight"
+							type="text" name="VATn" size=4 disabled></td>
+						<td style='text-align: right;'><input class="inputRight"
+							type="text" name="VATr" size=4 disabled></td>
+					</tr>
+					<tr>
+						<td class="fieldname"><strong>brutto</strong></td>
+						<td style='text-align: right;'><input class="inputRight"
+							type="text" name="grossValue" size=4 disabled></td>
+					</tr>
+					<tr>
+						<td class="fieldname">Skonto</td>
+						<td style='text-align: right;'><input class="inputRight"
+							type="text" name="tradeDiscount" size=4 disabled></td>
+					</tr>
+					<tr>
+						<td class="fieldname"><strong>Zahlbetrag</strong></td>
+						<td style='text-align: right;'><input class="inputRight"
+							type="text" name="paymentAmount" size=4 disabled></td>
+					</tr>
+				</table>
+</div>

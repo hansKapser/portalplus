@@ -1,0 +1,99 @@
+<div class="context-menu-one btn btn-neutral" id="gridPostoutBox"
+	style="margin: 0px;">gridPostoutBox</div>
+
+<!-- dialogPopUp -->
+<div id="dialogPostoutBoxDiv" style="display: none;">
+	<form id="dialogPostoutBox">
+	<input type=hidden name=id>
+		<table>
+			<tr>
+				<td>
+					<table style="text-align: center;">
+						<tbody>
+							<tr>
+								<td class="fieldname">E-Mail:</td>
+								<td style="text-align: left;"><input name="email"
+									type="checkbox"></td>
+							</tr>
+							<tr>
+								<td class="fieldname">Postausgang:</td>
+								<td style="text-align: left;"><input name="date"
+									type="text" size=8></td>
+							</tr>
+							<tr>
+								<td class="fieldname">Kunde/Lieferant:</td>
+								<td style="text-align: left;"><input name="to_company"
+									type="text"></td>
+							</tr>
+							<tr>
+								<td class="fieldname">Email:</td>
+								<td style="text-align: left;"><input name="to_email"
+									type="text"></td>
+							</tr>
+							<tr>
+								<td class="fieldname">Abteilung:</td>
+								<td style="text-align: left;"><select name="division"></select>
+								</td>
+							</tr>
+
+							<tr>
+								<td class="fieldname">Beleg:</td>
+								<td style="text-align: left;"><select name="voucher">
+								</select></td>
+							</tr>
+							<tr>
+								<td class="fieldname">Beleg #:</td>
+								<td style="text-align: left;"><input name="voucherNo"
+									type="text"></td>
+							</tr>
+							<tr>
+								<td class="fieldname">Belegdatum:</td>
+								<td style="text-align: left;"><input name="voucherDate"
+									type="text" size=8></td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+				<td valign=top>
+					<table style="text-align: center;">
+						<tbody>
+							<tr>
+								<td class="fieldname">ticket #:</td>
+								<td style="text-align: left;" colspan=2><input
+									name="ticketID" type="text" value="* neu*" size=4 disabled></td>
+							</tr>
+							<tr>
+								<td class="fieldname">intern Beleg #:</td>
+								<td style="text-align: left;"><select
+									name="voucherNoInternal">
+										<option value=-1>* neu *</option>
+								</select></td>
+								<td style="text-align: left"><a
+									href=javascript:showDocuments()><span
+										class="ui-icon ui-icon-document"></span>documents</a></td>
+							</tr>
+							<tr>
+								<td class="fieldname">Sachbearbeiter</td>
+								<td colspan=2 style="text-align: left;"><select
+									name="userID" id=userID>
+								</select></td>
+							</tr>
+							<tr>
+								<td class="fieldname">Team</td>
+								<td colspan=2 style="text-align: left;"><select
+									name="teamID">
+								</select></td>
+							</tr>
+							<tr>
+								<td class="fieldname">upload</td>
+								<td style="text-align: left;" colspan=2><input type=file
+									id=image></td>
+							</tr>
+							
+						</tbody>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</form>
+</div>

@@ -1,0 +1,177 @@
+<div class="context-menu-one btn btn-neutral" id="gridArticle"
+	style="margin: 0px;">gridArticle</div>
+
+<!-- dialogPopUp -->
+<div id="dialogArticleDiv" style="display: none">
+	<form id="dialogArticle">
+	<input type=hidden name=id>
+	<input type=hidden name=spec_id>
+	
+		<table>
+			<tr>
+				<td valign=top>
+					<table style="text-align: center;">
+						<tbody>
+							<tr style="background-color: #ccc;">
+								<td colspan=4>Artikel</td>
+							</tr>
+
+							<tr>
+								<td class="fieldname">Art.Nummer:</td>
+								<td colspan=3 style="text-align: left;"><input
+									name="article_code" type="text"></td>
+							</tr>
+
+							<tr>
+								<td class="fieldname">Bezeichnung:</td>
+								<td colspan=3 style="text-align: left;"><input name="name"
+									type="text"></td>
+							</tr>
+							<tr>
+								<td class="fieldname">Bezeichnung engl.:</td>
+								<td colspan=3 style="text-align: left;"><input name="name_en"
+									type="text"></td>
+							</tr>
+							<tr>
+								<td class="fieldname">Set (enthält Artikel):</td>
+								<td colspan=3 style="text-align: left;"><input name="isSet"
+									type="checkbox"></td>
+							</tr>
+
+							<!---    <tr>
+    <td class="fieldname">Kurzbezeichnung:</td>
+    <td colspan=3><input name="short_name" type="text"></td>
+    </tr>
+--->
+							<tr>
+								<td class="fieldname">Artikelart:</td>
+								<td colspan=3 style="text-align: left;"><select name="kind">
+										<option value='S'>Verkaufsartikel</option>
+										<option value='P'>Verpackungsmaterial</option>
+								</select></td>
+							</tr>
+
+							<tr>
+								<td class="fieldname">Art.gruppe:</td>
+								<td colspan=3 style="text-align: left;"><select
+									name="group_id"></select></td>
+							</tr>
+
+							<tr style="background-color: #ccc;">
+								<td colspan=4>Variationen</td>
+							</tr>
+							<tr>
+								<td class=fieldname>Variation 1</td>
+								<td style="text-align: left;"><select
+									name=variation1_group_id></select></td>
+								<td style="text-align: left;" colspan=2><select
+									name=variation1_id></select></td>
+							</tr>
+							<tr>
+								<td class=fieldname>Variation 2</td>
+								<td style="text-align: left;"><select
+									name=variation2_group_id></select></td>
+								<td style="text-align: left;" colspan=2><select
+									name=variation2_id></select></td>
+							</tr>
+
+
+							<tr style="background-color: #ccc;">
+								<td colspan=4>Lager</td>
+							</tr>
+							<tr>
+								<td class=fieldname>Lagerbuchung</td>
+								<td colspan=3><input type=checkbox name=inventory value=1></td>
+							</tr>
+							<tr>
+								<td class=fieldname>Mindestbestand</td>
+								<td><input class=inputRight type=text name=min_stock size=4></td>
+								<td class=fieldname>Höchstbestand</td>
+								<td><input class=inputRight type=text name=max_stock size=4></td>
+							</tr>
+							<tr>
+								<td class=fieldname>Meldebestand</td>
+								<td><input class=inputRight type=text name=reorder_stock
+									size=4></td>
+								<td class=fieldname>Bestellmenge</td>
+								<td><input class=inputRight type=text
+									name=purchase_quantity size=4></td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+				<td valign=top>
+					<table>
+						<tr style="background-color: #ccc;">
+							<td colspan=4>Preis</td>
+						</tr>
+						<tr>
+							<td class=fieldname>Vk-Preis</td>
+							<td><input class=inputRight type=text name=price size=4></td>
+							<td class=fieldname>GS Retour</td>
+							<td><input class=inputRight type=text name=retourCredit
+								size=4></td>
+						</tr>
+						<tr>
+							<td class=fieldname>FIBU-Konto</td>
+							<td><input type=text name=fibu_account size=4></td>
+							<td class=fieldname>USt.</td>
+							<td><select name=vat_id></select></td>
+						</tr>
+						<tr style="background-color: #ccc;">
+							<td colspan=4>Warenversand</td>
+						</tr>
+						<tr>
+							<td class=fieldname>Mengeneinheit</td>
+							<td><input type=text name=quantity_unit size=4></td>
+							<td class=fieldname>Gewicht (kg)</td>
+							<td><input class=inputRight type=text name=weight size=4></td>
+						</tr>
+						<tr style="background-color: #ccc;">
+							<td colspan=4>Beschreibung</td>
+						</tr>
+						<tr>
+							<td colspan=4 id=articleDataSheet style="text-align:right">
+							<a href=javascript:articleDataSheetView()>Datenblatt</a>
+							</td>
+						</tr>
+						<tr>
+							<td class="fieldname" id=_upload0>upload Datenblatt</td>
+							<td colspan=2 id=_upload1><input type=file name=dataSheet></td>
+							<td id=_upload2><input class=inputButton type=button onclick=articleMasterDataSheetUpload()
+							value='upload'></td>
+						</tr>
+						<tr>
+							<td colspan=4 style="text-align:right">
+							<textarea name=description rows=3 cols=40></textarea>
+							</td>
+						</tr>
+						<tr style="background-color: #ccc;">
+							<td colspan=4>Bild</td>
+						</tr>
+						<tr>
+							<td class="fieldname" id=_upload3>upload</td>
+							<td colspan=2 id=_upload4><input type=file id=image></td>
+							<td id=_upload5><input class=inputButton type=button onclick=articleMasterImageUpload()
+							value='upload'></td>
+						</tr>
+
+						<tr>
+							<td colspan=4 align=center><img id=imageArticle src=''
+								style='height: 150px'></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		
+	</form>
+</div>
+
+<div id="articleDataSheetDiv" style="display:none">
+<table style="width:100%">
+	<tr>
+	<td id=srcDataSheet></td>
+	</tr>
+</table>
+</div>

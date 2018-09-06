@@ -1,0 +1,737 @@
+{% extends 'base.html.twig' %}
+{% block javascripts %}
+	<script src="{{ asset('web/js/standard.js') }}"></script>
+	<script src="{{ asset('web/js/_class.files.js') }}"></script>
+	<script src="{{ asset('web/js/_myGrid.js') }}"></script>	
+
+<script src="{{ asset('web/js/jquery.min.js') }}"></script>
+<script src="{{ asset('web/js/jquery-ui.min.js') }}"></script>
+<script src="{{ asset('web/js/jquery.ui.dialog-collapse.js') }}"></script>
+<script src="{{ asset('web/js/pqgrid.min.js') }}"></script>
+<script src="{{ asset('web/js/tinymce/tinymce.min.js') }}"></script>
+<script src="{{ asset('web/js/dashboard.js') }}"></script>
+<script src="{{ asset('web/js/mainMenu.js') }}"></script>
+
+<script src="{{ asset('web/js/management.js') }}"></script>
+<script src="{{ asset('web/js/managementCompanyMaster.js') }}"></script>
+<script src="{{ asset('web/js/managementFirms.js') }}"></script>
+<script src="{{ asset('web/js/managementUser.js') }}"></script>
+<script src="{{ asset('web/js/managementPost.js') }}"></script>
+<script src="{{ asset('web/js/article.js') }}"></script>
+<script src="{{ asset('web/js/store.js') }}"></script>
+<script src="{{ asset('web/js/purchase.js') }}"></script>
+<script src="{{ asset('web/js/purchaseBook.js') }}"></script>
+<script src="{{ asset('web/js/purchaseRequisition.js') }}"></script>
+<script src="{{ asset('web/js/purchaseKK.js') }}"></script>
+<script src="{{ asset('web/js/purchaseEnquiry.js') }}"></script>
+<script src="{{ asset('web/js/selling.js') }}"></script>
+<script src="{{ asset('web/js/sellingBook.js') }}"></script>
+<script src="{{ asset('web/js/accountancy.js') }}"></script>
+<script src="{{ asset('web/js/accountancyAccounts.js') }}"></script>
+<script src="{{ asset('web/js/accountancyOverview.js') }}"></script>
+<script src="{{ asset('web/js/accountancyBank.js') }}"></script>
+<script src="{{ asset('web/js/bookingDialog.js') }}"></script>
+<script src="{{ asset('web/js/sysAdmin.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+<div id=container>
+<header>
+<section id="logo">
+<table style="width:100%">
+<tr>
+<td  style="width=1%; vertical-align: text-top;"><a href=javascript:hideBanner()><span class="ui-icon ui-icon-arrowstop-1-n"></span></a></td>
+<td id=srcBanner style="width:60%"><img id=logo src=web/images/logo_uebw.png>
+
+</td>
+<td style="width:19%"><img id=ajax-loader src=web/images/ajax-loader.gif>
+</td>
+<td style="width:20%">
+<div id=account style='text-align:right;display:none;'>
+	<table>
+	<tr>
+	<td style='text-align:right;' class=fieldname>Benutzer:</td>
+	<td style='text-align:left;'>{_session.user}</td>
+	<td><a href=javascript:logout()><img src=web/images/icon_logout.png></a></td>
+	</tr>
+	  <tr>
+	  <td style='text-align:right;' class=fieldname>Firma: </td>
+	  <td colspan=2 style='text-align:left;'>
+	  {_session.company} ({_session.firmID})
+	  </td>
+	  </tr>
+	  <tr>
+	  <td style='text-align:right;' class=fieldname>Status/Profil: </td>
+	  <td colspan=2 style='text-align:left;'>
+	  {_session.status} 
+	  / 
+	  {_session.profile_name}
+	  </td>
+	  </tr>
+	  <tr>
+	  <td style='text-align:right;' class=fieldname>Klasse/Team:</td>
+	  <td colspan=2 style='text-align:left;'>
+	  {_session.class_name}
+	  /
+	  {_session.team_name}
+	  </td>
+	  </tr>
+	  </table>
+</div>
+</td>
+</tr>
+</table>
+</section>
+
+	<section id="global-nav">
+		<nav>
+			<div id="navdashboard">
+				<ul>
+					<li id=showBanner style="display: none; vertical-align: text-top;">
+							<a href=javascript:showBanner()>
+							<span class="ui-icon ui-icon-arrowstop-1-s"></span></a>
+						</li>
+					<li id='dashboard:portal'><a href="javascript:showDashboard()" title="GF">dashboard</a></li>
+					<li id='dashboard:email'><a href="https://webmail.your-server.de/login.php" target=_blank title="communicator">E-Mail</a></li>
+					<li id='dashboard:calendar'><a href="javascript:showCalendar()" title="Kalender">Kalender</a></li>
+					<li id='dashboard:management'><a href="javascript:mainMenu('managementInit')" title="GF">Geschäftsführung</a></li>
+					<li id='dashboard:article'><a href="javascript:mainMenu('articleInit')" title="Artikelverwaltung">Artikel</a></li>
+
+					<!--- call einkauf.php not einkauf.html because a direct call from dashboard should be possible -->
+					<li id='dashboard:purchase'><a href="javascript:mainMenu('purchaseInit')" title="Material">Einkauf</a></li>
+					
+					<!--- call verkauf.php not verkauf.html because a direct call from dashboard should be possible -->
+					<li id='dashboard:sale'><a href="javascript:mainMenu('sellingInit')" title="Verkauf">Verkauf</a></li>
+					
+					<li id='dashboard:accounting'><a href="javascript:mainMenu('accountancyInit')" title="RW">Rechnungswesen</a></li>
+					<li id='dashboard:post'><a href="post.html" target=_blank title="Post">Post</a></li>
+					<li id='dashboard:center'><a href="javascript:mainMenu('sysAdminInit')" title="Systemadministration">Zentrale</a></li>
+				
+				</ul>
+			</div>
+		</nav>
+	</section>
+</header>
+<div id=account></div>
+
+
+<div id=greeting_name style="padding-top:20px"></div>
+<div id=mainContent>
+<table style="width:100%" valign=top>
+<tr>
+<td width=25% valign=top>
+<div id="modalPost" class="modal-content">
+<form id=dialogDashboardIMAP>
+  <!-- Modal content -->
+    <div class="modal-header"><a href=javascript:dashboardRefreshIMAP()><span class="ui-icon ui-icon-arrowrefresh-1-s"></span>&nbsp;Posteingang</a><hr></div>
+	<div class="modal-content-table">	
+		<table>
+		<tbody id=tbodyIMAP style="display:none">
+			<tr>
+			<td>{[PE]==1 ? '<span class="ui-icon ui-icon-mail-open"></span>' : ""}</td>
+			<td style="[style]">{dateIMAP2German("[date]")}</td>
+			<td style="[style]"><a href="javascript:dashboardDialogEmail([uid])">[from]</a></td>
+			</tr>
+			<tr>
+			<td></td>
+			<td colspan=2 style="[style]">[subject]</td>
+			</tr>
+			</tbody>
+	</table>
+	</div>
+	</form>
+  </div>
+</td>
+<td  width=15% valign=top>
+<div id="modalTermine" class="modal-content">
+  <!-- Modal content -->
+    <div class="modal-header"><a href=javascript:dashboardRefreshCalendar()><span class="ui-icon ui-icon-arrowrefresh-1-s"></span>&nbsp;Termine</a><hr></div>
+ 		<div class="modal-content-table">	
+		<table>
+		<tbody id=calendar>
+			<tr>
+			<td style="width:5%"><a href="javascript:[url]">[ticketID]</a></td>
+			<td style="width:5%">[group]</td>
+			<td style="width:15%">[start]</td>
+			<td>[title]</td>
+			</tr>
+			</tbody>
+	</table>
+	</div>
+  </div>
+</td>
+<td width=35% valign=top>
+<div id="modalTickets" class="modal-content">
+  <!-- Modal content -->
+  <div class="modal-header"><a href=javascript:dashboardRefreshTask()><span class="ui-icon ui-icon-arrowrefresh-1-s"></span>&nbsp;Aufgaben</a><hr></div>
+	
+	<table style="width:100%;">
+	<tr>
+	<td style="width=100%">
+		<form id=dashboardTicketsDialog>
+		<div id=dashboardTicketsDialogDiv></div>
+		</form>
+	</td>
+	</tr>
+	<tr>
+	<td id=dashboardTicketsContent>
+	Content
+	</td>
+	</tr>
+	</table>
+	
+</div>
+
+</td>
+<td width=25% valign=top>
+<div class="modal-content">
+  <!-- Modal content -->
+    <div class="modal-header" style="width:100%"><a href=javascript:dashboardRefreshPinBoard()><span class="ui-icon ui-icon-arrowrefresh-1-s"></span>&nbsp;Mitteilungen der Zentrale</a>
+    		<span id=pinBoardNew style="visibility:hidden">
+    		<span class="ui-icon ui-icon-document" style="text-align:right"></span><a href=javascript:pinBoardView(-1)>neu</a>
+    		</span>
+    		<hr></div>
+  		<div class="modal-content-table">	
+  		<table>
+		<thead>
+			<tr>
+			<td colspan=2 id=loadingPinboard>... Mitteilungen der Zentrale ...</td>
+			</tr>
+		</thead>
+		<tbody id=tbodyPinboard  style="display:none">
+					<tr>
+					<td>{[isDocument]==1 ? '<span class="ui-icon ui-icon-document"></span>' : ''}</td>
+					<td>{dateSql2German("[date]",false)}</td>
+					<td><a href="javascript:pinBoardView([id])">[subject]</a></td>
+					<td>[author]</td>
+					</tr>
+		</tbody>
+
+		</table>
+		</div>	
+</div>
+</td>
+
+</tr>
+</table>
+</div>
+<!-- end div.content -->
+</div>
+<div id=dialogDashboardPinboardDiv style="display:none;">
+<form id=dialogDashboardPinboard>
+<input type=hidden name=id>
+<div class="modal-content-table">	
+	<table>
+		<tbody>
+			<tr>
+			<td class="fieldname">Datum:</td>
+			<td><input type=text name=date size=8></td>
+			<td class="fieldname">Author:</td>
+			<td><input type=text name=author size=8 disabled></td>
+			</tr>
+			<tr>
+			<td class="fieldname">Betreff:</td>
+			<td><input type=text name=subject size=20></td>
+			<td class="fieldname">Anhang:</td>
+			<td><input class="inputButton" type=button name=name onclick="javascript:dashboardPinboardFileView()"></td>
+			</tr>
+			<tr>
+			<td colspan=4>
+			<textarea id=messagePinboard name=message rows=5 cols=60></textarea>
+			</td>
+			</tr>
+					<tr>
+					<td style="text-align: left;" colspan=2><input name=file type=file
+						id=pinBoardFile></td>
+						<td colspan=2><input class='inputButton tinySave' type=button
+							name=savePinboard value="save"></td>
+					</tr>
+			
+			<!-- -
+			<tr>
+			<td class="fieldname">upload</td>
+			
+			<td><input class=inputButton type=button name=uploadFile value=upload onclick=dashboardPinboardUploadFile()></td>
+			</tr>
+			 -->
+		</tbody>
+	</table>
+	</div>
+</form>
+</div>	
+
+<div id=dialogDashboardPinboardViewDiv style="display:none;">
+	<table style="width:100%">
+		<tbody>
+			<tr>
+			<td style="width:10%">Datum:</td>
+			<td id=date></td>
+			<td id=attachment style="text-align:right"></td>
+			</tr>
+			<tr>
+			<td>Betreff:</td>
+			<td id=subject colspan=2></td>
+			</tr>
+			<tr>
+			<td>Author:</td>
+			<td id=author colspan=2></td>
+			</tr>
+			<tr>
+			<td colspan=3><hr></td>
+			<tr>
+			<td colspan=3 id=message></td>
+			</tr>
+		</tbody>
+	</table>
+</div>	
+
+<div id=dashboardTicketsDialogTeacher style="display:none">
+
+		<table>
+		<tr>
+		<td class="fieldname">Teamaufgaben</td>
+		<td style="text-align:left;">
+			<select name=teamID onchange=javascript:dashboardTaskChange(this)></select>
+		</td>
+		</tr>
+		<tr>
+		<td class="fieldname">Benutzeraufgaben</td>
+		<td style="text-align:left;">
+			<select name=userID onchange=javascript:dashboardTaskChange(this)></select>
+		</td>
+		</tr>
+		<tr>
+		<td class="fieldname">Firmen</td>
+		<td style="text-align:left;">
+			<select name=firmID onchange=javascript:dashboardTaskChange(this)></select>
+		</td>
+		</tr>
+		</table>
+
+</div>
+<div id=dashboardTicketsDialogStudent style="display:none">
+		<table>
+		<tr>
+		<td class="fieldname">Firmen</td>
+		<td style="text-align:left;">
+			<select name=firmID onchange=javascript:dashboardTaskChange(this)></select>
+		</td>
+		</tr>
+		</table>
+
+</div>
+<div id=dashboardTicketsUser style="display:none">
+<hr>
+<h3>Tickets Benutzer</h3>
+<hr>
+		<div id=dashboardTicketsRowsUser class="modal-content-table-user"></div>
+
+</div>
+
+<div id=dashboardTicketsTeam style="display:none">
+<h3>Tickets Team</h3>
+<hr>
+		<div id=dashboardTicketsRowsTeam class="modal-content-table-team"></div>
+
+</div>
+
+<div id=dashboardTicketsRows style="display:none">
+<div class="modal-content-table">
+		<table>
+		<thead>
+		<tr>
+		<td colspan=5></td>
+		</tr>
+		</thead>
+		<tbody id=tbodyTickets>
+		<tr>
+			<td style="width:5%"><div style="display:{[isFile]==1 ? 'table' : 'none'}"><a href="javascript:ticketFiles([ticketID])"><span class="ui-icon ui-icon-document"></span></a></div></td>
+			<td style="width:5%">[division]</td>
+			<td style="width:20%">{dateSql2German('[date]',false)}</td>
+			<td colspan=2 style="width:70%"><a href="javascript:callTicket([ticketID])">[from_company]</a></td>
+			</tr>
+	
+			<tr>
+			<td style="width:5%"></td>
+			<td colspan=4><a style="color:#ff0000" href="javascript:callTicket([ticketID])">[voucherOpen]</a></td>
+			</tr>
+
+			<tr>
+			<td style="width:5%"></td>
+			<td colspan=3 style="width:60%"><a href="javascript:callTicket([ticketID])">[voucher] [voucherNoInternal]</a></td>
+			<td style="width:35%"><a href=javascript:callTicket([ticketID])>[user] <= [initiatorUser]</a></td>
+			</tr>
+			<tr>
+			<td></td>
+			<td colspan=4>[workflowStatus]</td>
+			</tr>
+
+			<tr>
+			<td colspan=5><hr class=hrDot></td>
+		</tr>
+		</tbody>
+		</table>
+		</div>
+
+</div>
+
+<div id=dashboardTicketsFirms style="display:none">
+<hr>
+<h3>Tickets Firma</h3>
+<hr>
+		<div id=dashboardTicketsRowsFirms class="modal-content-table-user"></div>
+
+</div>
+
+<!-- popUpDialog mask begin -->
+<div id="dialogDashboardEmailDiv" title="E-Mail"
+			style="display: none;">
+			<div id=li_icon_menu style="position: absolute; right: 10px;">
+				<img src='web/images/icon_menu.png' width=20px
+					onclick=javascript:showIconMenu()>
+			</div>
+
+			<ul id="icon_menu"
+				style='display:none; background-color: #fff; z-index: 1; position: absolute; right: 10px; top: 10px; border-width: 1px; border-style: solid; border-color: #000;'>
+				<li onclick=javascript:dashboardImapPostinCheck(false,"dashboardImapPostin()")>
+					<div>
+						<span class="ui-icon ui-icon-folder-open"></span>Posteingang
+					</div>
+				</li>
+				<li onclick=javascript:dashboardImapReply()>
+					<div>
+						<span class="ui-icon ui-icon-mail-open"></span>Antworten
+					</div>
+				</li>
+				<!---
+  <li onclick=javascript:emailDelete()>
+    <div><span class="ui-icon ui-icon-trash"></span>E-Mail löschen</div>
+  </li>-->
+				<li onclick=javascript:dashboardImapMove()>
+					<div>
+						<span class="ui-icon ui-icon-folder-open"></span>E-Mail
+						verschieben
+					</div>
+				</li>
+
+			</ul>
+
+			<form id="dialogDashboardEmail">
+				<table style="width: 100%">
+					<tr>
+						<td style='text-align: right;' width=50px class=fieldname>Datum</td>
+						<td id=mail_date></td>
+						<td style='text-align: right;'></td>
+					</tr>
+					<tr>
+						<td style='text-align: right;' width=50px class=fieldname>von</td>
+						<td id=mail_sender></td>
+						<td style='text-align: right;'></td>
+					</tr>
+					<tr>
+						<td style='text-align: right;' width=50px class=fieldname>an</td>
+						<td id=mail_receiver>uns</td>
+						<td style='text-align: right;'></td>
+					</tr>
+					<tr>
+						<td style='text-align: right;' class=fieldname>Betreff</td>
+						<td id=mail_subject></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td style='text-align: right;' class=fieldname>Attachment</td>
+						<td id=mail_attachment></td>
+						<td id=mail_send_button></td>
+
+					</tr>
+					<tr>
+						<td colspan=3><HR></td>
+					</tr>
+					<tr>
+						<td colspan=3 id=ajax-loading style="display: none;" align=center><img
+							src=/web/images/ajax-loader.gif></td>
+					</tr>
+
+					<tr>
+						<td colspan=3 id=mail_body></td>
+					</tr>
+
+				</table>
+			</form>
+		</div>
+
+
+
+
+		<div id="dialogDashboardEmailPostinDiv" style="display: none;">
+			<form id="dialogDashboardEmailPostin">
+				<input type=hidden name=uid>
+				<table>
+					<tr>
+						<td id=srcAttachment valign=top width=75%>attachment</td>
+						<td valign=top>
+							<table>
+								<tr>
+									<td>
+								<tbody>
+									<tr>
+										<td class="fieldname">E-Mail:</td>
+										<td colspan=2><input name="email" type="checkbox" checked></td>
+									</tr>
+									<tr>
+										<td class="fieldname">attachments</td>
+										<td colspan=2 id=mail_attachments></td>
+									</tr>
+									<tr>
+										<td class="fieldname">Posteingang:</td>
+										<td colspan=2><input name="date" type="text" size=8></td>
+									</tr>
+									<tr>
+										<td class="fieldname">Lieferant/Kunde:</td>
+										<td colspan=2><input name="from_company" type="text"></td>
+									</tr>
+									<tr>
+										<td class="fieldname">Absender:</td>
+										<td colspan=2><input name="sender_company" type="text"></td>
+									</tr>
+									<tr>
+										<td class="fieldname">Abteilung:</td>
+										<td colspan=2><select name="division"></select></td>
+									</tr>
+
+									<tr>
+										<td class="fieldname">Beleg:</td>
+										<td colspan=2><select name="voucher">
+												<option value=1>test</option>
+										</select></td>
+									</tr>
+									<tr>
+										<td class="fieldname">Beleg #:</td>
+										<td colspan=2><input name="voucherNo" type="text"></td>
+									</tr>
+									<tr>
+										<td class="fieldname">Belegdatum:</td>
+										<td colspan=2><input name="voucherDate" type="text"
+											size=8></td>
+									</tr>
+
+									<tr>
+										<td class="fieldname">ticket #:</td>
+										<td colspan=2><input name="ticketID" type="text" value=""
+											size=4 disabled></td>
+									</tr>
+									<tr>
+										<td class="fieldname">intern Beleg #:</td>
+										<td colspan=2><select name="voucherNoInternal"></select></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td colspan=2 style="text-align: left;"><a
+											href=javascript:dashboardPostinShowDocuments()><span
+												class="ui-icon ui-icon-document"></span>documents</a></td>
+									</tr>
+									<tr>
+										<td class="fieldname">Sachbearbeiter</td>
+										<td colspan=2><select name="userID" id=userID></select></td>
+									</tr>
+									<tr>
+										<td class="fieldname">Team</td>
+										<td colspan=2><select name="teamID"></select></td>
+									</tr>
+									<tr>
+										<td class="fieldname">E-Mail Text</td>
+										<td><input type=checkbox name=saveMessage>
+											message</td>
+									</tr>
+
+									<tr>
+										<td class="fieldname">upload</td>
+										<td colspan=2><input type=checkbox name=upload checked>
+											attachment</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td colspan=2><input class=inputButton type=button
+											onclick=dialogSave() name=savePostin value="save"></td>
+									</tr>
+								</tbody>
+
+							</table>
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+
+		<div id="dialogDashboardEmailMoveDiv" style="display: none;">
+			<form id="dialogDashboardEmailMove">
+
+				<table>
+					<tr>
+						<td valign=top>
+							<table>
+								<tr>
+									<td>Verschiebe E-Mail <BR> von Posteingang => Ordner
+									</td>
+								</tr>
+								<tr>
+									<td><hr></td>
+								</tr>
+								<tr>
+									<td id=moveDate></td>
+								</tr>
+								<tr>
+									<td id=moveSender></td>
+								</tr>
+								<tr>
+									<td id=moveSubject></td>
+								</tr>
+
+								<tr>
+									<td><input class=inputButton type=button name=movePostin
+										value="move to"></td>
+								</tr>
+
+							</table>
+						</td>
+
+						<td><select name=ImapFolders size=15></select></td>
+					</tr>
+				</table>
+			</form>
+		</div>
+
+		<div id="dialogDashboardEmailAttachmentDiv" title="Attachment"
+			style="display: none;">
+			<table style="width: 100%">
+				<tr>
+					<td colspan=2 id=ajax-loading style="display: none;" align=center><img
+						src=./web/images/ajax-loader.gif></td>
+				</tr>
+
+				<tr>
+					<td colspan=2 id=srcAttachment></td>
+				</tr>
+
+			</table>
+		</div>
+
+
+<div id="dialogDashboardEmailReplyDiv" style="display: none;">
+			<form id="dialogDashboardEmailReply">
+				
+				<table>
+					<tr>
+						<td class="fieldname">Empfänger:</td>
+						<td><input type=text name=mailReceiver size=40></td>
+
+					</tr>
+					<tr>
+						<td class="fieldname">CC an uns:</td>
+						<td><input type=checkbox name=mailCC value=1 checked></td>
+
+					</tr>
+					<tr>
+						<td class="fieldname">Betreff:</td>
+						<td><input type=text name=mailSubject size=40></td>
+
+					</tr>
+					<tr>
+					<td class="fieldname">Anhang:</td>
+					<td style="text-align: left;" colspan=3><input type=file name=file
+							id=attachment></td>
+					</tr>
+			
+					<tr>
+						<td colspan=2><textarea name=mailMessage id=mailMessage rows=6 cols=80></textarea></td>
+
+					</tr>
+
+					<tr>
+						<td colspan=2><input class='inputButton tinySave' type=button
+							name=sendEmail value="senden"></td>
+					</tr>
+
+				</table>
+			</form>
+</div>
+<!-- popup dashboard dialog mask end -->
+
+<!-- standard dialog mask begin -->
+<div id=baseOrderPositions style="display:none">	
+	<table id=tablePositions style="width: 95%">
+		<thead>
+			<tr style='background-color: [color];'>
+				<th align=left>Pos</th>
+				<th align=left>Nummer</th>
+				<th align=left>Bezeichnung</th>
+				<th align=left>Var1</th>
+				<th align=left>Var2</th>
+				<th style='text-align: right;'>Menge</th>
+				<th style='text-align: left;'>EH</th>
+				<th style='text-align: right;'>Einzelpreis</th>
+				<th style='text-align: right;'>Rabatt</th>
+				<th style='text-align: right;'>gesamt</th>
+				<th style='text-align: right;'>USt.</th>
+				<th colspan=2></th>
+			</tr>
+
+			<tr style='background-color: #ddd;'>
+				<th><input type=hidden name=id value=-1> <input
+					type=hidden name=article_id value=-1> <input type=hidden
+					name=orderID value=-1></th>
+				<th align=left><input type=text name=article_code size=5
+					maxlength=25></th>
+				<th align=left><input type=text name=name size=15 maxlength=10></th>
+				<th align=left style="width: 100px"><select name=variation1_id></select></th>
+				<th align=left style="width: 100px"><select name=variation2_id></select></th>
+				<th style='text-align: righ</div>t;'><input class=inputRight
+					type=text name=quantity size=3></th>
+				<th style='text-align: left;'><input class=inputLeft type=text
+					name=quantity_unit size=1></th>
+				<th style='text-align: right;'><input class=inputRight
+					type=text name=price size=4></th>
+				<th style='text-align: right;'><input class=inputRight
+					type=text name=discount size=1></th>
+				<th style='text-align: right;'><input class=inputRight
+					type=text name=sumPosition size=4></th>
+				<th><select name=vat_id></select></th>
+				<td colspan=2><input type=button name=saveButton value="add"></td>
+			</tr>
+		</thead>
+		<tbody id=tbody[OrderPurchase]Positions>
+			<tr>
+				<td></td>
+				<td style="text-align: left;">[article_code]</td>
+				<td style="text-align: left;">[name]</td>
+				<td style="text-align: left; width: 100px;">[variation1]</td>
+				<td style="text-align: left; width: 100px;">[variation2]</td>
+				<td style="text-align: right;">{germanDezimal([quantity])}</td>
+				<td style="text-align: left;">[quantity_unit]</td>
+				<td style="text-align: right;">{germanDezimal([price])}</td>
+				<td style="text-align: right;">{germanDezimal([discount])}</td>
+				<td style="text-align: right;">{germanDezimal([sumPosition])}</td>
+				<td style="text-align: right;">[percentage]</td>
+				<td style="text-align: left;"><a
+					href="javascript:classPosition._deletePosition([id])">delete</a></td>
+				<td style="text-align: left;"><a
+					href="javascript:classPosition._editPosition([id])">edit</a></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+
+<div class="footer" id=footer>
+	  	<table style="width:100%">
+	  	<tr>
+	  	<td><a href=javascript:showHelp()><img src="web/images/help.gif" style="height:20px;width:20px"></a>
+	  	<td id=footerShortcuts style="width:50%"></td>
+	  	<td id=footerCompany style="visibility:hidden;width:20%">{_session.company}</td>
+	  	<td id=footerUser style="visibility:hidden;width:15%">{_session.user}/{_session.status}</td>
+	  	<td style="text-align:right;width:15%" id=footerClock>{updateClock()}</td>
+  		</tr>
+  		</table>
+</div> 
+{% endblock %}
+	  	

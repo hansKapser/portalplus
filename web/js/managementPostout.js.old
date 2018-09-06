@@ -1,0 +1,387 @@
+var rowsTickets=new Array;
+var tbodyTicketFiles="";
+var tbodyTicketFilesInternal="";
+
+var $grid;
+
+function managementPostoutInit() {
+	registerMenuManagementPostout('managementPostoutBoxInit')
+} // end function mainMenu
+
+function registerMenuManagementPostout(registerModul) {
+
+	switch (registerModul) {
+	default:
+		break;
+	
+	} // end switch modul
+	var data = {
+			"action" : "init"
+		};
+
+		$.ajax({
+			type : "POST",
+			dataType : "json",
+			url : "/"+registerModul,
+			async: true,
+			data : JSON.stringify(data),
+			success : function(data) {
+				array_data = getDataContent(data);
+				content=array_data["html"];
+				
+				$('div.contentPostout').html(content);
+				var jsModul=registerModul+"()";
+				
+				eval(jsModul);
+			},
+			 error: function(xhr, status, text) {
+			        console.log(text);
+			    }
+		});
+	
+} // end registerMenuManagementCompanyMaster
+
+/* managementPostoutBox
+ * managementPostoutBoxInit:  
+ * 	contains as obj-function:
+ *  editRow
+ *  addRow
+ *  deleteRow
+ * changePostoutBox (change form-fields)
+ * showDocuments: getTicketID
+ * @see: standard.js ticketFiles
+ * prepareUpload(event) for upload files to p17_files
+ * managementPostoutFileUpload() do file-upload
+ * managementPostoutBoxSavePost(row) postblock-function after saving
+ * @see: standard.js dialogSave
+ * 		refresh rows
+ * 		optional upload file
+ */
+
+ function managementPostoutBoxInit() {
+	$("#dialogPostoutBoxDiv").dialog({
+		width : 850,
+		modal : true,
+		open : function() {
+			$(".ui-dialog").position({
+				of : "#gridPostoutBox"
+			});
+		},
+		autoOpen : false
+	});
+	
+	//ticketDocuments in base.html
+	$("#ticketDocuments").dialog({
+		width : 850,
+		modal : true,
+		open : function() {
+			$(".ui-dialog").position({
+				of : "#gridPostoutBox"
+			});
+		},
+		autoOpen : false
+	});
+
+	/* pqGridObj
+	 * @see: standard.js
+	 */
+	$grid=pqGridObj("#gridPostoutBox",array_data["rowGrid"],array_data["rowsPostout"]);
+	
+		var dialogId = $("form#dialogPostoutBox");
+
+		var array=new Array();
+		var arrayA=new Array();
+
+		arrayA[0]={};
+			arrayA[0].field='to_company';
+			arrayA[0].rows=array_data["rowsFirms"];
+			arrayA[0].autocomplete=1;
+			arrayA[0].label='company';
+			arrayA[0].value='company';
+		dialogInitAutocomplete(dialogId,arrayA)
+
+		
+		array[0]={};
+			array[0].field='division';
+			array[0].rows=array_data["rowsDivisions"];
+			array[0].label='name';
+			array[0].value='division';
+			
+		array[1]={};
+			array[1].field='teamID';
+			array[1].rows=array_data["rowsTeam"];
+			array[1].label='name';
+			array[1].value='id';
+		
+		dialogInitSelect(dialogId,array)
+
+		array[0]={};
+			array[0].field='userID';
+			array[0].groupField='class_name';
+			array[0].rows=array_data["rowsUser"];
+			array[0].label='user_name';
+			array[0].value='userID';
+		dialogInitSelectG(dialogId,array)
+
+		// edit Row
+		function editRow() {
+
+			var rowIndx = getRowIndx();
+
+			if (rowIndx == null) 
+				return;
+
+				var row = $grid.pqGrid('getRowData', {
+					rowIndx : rowIndx
+				});
+
+				
+				var dialogId = $("form#dialogPostoutBox");
+
+				/* set all input values to NULL
+				 * 
+				 */
+				dialogId.find("input").val("");
+				
+				dialogId.find('input[type=file]').on('change', prepareUpload);
+				
+				dialogId.find("select[name='division']").change(function() {
+					changePostoutBox(dialogId,'division', this.value);
+				});
+
+				dialogId.find("select[name='voucher']").change(function() {
+					changePostoutBox(dialogId,'voucher', this.value);
+				});
+
+				dialogId.find("select[name='voucherNoInternal']").change(function() {
+					changePostoutBox(dialogId,'voucherNoInternal', this.value);
+				});
+
+				changePostoutBox(dialogId,'division', row.division);
+				row.voucherNoInternal=row.ticketID;
+				dialogInit(dialogId,row);
+				//changePostoutBox(dialogId,'voucher', row.voucher);
+				
+				
+				$("#dialogPostoutBoxDiv").dialog(
+						{
+							title : "Edit Record (#" + row.id + ")",
+							buttons : {
+								Update : function() {
+									
+									var row = dialogGetRow(dialogId);
+									$grid.pqGrid('updateRow', {
+										rowIndx : rowIndx,
+										row : row,
+										checkEditable : false
+									});
+									
+									dialogSave(dialogId,row.id,"managementPostoutBoxSave")
+
+									$(this).dialog("close");
+								},
+								Cancel : function() {
+									$(this).dialog("close");
+								}
+							}
+						}).dialog("open");
+			
+		} // editRow
+
+		function addRow() {
+
+				var dialogId = $("form#dialogPostoutBox");
+				dialogId.find('input[name="id"]').val(-1);
+				
+				
+
+				/* set all input values to NULL
+				 * 
+				 */
+				dialogId.find("input").val("");
+				dialogId.find('input[name="date"]').val(today);
+				
+				
+				dialogId.find('input[type=file]').on('change', prepareUpload);
+				
+				dialogId.find("select[name='division']").change(function() {
+					changePostoutBox(dialogId,'division', this.value);
+				});
+
+				dialogId.find("select[name='voucher']").change(function() {
+					changePostoutBox(dialogId,'voucher', this.value);
+				});
+
+				dialogId.find("select[name='voucherNoInternal']").change(function() {
+					changePostoutBox(dialogId,'voucherNoInternal', this.value);
+				});
+
+				dialogId.find('select[name="voucherNoInternal"]').find('option').remove().end();
+				
+				dialogId.find('input[name="to_company"]').focus();
+				
+				$("#dialogPostoutBoxDiv").dialog(
+						{
+							title : "* neuer Eintrag *",
+							buttons : {
+								Add : function() {
+									
+									
+									var row = dialogGetRow(dialogId);
+									
+									if (checkFirmID(row.from_company)<0)
+										return;
+									var newRow = $grid.pqGrid('addRow', {
+										rowData : row
+									});
+									
+									dialogSave(dialogId,-1,"managementPostoutBoxSave","managementPostoutBoxSavePost(array_data['row'])");
+
+									$(this).dialog("close");
+								},
+								Cancel : function() {
+									$(this).dialog("close");
+								}
+							}
+						}).dialog("open");
+			
+		} // addRow
+
+		function deleteRow() {
+			
+				var rowIndx = getRowIndx();
+				if (rowIndx != null) {
+					var row = $grid.pqGrid('getRowData', {
+						rowIndx : rowIndx
+					});
+					var dialogId = $("form#dialogPostoutBox");
+					dialogDeleteId(dialogId,row.id,"managementPostoutBoxDelete",'');
+					$grid.pqGrid("deleteRow", {
+						rowIndx : rowIndx
+					});
+					$grid.pqGrid("setSelection", {
+						rowIndx : rowIndx
+					});
+
+				}
+			
+		}
+
+		function getRowIndx() {
+			var arr = $grid.pqGrid("selection", {
+				type : 'row',
+				method : 'getSelection'
+			});
+			if (arr && arr.length > 0) {
+				return arr[0].rowIndx;
+			} else {
+				alert("Select a row.");
+				return null;
+			}
+		}
+
+} // end managementPostoutBoxInit
+
+function changePostoutBox(dialogId,field,value='') {
+	
+	switch (field) {
+	
+	case "division":
+		var array=new Array();
+		array[0]={};
+		array[0].field='voucher';
+		array[0].rows=array_data["rowsVoucher"];
+		array[0].label='voucher';
+		array[0].value='voucher';
+		array[0].filter='rows[i].division=="'+value+'"';
+		dialogInitSelect(dialogId,array)
+
+		break;
+		
+	case "voucher":
+		
+		if (value=='') {
+			value=dialogId.find("select[name='voucher']").val();
+		};
+		var data = {
+				"action" : "init",
+				"company": dialogId.find("input[name='to_company']").val(),
+				"division":dialogId.find("select[name='division']").val(),
+				"voucher": value
+				
+			};
+		//data=JSON.stringify(data);
+		data = $.param(data);
+			$.ajax({
+				type : "POST",
+				dataType : "json",
+				url : "/ticketsGetByDivision",
+				async: true,
+				data : data,
+				success : function(data) {
+					console.log(data);
+					var array_data = getDataContent(data);
+					rowsTickets=array_data["rowsTickets"];
+					var array=new Array();
+					array[0]={};
+					array[0].field='voucherNoInternal';
+					array[0].rows=rowsTickets;
+					array[0].label='{dateSql2German(rows[i].date)+" "+rows[i].voucherNoInternal}';
+					array[0].value='ticketID';
+					array[0].blank={};
+					array[0].blank.label='* new *';
+					array[0].blank.value='';
+				
+				dialogInitSelect(dialogId,array)
+
+					
+				}
+			});
+		
+		break;
+		
+	case "voucherNoInternal":
+		
+		dialogId.find("input[name='ticketID']").val(value);
+		for (var i=0;i<rowsTickets.length;i++) {
+			if (rowsTickets[i].ticketID==value) {
+				dialogId.find("select[name='userID']").val(rowsTickets[i].userID);
+				dialogId.find("select[name='teamID']").val(rowsTickets[i].teamID);
+				break;
+			}
+		}
+		break;
+	}
+}
+
+function showDocuments() {
+	var dialogId = $("form#dialogPostoutBox");
+	var ticketID=dialogId.find("input[name='ticketID']").val();
+	ticketFiles(ticketID);
+}
+
+function prepareUpload(event) {
+	files = event.target.files;
+}
+
+function managementPostoutFileUpload() {
+	var dialogId=$("form#dialogPostoutBox");
+	var ticketID=dialogId.find("input[name='ticketID']").val();
+	dialogId.find("input[name='file']").val('');
+	ticketFileUpload('',ticketID);
+}
+
+function managementPostoutBoxSavePost(row) {
+	var newRow = $grid.pqGrid('addRow', {
+		rowData : row
+	});
+	$grid.pqGrid("refreshDataAndView");
+	
+	var dialogId = $("form#dialogPostoutBox");
+	ticketFileUpload('',row.ticketID,dialogId);
+	
+}
+
+/* end managementPostoutBox
+*/
+

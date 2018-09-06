@@ -1,0 +1,779 @@
+#    path: /
+#    controller: App\Controller\DefaultController::index
+# config/routes.yaml
+
+
+index:
+    path: /index
+    methods: POST
+    controller: App\Controller\indexController::index
+login:
+    path: /login
+    controller: App\Controller\indexController::login
+logout:
+    path: /logout
+    controller: App\Controller\indexController::logout
+    
+app_getFirmFile:
+    path: /getFirmFile
+    controller: App\Controller\fileController::getFirmFile
+app_uploadFirmFile:
+    path: /uploadFirmFile
+    controller: App\Controller\fileController::uploadFirmFile
+    
+app_getTicketFile:
+    path: /getTicketFile
+    controller: App\Controller\fileController::getTicketFile
+app_uploadTicketFile:
+    path: /uploadTicketFile
+    controller: App\Controller\fileController::uploadTicketFile
+app_deleteTicketFile:
+    path: /deleteTicketFile
+    controller: App\Controller\fileController::deleteTicketFile
+app_moveTicketFile:
+    path: /moveTicketFile
+    controller: App\Controller\fileController::moveTicketFile
+
+
+app_dashboard:
+    path: /dashboard
+    controller: App\Controller\dashboardController::dashboard
+app_dashboardInit:
+    path: /dashboardInit
+    controller: App\Controller\dashboardController::dashboardInit
+app_dashboardDataInit:
+    path: /dashboardDataInit
+    controller: App\Controller\dashboardController::dashboardDataInit
+app_dashboardDataArticleInit:
+    path: /dashboardDataArticleInit
+    controller: App\Controller\dashboardController::dashboardDataArticleInit
+app_dashboardDataUserInit:
+    path: /dashboardDataUserInit
+    controller: App\Controller\dashboardController::dashboardDataUserInit
+app_dashboardDataAccountancyInit:
+    path: /dashboardDataAccountancyInit
+    controller: App\Controller\dashboardController::dashboardDataAccountancyInit
+app_dashboardCalendarInit:
+    path: /dashboardCalendarInit
+    controller: App\Controller\dashboardController::dashboardCalendarInit
+    
+app_calendarLoadDrags:
+    path: /calendarLoadDrags
+    controller: App\Controller\dashboardController::calendarLoadDrags
+    
+app_dashboardTasksInit:
+    path: /dashboardTasksInit
+    controller: App\Controller\dashboardController::dashboardTasksInit
+app_dashboardTasksGetOrderIDfromTicketID:
+    path: /dashboardTasksGetOrderIDfromTicketID
+    controller: App\Controller\dashboardController::dashboardTasksGetOrderIDfromTicketID
+    
+app_dashboardPinboardInit:
+    path: /dashboardPinboardInit
+    controller: App\Controller\dashboardController::dashboardPinboardInit
+app_dashboardMenuUpdate:
+    path: /dashboardMenuUpdate
+    controller: App\Controller\dashboardController::dashboardMenuUpdate    
+app_dashboardImap:
+    path: /dashboardImap
+    controller: App\Controller\dashboardController::dashboardImap
+app_dashboardImapMessage:
+    path: /dashboardImapMessage
+    controller: App\Controller\dashboardController::dashboardImapMessage
+app_dashboardImapFolders:
+    path: /dashboardImapFolders
+    controller: App\Controller\dashboardController::dashboardImapFolders
+app_dashboardImapFoldersMove:
+    path: /dashboardImapFoldersMove
+    controller: App\Controller\dashboardController::dashboardImapFoldersMove
+app_dashboardImapPostinCheck:
+    path: /dashboardImapPostinCheck
+    controller: App\Controller\dashboardController::dashboardImapPostinCheck
+app_dashboardImapPostinSave:
+    path: /dashboardImapPostinSave
+    controller: App\Controller\dashboardController::dashboardImapPostinSave
+app_dashboardImapReplySend:
+    path: /dashboardImapReplySend
+    controller: App\Controller\dashboardController::dashboardImapReplySend
+
+app_dashboardImapAttachmentShow:
+    path: /dashboardImapAttachmentShow
+    controller: App\Controller\dashboardController::dashboardImapAttachmentShow
+
+app_dashboardPinboardSave:
+    path: /dashboardPinboardSave
+    controller: App\Controller\dashboardController::dashboardPinboardSave
+app_dashboardPinboardDelete:
+    path: /dashboardPinboardDelete
+    controller: App\Controller\dashboardController::dashboardPinboardDelete
+app_uploadPinboardFile:
+    path: /uploadPinboardFile
+    controller: App\Controller\fileController::uploadPinboardFile
+app_getPinboardFile:
+    path: /getPinboardFile
+    controller: App\Controller\fileController::getPinboardFile
+ 
+app_managementInit:
+    path: /managementInit
+    controller: App\Controller\managementController::managementInit
+app_managementUserInit:
+    path: /managementUserInit
+    controller: App\Controller\managementController::managementUserInit
+app_managementTicketsInit:
+    path: /managementTicketsInit
+    controller: App\Controller\managementController::managementTicketsInit
+app_managementExamInit:
+    path: /managementExamInit
+    controller: App\Controller\managementController::managementExamInit
+
+app_managementVoucherInit:
+    path: /managementVoucherInit
+    controller: App\Controller\managementController::managementVoucherInit
+
+app_managementCompanyMasterInit:
+    path: /managementCompanyMasterInit
+    controller: App\Controller\managementCompanyMasterController::managementCompanyMasterInit
+app_managementCompanyMasterAddressInit:
+    path: /managementCompanyMasterAddressInit
+    controller: App\Controller\managementCompanyMasterController::managementCompanyMasterAddressInit
+app_managementCompanyMasterAddressSave:
+    path: /managementCompanyMasterAddressSave
+    controller: App\Controller\managementCompanyMasterController::managementCompanyMasterAddressSave
+
+app_managementCompanyMasterWBTimeSave:
+    path: /managementCompanyMasterWBTimeSave
+    controller: App\Controller\managementCompanyMasterController::managementCompanyMasterWBTimeSave
+app_managementCompanyMasterWBTimeDelete:
+    path: /managementCompanyMasterWBTimeDelete
+    controller: App\Controller\managementCompanyMasterController::managementCompanyMasterWBTimeDelete
+
+
+app_managementCompanyMasterProductsInit:
+    path: /managementCompanyMasterProductsInit
+    controller: App\Controller\managementCompanyMasterController::managementCompanyMasterProductsInit
+app_managementCompanyMasterProductsSave:
+    path: /managementCompanyMasterProductsSave
+    controller: App\Controller\managementCompanyMasterController::managementCompanyMasterProductsSave
+app_managementCompanyMasterProductsDelete:
+    path: /managementCompanyMasterProductsDelete
+    controller: App\Controller\managementCompanyMasterController::managementCompanyMasterProductsDelete
+    
+app_managementCompanyMasterPurchaseInit:
+    path: /managementCompanyMasterPurchaseInit
+    controller: App\Controller\managementCompanyMasterController::managementCompanyMasterPurchaseInit
+app_managementCompanyMasterSellingInit:
+    path: /managementCompanyMasterSellingInit
+    controller: App\Controller\managementCompanyMasterController::managementCompanyMasterSellingInit
+
+app_managementCompanyMasterSellingSave:
+    path: /managementCompanyMasterSellingSave
+    controller: App\Controller\managementCompanyMasterController::managementCompanyMasterSellingSave
+
+app_managementCompanyMasterAccountancyInit:
+    path: /managementCompanyMasterAccountancyInit
+    controller: App\Controller\managementCompanyMasterController::managementCompanyMasterAccountancyInit
+
+app_managementPostinInit:
+    path: /managementPostinInit
+    controller: App\Controller\managementController::managementPostinInit
+app_managementPostinBoxInit:
+    path: /managementPostinBoxInit
+    controller: App\Controller\managementPostinController::managementPostinBoxInit
+app_managementPostinBoxSave:
+    path: /managementPostinBoxSave
+    controller: App\Controller\managementPostinController::managementPostinBoxSave
+app_managementPostinBoxDelete:
+    path: /managementPostinBoxDelete
+    controller: App\Controller\managementPostinController::managementPostinBoxDelete
+app_managementPostinChangeData:
+    path: /managementPostinChangeData
+    controller: App\Controller\managementPostinController::managementPostinChangeData
+
+app_managementPostinVoucherInit:
+    path: /managementPostinVoucherInit
+    controller: App\Controller\managementPostinController::managementPostinVoucherInit
+app_managementPostinVoucherSave:
+    path: /managementPostinVoucherSave
+    controller: App\Controller\managementPostinController::managementPostinVoucherSave
+app_managementPostinVoucherDelete:
+    path: /managementPostinVoucherDelete
+    controller: App\Controller\managementPostinController::managementPostinVoucherDelete
+    
+app_managementPostoutInit:
+    path: /managementPostoutInit
+    controller: App\Controller\managementController::managementPostoutInit
+app_managementPostoutBoxInit:
+    path: /managementPostoutBoxInit
+    controller: App\Controller\managementPostoutController::managementPostoutBoxInit
+app_managementPostoutBoxSave:
+    path: /managementPostoutBoxSave
+    controller: App\Controller\managementPostoutController::managementPostoutBoxSave
+app_managementPostoutBoxDelete:
+    path: /managementPostoutBoxDelete
+    controller: App\Controller\managementPostoutController::managementPostoutBoxDelete
+app_managementPostoutChangeData:
+    path: /managementPostoutChangeData
+    controller: App\Controller\managementPostoutController::managementPostoutChangeData
+
+
+
+app_managementFirmsInit:
+    path: /managementFirmsInit
+    controller: App\Controller\managementFirmsController::managementFirmsInit
+app_managementFirmsListInit:
+    path: /managementFirmsListInit
+    controller: App\Controller\managementFirmsController::managementFirmsListInit
+app_managementFirmsAddressInit:
+    path: /managementFirmsAddressInit
+    controller: App\Controller\managementFirmsController::managementFirmsAddressInit
+app_managementFirmsProductsInit:
+    path: /managementFirmsProductsInit
+    controller: App\Controller\managementFirmsController::managementFirmsProductsInit
+app_managementFirmsFakturaInit:
+    path: /managementFirmsFakturaInit
+    controller: App\Controller\managementFirmsController::managementFirmsFakturaInit
+app_managementFirmsFakturaSave:
+    path: /managementFirmsFakturaSave
+    controller: App\Controller\managementFirmsController::managementFirmsFakturaSave
+app_managementFirmsNewFirmSave:
+    path: /managementFirmsNewFirmSave
+    controller: App\Controller\managementFirmsController::managementFirmsNewFirmSave
+
+app_managementUserListInit:
+    path: /managementUserListInit
+    controller: App\Controller\managementUserController::managementUserListInit
+app_managementUserGetFirm:
+    path: /managementUserGetFirm
+    controller: App\Controller\managementUserController::managementUserGetFirm
+app_managementUserSave:
+    path: /managementUserSave
+    controller: App\Controller\managementUserController::managementUserSave
+app_managementUserDelete:
+    path: /managementUserDelete
+    controller: App\Controller\managementUserController::managementUserDelete
+app_managementUserClassesInit:
+    path: /managementUserClassesInit
+    controller: App\Controller\managementUserController::managementUserClassesInit
+app_managementUserClassSave:
+    path: /managementUserClassSave
+    controller: App\Controller\managementUserController::managementUserClassSave
+app_managementUserClassDelete:
+    path: /managementUserClassDelete
+    controller: App\Controller\managementUserController::managementUserClassDelete
+app_managementUserTeamsInit:
+    path: /managementUserTeamsInit
+    controller: App\Controller\managementUserController::managementUserTeamsInit
+app_managementUserTeamSave:
+    path: /managementUserTeamSave
+    controller: App\Controller\managementUserController::managementUserTeamSave
+app_managementUserTeamDelete:
+    path: /managementUserTeamDelete
+    controller: App\Controller\managementUserController::managementUserTeamDelete
+
+app_managementTicketsListInit:
+    path: /managementTicketsListInit
+    controller: App\Controller\ticketController::managementTicketsListInit
+app_ticketsGetByDivision:
+    path: /ticketsGetByDivision
+    controller: App\Controller\ticketController::ticketsGetByDivision
+app_ticketsChangeData:
+    path: /ticketsChangeData
+    controller: App\Controller\ticketController::ticketsChangeData
+app_ticketGetFiles:
+    path: /ticketGetFiles
+    controller: App\Controller\ticketController::ticketGetFiles
+    
+app_managementExamListInit:
+    path: /managementExamListInit
+    controller: App\Controller\examController::managementExamListInit
+app_managementExamSave:
+    path: /managementExamSave
+    controller: App\Controller\examController::managementExamSave
+app_managementExamDelete:
+    path: /managementExamDelete
+    controller: App\Controller\examController::managementExamDelete
+
+    
+app_articleInit:
+    path: /articleInit
+    controller: App\Controller\articleController::articleInit
+app_articleMasterInit:
+    path: /articleMasterInit
+    controller: App\Controller\articleController::articleMasterInit
+app_articleMasterListInit:
+    path: /articleMasterListInit
+    controller: App\Controller\articleController::articleMasterListInit
+app_articleMasterSave:
+    path: /articleMasterSave
+    controller: App\Controller\articleController::articleMasterSave
+app_articleMasterDelete:
+    path: /articleMasterDelete
+    controller: App\Controller\articleController::articleMasterDelete
+app_articleGroupsListInit:
+    path: /articleGroupsListInit
+    controller: App\Controller\articleController::articleGroupsListInit
+app_articleGroupsSave:
+    path: /articleGroupsSave
+    controller: App\Controller\articleController::articleGroupsSave
+app_articleGroupsDelete:
+    path: /articleGroupsDelete
+    controller: App\Controller\articleController::articleGroupsDelete
+app_articleCategoriesListInit:
+    path: /articleCategoriesListInit
+    controller: App\Controller\articleController::articleCategoriesListInit
+app_articleCategoriesSave:
+    path: /articleCategoriesSave
+    controller: App\Controller\articleController::articleCategoriesSave
+app_articleCategoriesDelete:
+    path: /articleCategoriesDelete
+    controller: App\Controller\articleController::articleCategoriesDelete
+app_articleVariationsListInit:
+    path: /articleVariationsListInit
+    controller: App\Controller\articleController::articleVariationsListInit
+app_articleVariationsSave:
+    path: /articleVariationsSave
+    controller: App\Controller\articleController::articleVariationsSave
+app_articleVariationsDelete:
+    path: /articleVariationsDelete
+    controller: App\Controller\articleController::articleVariationsDelete
+app_articleGet4Positions:
+    path: /articleGet4Positions
+    controller: App\Controller\articleController::articleGet4Positions
+app_getArticleFile:
+    path: /getArticleFile
+    controller: App\Controller\fileController::getArticleFile
+app_uploadArticleImageFile:
+    path: /uploadArticleImageFile
+    controller: App\Controller\fileController::uploadArticleImageFile
+app_uploadArticleDataSheetFile:
+    path: /uploadArticleDataSheetFile
+    controller: App\Controller\fileController::uploadArticleDataSheetFile
+app_getDataSheetFile:
+    path: /getDataSheetFile
+    controller: App\Controller\fileController::getDataSheetFile
+app_getBanner:
+    path: /getBanner
+    controller: App\Controller\fileController::getBanner
+    
+app_storeInit:
+    path: /storeListInit
+    controller: App\Controller\storeController::storeListInit
+app_storeListInit:
+    path: /storeListInit
+    controller: App\Controller\storeController::storeListInit
+app_storeGetTransaction:
+    path: /storeGetTransaction
+    controller: App\Controller\storeController::storeGetTransaction
+app_storeGetArticleTransactions:
+    path: /storeGetArticleTransactions
+    controller: App\Controller\storeController::storeGetArticleTransactions
+app_storeGetOrderTransactions:
+    path: /storeGetOrderTransactions
+    controller: App\Controller\storeController::storeGetOrderTransactions
+app_storeTransactionDelete:
+    path: /storeTransactionDelete
+    controller: App\Controller\storeController::storeTransactionDelete
+
+app_storeReorderListInit:
+    path: /storeReorderListInit
+    controller: App\Controller\storeController::storeReorderListInit
+app_storeReorderRequisition:
+    path: /storeReorderRequisition
+    controller: App\Controller\storeController::storeReorderRequisition
+
+app_purchaseBookInit:
+    path: /purchaseBookInit
+    controller: App\Controller\purchaseController::purchaseBookInit
+app_purchaseBookListInit:
+    path: /purchaseBookListInit
+    controller: App\Controller\purchaseController::purchaseBookListInit
+app_purchaseBookListDelete:
+    path: /purchaseBookListDelete
+    controller: App\Controller\purchaseController::purchaseBookListDelete
+app_purchaseBookChangeData:
+    path: /purchaseBookChangeData
+    controller: App\Controller\purchaseController::purchaseBookChangeData
+app_purchaseOrderInit:
+    path: /purchaseOrderInit
+    controller: App\Controller\purchaseController::purchaseOrderInit
+app_purchaseOrderSave:
+    path: /purchaseOrderSave
+    controller: App\Controller\purchaseController::purchaseOrderSave
+app_purchaseOrderPositionSave:
+    path: /purchaseOrderPositionSave
+    controller: App\Controller\purchaseController::purchaseOrderPositionSave
+app_purchaseOrderPositionDelete:
+    path: /purchaseOrderPositionDelete
+    controller: App\Controller\purchaseController::purchaseOrderPositionDelete
+app_purchaseGetArticles:
+    path: /purchaseGetArticles
+    controller: App\Controller\purchaseController::purchaseGetArticles
+
+app_purchaseOrderStoreInit:
+    path: /purchaseOrderStoreInit
+    controller: App\Controller\purchaseController::purchaseOrderStoreInit
+app_purchaseOrderStoreGetStock:
+    path: /purchaseOrderStoreGetStock
+    controller: App\Controller\purchaseController::purchaseOrderStoreGetStock
+app_purchaseOrderStoreSave:
+    path: /purchaseOrderStoreSave
+    controller: App\Controller\purchaseController::purchaseOrderStoreSave
+app_purchaseOrderStoreDelete:
+    path: /purchaseOrderStoreDelete
+    controller: App\Controller\purchaseController::purchaseOrderStoreDelete
+    
+
+app_purchaseOrderIncomingInit:
+    path: /purchaseOrderIncomingInit
+    controller: App\Controller\purchaseController::purchaseOrderIncomingInit
+app_purchaseOrderIncomingSave:
+    path: /purchaseOrderIncomingSave
+    controller: App\Controller\purchaseController::purchaseOrderIncomingSave
+app_purchaseOrderIncomingPositionSave:
+    path: /purchaseOrderIncomingPositionSave
+    controller: App\Controller\purchaseController::purchaseOrderIncomingPositionSave
+app_purchaseOrderIncomingPositionSaveR:
+    path: /purchaseOrderIncomingPositionSaveR
+    controller: App\Controller\purchaseController::purchaseOrderIncomingPositionSaveR
+
+app_purchaseOrderInvoiceInit:
+    path: /purchaseOrderInvoiceInit
+    controller: App\Controller\purchaseController::purchaseOrderInvoiceInit
+app_purchaseOrderInvoiceSave:
+    path: /purchaseOrderInvoiceSave
+    controller: App\Controller\purchaseController::purchaseOrderInvoiceSave
+app_purchaseOrderInvoicePositionSave:
+    path: /purchaseOrderInvoicePositionSave
+    controller: App\Controller\purchaseController::purchaseOrderInvoicePositionSave
+app_purchaseOrderInvoicePositionDelete:
+    path: /purchaseOrderInvoicePositionDelete
+    controller: App\Controller\purchaseController::purchaseOrderInvoicePositionDelete
+
+app_purchaseOrderBookingInit:
+    path: /purchaseOrderBookingInit
+    controller: App\Controller\purchaseController::purchaseOrderBookingInit
+app_purchaseOrderBookingSave:
+    path: /purchaseOrderBookingSave
+    controller: App\Controller\purchaseController::purchaseOrderBookingSave
+app_purchaseOrderBookingPositionSave:
+    path: /purchaseOrderBookingPositionSave
+    controller: App\Controller\purchaseController::purchaseOrderBookingPositionSave
+app_purchaseOrderBookingPositionDelete:
+    path: /purchaseOrderBookingPositionDelete
+    controller: App\Controller\purchaseController::purchaseOrderBookingPositionDelete
+
+app_purchaseOrderMessagesInit:
+    path: /purchaseOrderMessagesInit
+    controller: App\Controller\purchaseController::purchaseOrderMessagesInit
+app_purchaseOrderMessagesSave:
+    path: /purchaseOrderMessagesSave
+    controller: App\Controller\purchaseController::purchaseOrderMessagesSave
+app_purchaseOrderMessagesDelete:
+    path: /purchaseOrderMessagesDelete
+    controller: App\Controller\purchaseController::purchaseOrderMessagesDelete
+
+app_purchaseRequisitionInit:
+    path: /purchaseRequisitionInit
+    controller: App\Controller\purchaseController::purchaseRequisitionInit
+app_purchaseRequisitionListInit:
+    path: /purchaseRequisitionListInit
+    controller: App\Controller\purchaseController::purchaseRequisitionListInit
+app_purchaseRequisitionDelete:
+    path: /purchaseRequisitionDelete
+    controller: App\Controller\purchaseController::purchaseRequisitionDelete
+app_purchaseRequisitionOrderInit:
+    path: /purchaseRequisitionOrderInit
+    controller: App\Controller\purchaseController::purchaseRequisitionOrderInit
+app_purchaseRequisitionOrderSave:
+    path: /purchaseRequisitionOrderSave
+    controller: App\Controller\purchaseController::purchaseRequisitionOrderSave
+app_purchaseRequisitionOrderPositionSave:
+    path: /purchaseRequisitionOrderPositionSave
+    controller: App\Controller\purchaseController::purchaseRequisitionOrderPositionSave
+app_purchaseRequisitionOrderPositionDelete:
+    path: /purchaseRequisitionOrderPositionDelete
+    controller: App\Controller\purchaseController::purchaseRequisitionOrderPositionDelete
+
+app_purchaseKKInit:
+    path: /purchaseKKInit
+    controller: App\Controller\purchaseController::purchaseKKInit
+app_purchaseKKListInit:
+    path: /purchaseKKListInit
+    controller: App\Controller\purchaseController::purchaseKKListInit
+app_purchaseKKDelete:
+    path: /purchaseKKDelete
+    controller: App\Controller\purchaseController::purchaseKKDelete
+app_purchaseKKOrderInit:
+    path: /purchaseKKOrderInit
+    controller: App\Controller\purchaseController::purchaseKKOrderInit
+app_purchaseKKOrderSave:
+    path: /purchaseKKOrderSave
+    controller: App\Controller\purchaseController::purchaseKKOrderSave
+app_purchaseKKOrderPositionSave:
+    path: /purchaseKKOrderPositionSave
+    controller: App\Controller\purchaseController::purchaseKKOrderPositionSave
+app_purchaseKKOrderPositionDelete:
+    path: /purchaseKKOrderPositionDelete
+    controller: App\Controller\purchaseController::purchaseKKOrderPositionDelete
+
+app_purchaseEnquiryInit:
+    path: /purchaseEnquiryInit
+    controller: App\Controller\purchaseController::purchaseEnquiryInit
+app_purchaseEnquiryListInit:
+    path: /purchaseEnquiryListInit
+    controller: App\Controller\purchaseController::purchaseEnquiryListInit
+
+app_purchaseSourceSupplyInit:
+    path: /purchaseSourceSupplyInit
+    controller: App\Controller\purchaseController::purchaseSourceSupplyInit
+app_purchaseSourceSupplySearch:
+    path: /purchaseSourceSupplySearch
+    controller: App\Controller\purchaseController::purchaseSourceSupplySearch
+        
+app_sellingBookInit:
+    path: /sellingBookInit
+    controller: App\Controller\sellingController::sellingBookInit
+app_sellingBookListInit:
+    path: /sellingBookListInit
+    controller: App\Controller\sellingController::sellingBookListInit
+app_sellingBookListDelete:
+    path: /sellingBookListDelete
+    controller: App\Controller\sellingController::sellingBookListDelete
+app_sellingBookListChangeData:
+    path: /sellingBookListChangeData
+    controller: App\Controller\sellingController::sellingBookListChangeData
+    
+app_sellingOrderInit:
+    path: /sellingOrderInit
+    controller: App\Controller\sellingController::sellingOrderInit
+app_sellingOrderPositionSave:
+    path: /sellingOrderPositionSave
+    controller: App\Controller\sellingController::sellingOrderPositionSave
+app_sellingOrderPositionDelete:
+    path: /sellingOrderPositionDelete
+    controller: App\Controller\sellingController::sellingOrderPositionDelete
+
+
+
+
+app_sellingOrderStoreInit:
+    path: /sellingOrderStoreInit
+    controller: App\Controller\sellingController::sellingOrderStoreInit
+app_sellingOrderStoreGetStock:
+    path: /sellingOrderStoreGetStock
+    controller: App\Controller\sellingController::sellingOrderStoreGetStock
+app_sellingOrderStoreSave:
+    path: /sellingOrderStoreSave
+    controller: App\Controller\sellingController::sellingOrderStoreSave
+app_sellingOrderStoreDelete:
+    path: /sellingOrderStoreDelete
+    controller: App\Controller\sellingController::sellingOrderStoreDelete
+
+app_sellingOrderDispatchInit:
+    path: /sellingOrderDispatchInit
+    controller: App\Controller\sellingController::sellingOrderDispatchInit
+app_sellingOrderDispatchSave:
+    path: /sellingOrderDispatchSave
+    controller: App\Controller\sellingController::sellingOrderDispatchSave
+app_sellingOrderDispatchCost:
+    path: /sellingOrderDispatchCost
+    controller: App\Controller\sellingController::sellingOrderDispatchCost
+app_sellingOrderPackagePositionSave:
+    path: /sellingOrderPackagePositionSave
+    controller: App\Controller\sellingController::sellingOrderPackagePositionSave
+app_sellingOrderPackagePositionDelete:
+    path: /sellingOrderPackagePositionDelete
+    controller: App\Controller\sellingController::sellingOrderPackagePositionDelete
+
+app_sellingOrderReceiptInit:
+    path: /sellingOrderReceiptInit
+    controller: App\Controller\sellingController::sellingOrderReceiptInit
+app_sellingOrderReceiptSave:
+    path: /sellingOrderReceiptSave
+    controller: App\Controller\sellingController::sellingOrderReceiptSave
+app_sellingOrderCreditPositionSave:
+    path: /sellingOrderCreditPositionSave
+    controller: App\Controller\sellingController::sellingOrderCreditPositionSave
+app_sellingOrderCreditPositionDelete:
+    path: /sellingOrderCreditPositionDelete
+    controller: App\Controller\sellingController::sellingOrderCreditPositionDelete
+
+
+app_sellingOrderInvoiceInit:
+    path: /sellingOrderInvoiceInit
+    controller: App\Controller\sellingController::sellingOrderInvoiceInit
+app_sellingOrderInvoiceSave:
+    path: /sellingOrderInvoiceSave
+    controller: App\Controller\sellingController::sellingOrderInvoiceSave
+app_sellingOrderInvoicePositionSave:
+    path: /sellingOrderInvoicePositionSave
+    controller: App\Controller\sellingController::sellingOrderInvoicePositionSave
+app_sellingOrderInvoicePositionDelete:
+    path: /sellingOrderInvoicePositionDelete
+    controller: App\Controller\sellingController::sellingOrderInvoicePositionDelete
+
+app_sellingOrderBookingInit:
+    path: /sellingOrderBookingInit
+    controller: App\Controller\sellingController::sellingOrderBookingInit
+app_sellingOrderBookingSave:
+    path: /sellingOrderBookingSave
+    controller: App\Controller\sellingController::sellingOrderBookingSave
+app_sellingOrderBookingPositionSave:
+    path: /sellingOrderBookingPositionSave
+    controller: App\Controller\sellingController::sellingOrderBookingPositionSave
+app_sellingOrderBookingPositionDelete:
+    path: /sellingOrderBookingPositionDelete
+    controller: App\Controller\sellingController::sellingOrderBookingPositionDelete
+
+app_sellingOrderMessagesInit:
+    path: /sellingOrderMessagesInit
+    controller: App\Controller\sellingController::sellingOrderMessagesInit
+app_sellingOrderMessagesSave:
+    path: /sellingOrderMessagesSave
+    controller: App\Controller\sellingController::sellingOrderMessagesSave
+app_sellingOrderMessagesDelete:
+    path: /sellingOrderMessagesDelete
+    controller: App\Controller\sellingController::sellingOrderMessagesDelete
+    
+app_accountancyInit:
+    path: /accountancyInit
+    controller: App\Controller\accountancyController::accountancyInit
+app_accountancyAccountsInit:
+    path: /accountancyAccountsInit
+    controller: App\Controller\accountancyController::accountancyAccountsInit
+app_accountancyOverviewInit:
+    path: /accountancyOverviewInit
+    controller: App\Controller\accountancyController::accountancyOverviewInit
+app_accountancyChangeData:
+    path: /accountancyChangeData
+    controller: App\Controller\accountancyController::accountancyChangeData
+app_accountancyJournalPrint:
+    path: /accountancyJournalPrint
+    controller: App\Controller\printController::accountancyJournalPrint
+app_accountancyBankInit:
+    path: /accountancyBankInit
+    controller: App\Controller\accountancyController::accountancyBankInit
+app_accountancyBankJournalListInit:
+    path: /accountancyBankJournalListInit
+    controller: App\Controller\accountancyController::accountancyBankJournalListInit
+app_accountancyPayFriendListInit:
+    path: /accountancyPayFriendListInit
+    controller: App\Controller\accountancyController::accountancyPayFriendJournalListInit
+app_accountancyBankTransactionsFirm:
+    path: /accountancyBankTransactionsFirm
+    controller: App\Controller\accountancyController::accountancyBankTransactionsFirm
+
+app_accountancyImpersonalAccountsListInit:
+    path: /accountancyImpersonalAccountsListInit
+    controller: App\Controller\accountancyController::accountancyImpersonalAccountsListInit
+app_accountancyImpersonalAccountsSave:
+    path: /accountancyImpersonalAccountsSave
+    controller: App\Controller\accountancyController::accountancyImpersonalAccountsSave
+app_accountancyImpersonalAccountsDelete:
+    path: /accountancyImpersonalAccountsDelete
+    controller: App\Controller\accountancyController::accountancyImpersonalAccountsDelete
+    
+app_accountancyPersonalAccountsListInit:
+    path: /accountancyPersonalAccountsListInit
+    controller: App\Controller\accountancyController::accountancyPersonalAccountsListInit
+app_accountancyPersonalAccountsSave:
+    path: /accountancyPersonalAccountsSave
+    controller: App\Controller\accountancyController::accountancyPersonalAccountsSave
+app_accountancyPersonalAccountsDelete:
+    path: /accountancyPersonalAccountsDelete
+    controller: App\Controller\accountancyController::accountancyPersonalAccountsDelete
+    
+app_accountancyOverviewJournalListInit:
+    path: /accountancyOverviewJournalListInit
+    controller: App\Controller\accountancyController::accountancyOverviewJournalListInit
+app_accountancyOverviewOutstandingListInit:
+    path: /accountancyOverviewOutstandingListInit
+    controller: App\Controller\accountancyController::accountancyOverviewOutstandingListInit
+app_accountancyOverviewLedgerListInit:
+    path: /accountancyOverviewLedgerListInit
+    controller: App\Controller\accountancyController::accountancyOverviewLedgerListInit
+app_accountancyOverviewBalanceListInit:
+    path: /accountancyOverviewBalanceListInit
+    controller: App\Controller\accountancyController::accountancyOverviewBalanceListInit
+app_accountancyEurobankListInit:
+    path: /accountancyEurobankListInit
+    controller: App\Controller\accountancyController::accountancyEurobankListInit
+
+    
+app_dialogBookingSave:
+    path: /dialogBookingSave
+    controller: App\Controller\accountancyController::dialogBookingSave
+app_dialogBookingDelete:
+    path: /dialogBookingDelete
+    controller: App\Controller\accountancyController::dialogBookingDelete
+app_getBookingJournal:
+    path: /getBookingJournal
+    controller: App\Controller\accountancyController::getBookingJournal
+              
+app_sysAdminInit:
+    path: /sysAdminInit
+    controller: App\Controller\sysAdminController::sysAdminInit
+app_sysAdminNewFirmsInit:
+    path: /sysAdminNewFirmsInit
+    controller: App\Controller\sysAdminController::sysAdminNewFirmsInit
+app_sysAdminNewFirmsSave:
+    path: /sysAdminNewFirmsSave
+    controller: App\Controller\sysAdminController::sysAdminNewFirmsSave
+app_sysAdminNewFirmsDelete:
+    path: /sysAdminNewFirmsDelete
+    controller: App\Controller\sysAdminController::sysAdminNewFirmsDelete
+app_sysAdminChangeFirmInit:
+    path: /sysAdminChangeFirmInit
+    controller: App\Controller\sysAdminController::sysAdminChangeFirmInit
+app_sysAdminChangeFirm:
+    path: /sysAdminChangeFirm
+    controller: App\Controller\sysAdminController::sysAdminChangeFirm
+
+app_sysAdminGridInit:
+    path: /sysAdminGridInit
+    controller: App\Controller\sysAdminController::sysAdminGridInit
+app_sysAdminGridSave:
+    path: /sysAdminGridSave
+    controller: App\Controller\sysAdminController::sysAdminGridSave
+
+app_sysAdminPrintTemplatesInit:
+    path: /sysAdminPrintTemplatesInit
+    controller: App\Controller\sysAdminController::sysAdminPrintTemplatesInit
+app_sysAdminPrintTemplatesSave:
+    path: /sysAdminPrintTemplatesSave
+    controller: App\Controller\sysAdminController::sysAdminPrintTemplatesSave
+app_sysAdminMigrationDatabaseInit:
+    path: /sysAdminMigrationDatabaseInit
+    controller: App\Controller\sysAdminController::sysAdminMigrationDatabaseInit
+app_sysAdminMigrationDoIt:
+    path: /sysAdminMigrationDoIt
+    controller: App\Controller\sysAdminController::sysAdminMigrationDoIt
+# PHPMailer 
+app_PHPMailer:
+    path: /PHPMailer
+    controller: App\Controller\PHPMailer::PHPMailer
+app_SMTP:
+    path: /SMTP
+    controller: App\Controller\SMTP::SMTP
+app_OAuth:
+    path: /OAuth
+    controller: App\Controller\OAuth::OAuth
+# PHPMailer 
+
+app_purchasePrint:
+    path: /purchasePrint
+    controller: App\Controller\printController::purchasePrint
+app_purchasePrintPrepare:
+    path: /purchasePrintPrepare
+    controller: App\Controller\printController::purchasePrintPrepare
+app_sellingPrint:
+    path: /sellingPrint
+    controller: App\Controller\printController::sellingPrint
+app_sellingPrintPrepare:
+    path: /sellingPrintPrepare
+    controller: App\Controller\printController::sellingPrintPrepare
+app_pdfParserInit:
+    path: /pdfParserInit
+    controller: App\Controller\pdfParser::pdfParserInit
+    
+        

@@ -1,0 +1,146 @@
+<?php
+// src/Controller/indexController.php
+// use Symfony\Component\HttpFoundation\Session\Storage\PhpBridgeSessionStorage;
+namespace App\Controller;
+use Symfony\Component\HttpFoundation\Session\Session;
+use Symfony\Component\HttpFoundation\Session\Storage\NativeSessionStorage;
+use Symfony\Component\HttpFoundation\Session\Storage\Handler\NativeFileSessionHandler;
+
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\Request; 
+use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use App\Entity\P17User; 
+
+
+
+/** / for direkt calls of mysql-queries 
+use Doctrine\ORM\Query\ResultSetMapping;
+*/
+/**
+
+ * session-variables
+ * stored json_encoded in one variable
+ * $_SESSION["auth"]=json_encode($row);
+ * $row["lang"]='';
+ * $row["firmID"]='';
+ * $row["schoolNo"]='';
+ * $row["company"]='';
+ * $row["email"]='';
+ * $row["userID"]='-1';
+ * $row["user"]='';
+ * $row["user_name"]='';
+ * $row["classID"]='';
+ * $row["class_name"]='';
+ * $row["teamID"]='';
+ * $row["team_name"]='';
+ * $row["profileID"]='';
+ * $row["profile_name"]='';
+ * $row["status"]='';
+ * $row["menu"]='';
+ * get the variable by json_decode
+ * $firmID = json_decode($_SESSION["auth"])->{'firmID'};
+ 
+
+$_SESSION["auth"] = '';
+*/
+
+
+class indexController extends Controller
+{
+
+	/**
+	* @Route("/index")
+	*/        
+
+    public function index()
+    {
+      
+      return $this->render('de/index.html.twig');
+    }
+
+    /**
+     * @Route("/login")
+     */
+    
+      public function login(Request $request)
+        {
+        /*
+        if ($request->isXmlHttpRequest() || $request->query->get('showJson') == 1) {
+        $jsonData = array();
+        $idx = 0;
+        */
+            $title="dashboard";
+            $date=date('d.m.Y');
+
+           
+            $user = $_REQUEST["user"];
+            $password = $_REQUEST["password"];
+
+            
+            $repository = $this->getDoctrine()->getRepository(P17User::class);
+
+            // $result = $repository->findOneByUser('hk');
+            /*
+            $result = $repository->findOneBy(
+                array('user' => $user , 'password' => $password)
+                );
+            
+           
+            // query for multiple products matching the given name, ordered by price
+            $products = $repository->findBy(
+                array('name' => 'Keyboard'),
+                array('price' => 'ASC')
+                );
+            
+            */
+            $em = $this->getDoctrine()->getManager();
+
+            $sql="select u.* from p17_user u where u.user='$user' AND u.password=password('$password')";
+                        
+            $result = $em->getConnection()->prepare($sql);
+            $result->execute();
+            echo json_encode($result->fetchAll());
+            /*
+            $query = $em->createQuery(
+                    'SELECT u
+                    FROM App:P17User u
+                    WHERE 
+                    u.user = :pUser
+                    ORDER BY u.name ASC'
+                    )
+                    ->setParameters(array('pUser' => $user));
+            
+            $result = $query->getOneOrNullResult();
+            */
+            if (!$result) {
+                return $this->redirect('index');
+            } else {
+              
+                //echo $result->getName();
+
+            }
+            
+            // Get Symfony to interface with this existing session
+            /*
+            $sessionStorage = new NativeSessionStorage(array(), new NativeFileSessionHandler());
+            $session = new Session($sessionStorage);
+            
+            // symfony will now interface with the existing PHP session
+            $session->start();
+            $session->set('name', 'Drak');
+            //echo $session->get('name');
+            
+             */
+            return $this->redirect('dashboard');
+            
+            //return new JSONResponse($result);
+            //return new JSONResponse($result->getUser());
+            
+            //return $this->forward('App\Controller\dashboardController::dashboard');
+            
+            
+        }
+
+}

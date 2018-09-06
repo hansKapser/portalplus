@@ -1,0 +1,36 @@
+BEGIN 
+				declare action varchar(50) default 'update';
+                SET NEW.dateTime = NOW(); 
+                if (NEW.userID is null) 
+                then set NEW.userID=1; 
+                else SET NEW.userID = @_userID; 
+                end if; 
+                
+                if (NEW.orderNO!=OLD.orderNo)
+                then set action=concat('orderNo: ',OLD.orderNo,"=>",NEW.orderNo);
+                insert into p17_user_activities 
+                    (NEW.userID,p17_table,table_id,action) 
+                    values (NEW.userID,'p17_orderbook',OLD.orderID,action); 
+                end if;
+
+				if (NEW.purchaseNO!=OLD.purchaseNo)
+                then set action=concat('purchaseNo: ',OLD.purchaseNo,"=>",NEW.purchaseNo);
+                insert into p17_user_activities 
+                    (NEW.userID,p17_table,table_id,action)
+                    values (NEW.userID,'p17_orderbook',OLD.orderID,action); 
+
+                end if;
+
+				if (NEW.dispatchDate!=OLD.dispatchDate)
+                then set action=concat('dispatch: ',OLD.dispatchDate,"=>",NEW.dispatchDate);
+                insert into p17_user_activities 
+                    values (NEW.userID,'p17_orderbook',OLD.orderID,action); 
+                end if;
+
+				if (NEW.receiptDate!=OLD.receiptDate)
+                then set action=concat('receipt: ',OLD.receiptDate,"=>",NEW.receiptDate);
+                insert into p17_user_activities 
+                    values (NEW.userID,'p17_orderbook',OLD.orderID,action); 
+                end if;
+                
+                END

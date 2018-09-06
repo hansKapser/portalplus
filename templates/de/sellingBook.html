@@ -1,0 +1,71 @@
+		<div id="navtabs" style="width:1200px">
+			<ul>
+				<li id="registerSellingBookList"><a
+					href="javascript:orderID=-1;registerMenuSelling('sellingBookListInit')" title="Auftragsbuch">Auftrags<span accesskey=b><u>b</u>uch</a></li>
+				
+				<li id="registerSellingOrder"><span id=wfSAB></span><a
+					href="javascript:registerMenuSelling('sellingOrderInit')" title="Auftrag"><span accesskey=a><u>A</u>uftrag</a></li>
+				
+				<li id="registerSellingStore"><span id=wfSLD></span><a
+					href="javascript:registerMenuSelling('sellingOrderStoreInit')" title="Lager"><span accesskey=l><u>L</u>agerdispo</a></li>
+				
+				<li id="registerSellingOrderDispatch"><span id=wfSWV></span><a
+					href="javascript:registerMenuSelling('sellingOrderDispatchInit')" title="Warenversand"><span accesskey=w><u>W</u>arenversand</a></li>
+				
+				<li id="registerSellingOrderDispatch"><span id=wfSES></span><a
+					href="javascript:registerMenuSelling('sellingOrderReceiptInit')" title="Empfangsschein"><span accesskey=e><u>E</u>mpfangsschein</a></li>
+
+				<li id="registerSellingOrderInvoice"><span id=wfSAR></span><a
+					href="javascript:registerMenuSelling('sellingOrderInvoiceInit')" title="Rechnung"><span accesskey=r><u>R</u>echnung</a></li>
+				
+				<li id="registerSellingOrderBooking"><span id=wfSDF></span><a
+					href="javascript:registerMenuSelling('sellingOrderBookingInit')" title="Buchung">B<span accesskey=u><u>u</u>chungen</a></li>
+				
+				<li id="registerSellingOrderMessages"><span id=wfSGB></span><a
+					href="javascript:registerMenuSelling('sellingOrderMessagesInit')" title="Nachrichten"><span accesskey=n><u>N</u>achrichten</a></li>
+				
+				<li id="li_icon_menu" style="position:absolute;"><img
+					src='./web/images/icon_menu.png' style="width:20px;"
+					onclick="javascript:showIconMenu('sellingBookIconMenu')" alt=""></li>
+			</ul>
+			<BR>
+		</div>
+
+<ul id="sellingBookIconMenu"
+	style='display: none; background-color: #fff; z-index: 1; position: absolute; top: 180px; border-width: 1px; border-style: solid; border-color: #000;'>
+	<li onclick="javascript:sellingBookIconMenuControl('voucher')">
+		<div>
+			<span class="ui-icon ui-icon-clipboard"></span>Beleg
+		</div>
+	</li>
+	<li onclick="javascript:sellingBookIconMenuControl('catalogue')">
+		<div>
+			<span class="ui-icon ui-icon-cart"></span>Katalog
+		</div>
+	</li>
+	<li onclick="javascript:sellingBookIconMenuControl('print')">
+		<div>
+			<span class="ui-icon ui-icon-print"></span>Print
+		</div>
+	</li>
+	<li onclick="javascript:sellingBookIconMenuControl('email')">
+		<div>
+			<span class="ui-icon ui-icon-mail-open"></span>E-Mail
+		</div>
+	</li>
+	<li onclick="javascript:sellingBookIconMenuControl('exam')">
+		<div>
+			<span class="ui-icon ui-icon-person"></span>Pr&uuml;fung
+		</div>
+	</li>
+
+	<li class="ui-state-disabled" onclick="javascript:sellingBookIconMenuControl('export')">
+		<div>
+			<span class="ui-icon ui-icon-disk"></span>Export
+		</div>
+	</li>
+</ul>
+		
+
+
+<div class=contentSelling style="position: relative ;top: 0px"></div>

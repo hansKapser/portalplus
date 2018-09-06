@@ -1,0 +1,73 @@
+		<div id="navtabs" style="width:1200px">
+			<ul>
+				<li id="registerPurchaseBookList"><a
+					href="javascript:orderID=-1;registerMenuPurchase('purchaseBookListInit')" title="Bestellbuch"><span accesskey=b><u>B</u>estellbuch</a></li>
+				
+				<li id="registerPurchaseOrder"><span id=wfSBE></span><a
+					href="javascript:registerMenuPurchase('purchaseOrderInit')" title="Bestellung">B<span accesskey=e><u>e</u>stellung</a></li>
+				
+				<li id="registerPurchaseStore"><span id=wfSLD></span><a
+					href="javascript:registerMenuPurchase('purchaseOrderStoreInit')" title="Lager"><span accesskey=l><u>L</u></span>agerdispo</a></li>
+				
+				<li id="registerPurchaseOrderIncoming"><span id=wfSWE></span><a
+					href="javascript:registerMenuPurchase('purchaseOrderIncomingInit')" title="Wareneingang"><span accesskey=w><u>W</u>areneingang</a></li>
+				
+				<li id="registerPurchaseOrderInvoice"><span id=wfSRP></span><a
+					href="javascript:registerMenuPurchase('purchaseOrderInvoiceInit')" title="Rechnungsprüfung"><span accesskey=r><u>R</u>echnungsprüfung</a></li>
+				
+				<li id="registerPurchaseOrderBooking"><span id=wfSKF></span><a
+					href="javascript:registerMenuPurchase('purchaseOrderBookingInit')" title="Buchung">B<span accesskey=u><u>u</u>chungen</a></li>
+				
+				<li id="registerPurchaseOrderMessages"><span id=wfSGB></span><a
+					href="javascript:registerMenuPurchase('purchaseOrderMessagesInit')" title="Nachrichten"><span accesskey=n><u>N</u>achrichten</a></li>
+				
+				<li id="li_icon_menu" style="position:absolute;right:10;"><img
+					src='./web/images/icon_menu.png' style="width:20px;"
+					onclick="javascript:showIconMenu('purchaseBookIconMenu')" alt=""></li>
+			</ul>
+			<BR>
+		</div>
+
+<ul id="purchaseBookIconMenu"
+	style='display: none; background-color: #fff; z-index: 1; position: absolute; top: 180px; border-width: 1px; border-style: solid; border-color: #000;'>
+	<li onclick="javascript:purchaseBookIconMenuControl('voucher')">
+		<div>
+			<span class="ui-icon ui-icon-clipboard"></span>Beleg
+		</div>
+	</li>
+	<li onclick="javascript:purchaseBookIconMenuControl('catalogue')">
+		<div>
+			<span class="ui-icon ui-icon-cart"></span>Katalog
+		</div>
+	</li>
+	<li onclick="javascript:purchaseBookIconMenuControl('print')">
+		<div>
+			<span class="ui-icon ui-icon-print"></span>Print
+		</div>
+	</li>
+	<li onclick="javascript:purchaseBookIconMenuControl('email')">
+		<div>
+			<span class="ui-icon ui-icon-mail-open"></span>E-Mail
+		</div>
+	</li>
+	<li onclick="javascript:purchaseBookIconMenuControl('exam')">
+		<div>
+			<span class="ui-icon ui-icon-person"></span>Pr&uuml;fung
+		</div>
+	</li>
+	<li onclick="javascript:purchaseBookIconMenuControl('bank')">
+		<div>
+			<span class="ui-icon ui-icon-transfer-e-w"></span>Bankjournal
+		</div>
+	</li>
+
+	<li class="ui-state-disabled" onclick="javascript:purchaseBookIconMenuControl('export')">
+		<div>
+			<span class="ui-icon ui-icon-disk"></span>Export
+		</div>
+	</li>
+</ul>
+		
+
+
+<div class=contentPurchase style="position: relative ;top: 0px"></div>

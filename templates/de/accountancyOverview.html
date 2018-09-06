@@ -1,0 +1,36 @@
+<div id="navtabs" style="width: 1000px">
+	<ul>
+		<li id="registerAccountancyOverviewJournalList"><a
+			href="javascript:registerMenuAccountancy('accountancyOverviewJournalListInit')"
+			title="Sachkonten">Journal</a></li>
+		<li id="registerAccountancyOverviewOutstandingList"><a
+			href="javascript:registerMenuAccountancy('accountancyOverviewOutstandingListInit')"
+			title="Offen Posten">Offene Posten</a></li>
+		<li id="registerAccountancyOverviewLedgerList"><a
+			href="javascript:registerMenuAccountancy('accountancyOverviewLedgerListInit')"
+			title="Hauptbuch">Hauptbuch</a></li>
+		<li id="registerAccountancyOverviewBalanceList"><a
+			href="javascript:registerMenuAccountancy('accountancyOverviewBalanceListInit')"
+			title="SuSa">SuSa</a></li>
+		<li id="li_icon_menu" style="position: absolute; right: 10;"><img
+			src='./web/images/icon_menu.png' style="width: 20px;"
+			onclick="javascript:showIconMenu('accountancyOverviewIconMenu')" alt=""></li>
+</div>
+
+<ul id="accountancyOverviewIconMenu"
+	style='display: none; background-color: #fff; z-index: 1; position: absolute; top: 180px; border-width: 1px; border-style: solid; border-color: #000;'>
+	<li onclick="javascript:accountancyIconMenuControl('print')">
+		<div>
+			<span class="ui-icon ui-icon-print"></span>print
+		</div>
+	</li>
+	<li onclick="javascript:accountancyIconMenuControl('print')">
+		<div>
+			<span class="ui-icon ui-icon-mail-open"></span>E-Mail
+		</div>
+	</li>
+</ul>
+
+
+
+<div class=contentAccountancy style="position: relative; top: 0px"></div>

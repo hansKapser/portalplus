@@ -1,0 +1,91 @@
+Bezugsquellen<BR>
+<form id=dialogSourceSupply>
+<table>
+<tr>
+<td>
+<input type=text name=searchString>
+</td>
+<td>
+<input type=button class=inputButton id=searchButton value=search>
+</td>
+<td></td>
+</tr>
+<tr>
+<td colspan=3><hr></td>
+</tr>
+<tr>
+<td colspan=2 valign=top style="width:500px;">
+<div id=sourceResultsDiv style="display:none;height:200px; overflow:auto;"></div>
+</td>
+<td valign=top style="width:600px">
+<div id=sourceResultsArticleDiv style="display:none;height:200px; overflow:auto;"></div>
+</td>
+</tr>
+</table>
+</form>
+
+<div id=sourceResults style="display:none;">
+		<table style="width:100%">
+		<tbody id=tbodySourceSupply>
+		<tr>
+		<td colspan=2><img id=imageLogo[firmID] src='' style='height: 50px'>
+		
+		</td> 
+		</tr>
+		<tr>
+		<td>[company]</td>
+		<td style="text-align:right">		
+		{[isCatalogue]==1 ?
+			'<a href=javascript:showCatalogue([firmID])>Katalog</a>' :
+			''
+		}
+		</td>
+		</tr>
+		<tr>
+		<td colspan=2>[company2]</td>
+		</tr>
+		<tr style="background-color:#ccc">
+		<td>Angebot</td>
+		<td style="text-align:right"><a href=javascript:purchaseSupplyArticles([firmID])>Artikelliste</a></td>
+		</tr>
+		<tr>
+		<td colspan=2 id=tbodySourceSupplyOffer[firmID]></td>
+		</tr>
+		<tr>
+		<td colspan=2><hr></td>
+		</tr>
+		</tbody>
+		</table>
+</div>
+	
+<div id=sourceResultsArticle style="display:none">
+		<table style="width:100%">
+		<thead>
+		<tr>
+		<th style="width:100%;background-color:#ccc" colspan=3>Artikelliste</th>
+		</tr>
+		</thead>
+		<tbody id=tbodySourceSupplyGroup>
+		<tr>
+		<td style="background-color:#ddd" colspan=3>[group_name]</td> 
+		</tr>
+		<tr>
+		<td colspan=3 id=sourceResultsArticleList[group_id]></td>
+		</tr>
+		</tbody>
+		</table>
+</div>
+
+<div id=sourceResultsArticleMaster style="display:none">
+		<table style="width:100%">
+		<thead>
+		<tbody id=tbodySourceSupplyArticleMaster>
+		<tr>
+		<td>[article_code]</td> 
+		<td style="width:60%">{purchaseSupplyMark('[name]')}</td> 
+		<td style="text-align:right">{germanDezimal([price])}</td> 
+		</tr>
+		</tbody>
+		</table>
+</div>
+	

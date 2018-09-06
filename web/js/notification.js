@@ -1,0 +1,3 @@
+function notification() {
+	alert('hallo');
+}

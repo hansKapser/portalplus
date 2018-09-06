@@ -1,0 +1,1096 @@
+
+=====================================<br><font color=magenta>execution of task	: <b>ssh</b>, starting</font><br>Source	: <b><font color=blue>/home/hansk/public_html/portal17</font></b><br>Destination	: <b><font color=blue>/home/hansk/public_html/</font></b>
+portal17/.luckybackup-snaphots/portalPlus.profile/logs/
+portal17/.luckybackup-snaphots/portalPlus.profile/logs/portalPlus-portalPlus-20180824150608.log
+
+         32.77K  16%    0.00kB/s    0:00:00  
+        204.06K 100%  163.35MB/s    0:00:00 (xfr#1, to-chk=12619/12648)
+portal17/.luckybackup-snaphots/portalPlus.profile/logs/portalPlus-ssh-20180826071437.log
+
+            259 100%   21.08kB/s    0:00:00              259 100%   21.08kB/s    0:00:00 (xfr#2, to-chk=12618/12648)
+portal17/.luckybackup-snaphots/portalPlus.profile/logs/portalPlus-ssh-20180827214230.log
+
+         32.77K  13%    2.23MB/s    0:00:00          239.60K 100%   14.28MB/s    0:00:00 (xfr#3, to-chk=12617/12648)
+portal17/.luckybackup-snaphots/portalPlus.profile/snaps/
+portal17/.luckybackup-snaphots/portalPlus.profile/snaps/portalPlus-portalPlus-20180824150608.changes.log
+              0 100%    0.00kB/s    0:00:00 (xfr#4, to-chk=12613/12648)
+portal17/.luckybackup-snaphots/portalPlus.profile/snaps/portalPlus-ssh-20180827214230.changes.log
+              0 100%    0.00kB/s    0:00:00 (xfr#5, to-chk=12612/12648)
+portal17/config/routes.yaml
+
+            700   2%   28.48kB/s    0:00:01  
+         30.80K 100%    1.22MB/s    0:00:00 (xfr#6, to-chk=12599/12648)
+portal17/src/Controller/articleController.php
+            700   2%   27.34kB/s    0:00:00           26.38K 100%    1.01MB/s    0:00:00 (xfr#7, to-chk=12563/12648)
+portal17/src/Controller/dashboardController.php
+            700   1%   27.34kB/s    0:00:01           44.39K 100%    1.63MB/s    0:00:00 (xfr#8, to-chk=12562/12648)
+portal17/src/Controller/fileController.php
+            700   4%   26.29kB/s    0:00:00           17.11K 100%  642.73kB/s    0:00:00 (xfr#9, to-chk=12559/12648)
+portal17/src/Controller/managementCompanyMasterController.php
+            700   4%   26.29kB/s    0:00:00           17.36K 100%  627.86kB/s    0:00:00 (xfr#10, to-chk=12556/12648)
+portal17/src/Controller/managementFirmsController.php
+            700   5%   25.32kB/s    0:00:00           11.93K 100%  431.64kB/s    0:00:00 (xfr#11, to-chk=12554/12648)
+portal17/src/Controller/managementPostinController.php
+            700   4%   25.32kB/s    0:00:00           14.31K 100%  517.58kB/s    0:00:00 (xfr#12, to-chk=12553/12648)
+portal17/src/Controller/managementPostoutController.php
+            700  14%   25.32kB/s    0:00:00            4.91K 100%  177.41kB/s    0:00:00 (xfr#13, to-chk=12552/12648)
+portal17/src/Controller/managementUserController.php
+
+            700   5%   17.99kB/s    0:00:00  
+         12.73K 100%  327.15kB/s    0:00:00 (xfr#14, to-chk=12551/12648)
+portal17/src/Controller/storeController.php
+          2.68K  13%   68.82kB/s    0:00:00           20.52K 100%  513.77kB/s    0:00:00 (xfr#15, to-chk=12546/12648)
+portal17/templates/de/articleMaster.html
+
+          1.06K 100%   20.39kB/s    0:00:00            1.06K 100%   20.39kB/s    0:00:00 (xfr#16, to-chk=12411/12648)
+portal17/templates/de/dashboard.html.twig
+
+          1.46K   7%   21.66kB/s    0:00:00  
+         20.11K 100%  297.60kB/s    0:00:00 (xfr#17, to-chk=12406/12648)
+portal17/templates/de/store.html
+            729 100%   10.79kB/s    0:00:00              729 100%   10.79kB/s    0:00:00 (xfr#18, to-chk=12349/12648)
+portal17/var/cache/dev/
+portal17/var/cache/dev/annotations.map
+
+            165 100%    2.24kB/s    0:00:00              165 100%    2.24kB/s    0:00:00 (xfr#19, to-chk=12337/12648)
+portal17/var/cache/dev/srcDevDebugProjectContainer.php
+
+            772 100%    9.31kB/s    0:00:00              772 100%    9.31kB/s    0:00:00 (xfr#20, to-chk=12335/12648)
+portal17/var/cache/dev/srcDevDebugProjectContainer.php.meta
+
+            700   4%    8.44kB/s    0:00:01           15.38K 100%  185.47kB/s    0:00:00 (xfr#21, to-chk=12334/12648)
+portal17/var/cache/dev/srcDevDebugProjectContainer.xml
+
+            700   0%    7.60kB/s    0:00:19  
+        146.61K 100%    1.54MB/s    0:00:00 (xfr#22, to-chk=12333/12648)
+portal17/var/cache/dev/srcDevDebugProjectContainer.xml.meta
+            700   4%    7.43kB/s    0:00:01           15.38K 100%  163.30kB/s    0:00:00 (xfr#23, to-chk=12332/12648)
+portal17/var/cache/dev/srcDevDebugProjectContainerCompiler.log
+
+            700   1%    6.70kB/s    0:00:10  
+         69.35K 100%  663.95kB/s    0:00:00 (xfr#24, to-chk=12331/12648)
+portal17/var/cache/dev/srcDevDebugProjectContainerDeprecations.log
+              6 100%    0.06kB/s    0:00:00                6 100%    0.06kB/s    0:00:00 (xfr#25, to-chk=12330/12648)
+portal17/var/cache/dev/srcDevDebugProjectContainerUrlGenerator.php
+
+            700   1%    6.16kB/s    0:00:08  
+         54.65K 100%  476.55kB/s    0:00:00 (xfr#26, to-chk=12329/12648)
+portal17/var/cache/dev/srcDevDebugProjectContainerUrlGenerator.php.meta
+            700  14%    6.10kB/s    0:00:00            4.96K 100%   43.29kB/s    0:00:00 (xfr#27, to-chk=12328/12648)
+portal17/var/cache/dev/srcDevDebugProjectContainerUrlMatcher.php
+            700   1%    6.10kB/s    0:00:08           54.80K 100%  473.58kB/s    0:00:00 (xfr#28, to-chk=12327/12648)
+portal17/var/cache/dev/srcDevDebugProjectContainerUrlMatcher.php.meta
+            700  14%    6.05kB/s    0:00:00            4.96K 100%   42.91kB/s    0:00:00 (xfr#29, to-chk=12326/12648)
+portal17/var/cache/dev/Container8d8VYvl/
+portal17/var/cache/dev/Container8d8VYvl/getAccountancyControllerService.php
+            700  75%    6.05kB/s    0:00:00              926 100%    8.00kB/s    0:00:00 (xfr#30, to-chk=12324/12648)
+portal17/var/cache/dev/Container8d8VYvl/getAnnotations_CacheService.php
+
+            700  33%    5.74kB/s    0:00:00            2.10K 100%   17.25kB/s    0:00:00 (xfr#31, to-chk=12323/12648)
+
+portal17/var/cache/dev/Container8d8VYvl/getAnnotations_CacheWarmerService.php
+            700  62%    5.74kB/s    0:00:00            1.13K 100%    9.25kB/s    0:00:00 (xfr#32, to-chk=12322/12648)
+portal17/var/cache/dev/Container8d8VYvl/getAnnotations_CachedReaderService.php
+            700  84%    5.74kB/s    0:00:00              833 100%    6.78kB/s    0:00:00 (xfr#33, to-chk=12321/12648)
+portal17/var/cache/dev/Container8d8VYvl/getAnnotations_ReaderService.php
+            700  74%    5.70kB/s    0:00:00              939 100%    7.64kB/s    0:00:00 (xfr#34, to-chk=12320/12648)
+portal17/var/cache/dev/Container8d8VYvl/getArgumentResolver_DefaultService.php
+            689 100%    5.61kB/s    0:00:00              689 100%    5.61kB/s    0:00:00 (xfr#35, to-chk=12319/12648)
+portal17/var/cache/dev/Container8d8VYvl/getArgumentResolver_RequestAttributeService.php
+            700  96%    5.70kB/s    0:00:00              727 100%    5.92kB/s    0:00:00 (xfr#36, to-chk=12318/12648)
+portal17/var/cache/dev/Container8d8VYvl/getArgumentResolver_RequestService.php
+            689 100%    5.61kB/s    0:00:00              689 100%    5.61kB/s    0:00:00 (xfr#37, to-chk=12317/12648)
+portal17/var/cache/dev/Container8d8VYvl/getArgumentResolver_ServiceService.php
+            700  48%    5.70kB/s    0:00:00            1.46K 100%   11.86kB/s    0:00:00 (xfr#38, to-chk=12316/12648)
+portal17/var/cache/dev/Container8d8VYvl/getArgumentResolver_SessionService.php
+            689 100%    5.56kB/s    0:00:00              689 100%    5.56kB/s    0:00:00 (xfr#39, to-chk=12315/12648)
+portal17/var/cache/dev/Container8d8VYvl/getArgumentResolver_VariadicService.php
+            693 100%    5.59kB/s    0:00:00              693 100%    5.59kB/s    0:00:00 (xfr#40, to-chk=12314/12648)
+portal17/var/cache/dev/Container8d8VYvl/getArticleControllerService.php
+            700  76%    5.65kB/s    0:00:00              910 100%    7.34kB/s    0:00:00 (xfr#41, to-chk=12313/12648)
+portal17/var/cache/dev/Container8d8VYvl/getCacheClearerService.php
+            700  90%    5.65kB/s    0:00:00              774 100%    6.25kB/s    0:00:00 (xfr#42, to-chk=12312/12648)
+portal17/var/cache/dev/Container8d8VYvl/getCacheWarmerService.php
+            700  56%    5.65kB/s    0:00:00            1.25K 100%   10.06kB/s    0:00:00 (xfr#43, to-chk=12311/12648)
+portal17/var/cache/dev/Container8d8VYvl/getCache_AnnotationsService.php
+            700  57%    5.65kB/s    0:00:00            1.22K 100%    9.87kB/s    0:00:00 (xfr#44, to-chk=12310/12648)
+portal17/var/cache/dev/Container8d8VYvl/getCache_AppClearerService.php
+            700  97%    5.65kB/s    0:00:00              721 100%    5.82kB/s    0:00:00 (xfr#45, to-chk=12309/12648)
+portal17/var/cache/dev/Container8d8VYvl/getCache_AppService.php
+            700  45%    5.60kB/s    0:00:00            1.55K 100%   12.38kB/s    0:00:00 (xfr#46, to-chk=12308/12648)
+portal17/var/cache/dev/Container8d8VYvl/getCache_GlobalClearerService.php
+            700  74%    5.60kB/s    0:00:00              938 100%    7.51kB/s    0:00:00 (xfr#47, to-chk=12307/12648)
+portal17/var/cache/dev/Container8d8VYvl/getCache_SystemClearerService.php
+            700  82%    5.60kB/s    0:00:00              849 100%    6.80kB/s    0:00:00 (xfr#48, to-chk=12306/12648)
+portal17/var/cache/dev/Container8d8VYvl/getCache_SystemService.php
+
+            700  57%    5.60kB/s    0:00:00            1.21K 100%    9.70kB/s    0:00:00 (xfr#49, to-chk=12305/12648)
+portal17/var/cache/dev/Container8d8VYvl/getConfig_Resource_SelfCheckingResourceCheckerService.php
+            676 100%    5.41kB/s    0:00:00              676 100%    5.41kB/s    0:00:00 (xfr#50, to-chk=12304/12648)
+portal17/var/cache/dev/Container8d8VYvl/getConsole_CommandLoaderService.php
+            700   3%    5.56kB/s    0:00:03           18.26K 100%  144.99kB/s    0:00:00 (xfr#51, to-chk=12303/12648)
+portal17/var/cache/dev/Container8d8VYvl/getConsole_Command_AboutService.php
+            656 100%    5.21kB/s    0:00:00              656 100%    5.21kB/s    0:00:00 (xfr#52, to-chk=12302/12648)
+portal17/var/cache/dev/Container8d8VYvl/getConsole_Command_AssetsInstallService.php
+            700  78%    5.56kB/s    0:00:00              891 100%    7.07kB/s    0:00:00 (xfr#53, to-chk=12301/12648)
+portal17/var/cache/dev/Container8d8VYvl/getConsole_Command_CacheClearService.php
+            700  73%    5.56kB/s    0:00:00              957 100%    7.60kB/s    0:00:00 (xfr#54, to-chk=12300/12648)
+portal17/var/cache/dev/Container8d8VYvl/getConsole_Command_CachePoolClearService.php
+            700  87%    5.56kB/s    0:00:00              800 100%    6.35kB/s    0:00:00 (xfr#55, to-chk=12299/12648)
+portal17/var/cache/dev/Container8d8VYvl/getConsole_Command_CachePoolDeleteService.php
+            700  86%    5.56kB/s    0:00:00              805 100%    6.39kB/s    0:00:00 (xfr#56, to-chk=12298/12648)
+portal17/var/cache/dev/Container8d8VYvl/getConsole_Command_CachePoolPruneService.php
+            700  82%    5.51kB/s    0:00:00              849 100%    6.69kB/s    0:00:00 (xfr#57, to-chk=12297/12648)
+portal17/var/cache/dev/Container8d8VYvl/getConsole_Command_CacheWarmupService.php
+            700  91%    5.51kB/s    0:00:00              766 100%    6.03kB/s    0:00:00 (xfr#58, to-chk=12296/12648)
+portal17/var/cache/dev/Container8d8VYvl/getConsole_Command_ConfigDebugService.php
+            700  78%    5.51kB/s    0:00:00              897 100%    7.06kB/s    0:00:00 (xfr#59, to-chk=12295/12648)
+portal17/var/cache/dev/Container8d8VYvl/getConsole_Command_ConfigDumpReferenceService.php
+            700  74%    5.51kB/s    0:00:00              940 100%    7.40kB/s    0:00:00 (xfr#60, to-chk=12294/12648)
+portal17/var/cache/dev/Container8d8VYvl/getConsole_Command_ContainerDebugService.php
+            700  99%    5.51kB/s    0:00:00              704 100%    5.54kB/s    0:00:00 (xfr#61, to-chk=12293/12648)
+portal17/var/cache/dev/Container8d8VYvl/getConsole_Command_DebugAutowiringService.php
+            700  86%    5.51kB/s    0:00:00              813 100%    6.40kB/s    0:00:00 (xfr#62, to-chk=12292/12648)
+portal17/var/cache/dev/Container8d8VYvl/getConsole_Command_EventDispatcherDebugService.php
+            700  86%    5.47kB/s    0:00:00              812 100%    6.34kB/s    0:00:00 (xfr#63, to-chk=12291/12648)
+portal17/var/cache/dev/Container8d8VYvl/getConsole_Command_PublicAlias_DoctrineCache_ContainsCommandService.php
+            700  77%    5.47kB/s    0:00:00              899 100%    7.02kB/s    0:00:00 (xfr#64, to-chk=12290/12648)
+portal17/var/cache/dev/Container8d8VYvl/getConsole_Command_PublicAlias_DoctrineCache_DeleteCommandService.php
+            700  78%    5.43kB/s    0:00:00              891 100%    6.91kB/s    0:00:00 (xfr#65, to-chk=12289/12648)
+portal17/var/cache/dev/Container8d8VYvl/getConsole_Command_PublicAlias_DoctrineCache_FlushCommandService.php
+            700  78%    5.43kB/s    0:00:00              887 100%    6.87kB/s    0:00:00 (xfr#66, to-chk=12288/12648)
+portal17/var/cache/dev/Container8d8VYvl/getConsole_Command_PublicAlias_DoctrineCache_StatsCommandService.php
+            700  78%    5.43kB/s    0:00:00              887 100%    6.87kB/s    0:00:00 (xfr#67, to-chk=12287/12648)
+portal17/var/cache/dev/Container8d8VYvl/getConsole_Command_PublicAlias_DoctrineMigrations_DiffCommandService.php
+            700  61%    5.43kB/s    0:00:00            1.13K 100%    8.77kB/s    0:00:00 (xfr#68, to-chk=12286/12648)
+portal17/var/cache/dev/Container8d8VYvl/getConsole_Command_PublicAlias_DoctrineMigrations_ExecuteCommandService.php
+            700  69%    5.43kB/s    0:00:00            1.01K 100%    7.84kB/s    0:00:00 (xfr#69, to-chk=12285/12648)
+portal17/var/cache/dev/Container8d8VYvl/getConsole_Command_PublicAlias_DoctrineMigrations_GenerateCommandService.php
+            700  68%    5.38kB/s    0:00:00            1.02K 100%    7.81kB/s    0:00:00 (xfr#70, to-chk=12284/12648)
+portal17/var/cache/dev/Container8d8VYvl/getConsole_Command_PublicAlias_DoctrineMigrations_LatestCommandService.php
+            700  69%    5.38kB/s    0:00:00            1.01K 100%    7.74kB/s    0:00:00 (xfr#71, to-chk=12283/12648)
+portal17/var/cache/dev/Container8d8VYvl/getConsole_Command_PublicAlias_DoctrineMigrations_MigrateCommandService.php
+            700  69%    5.38kB/s    0:00:00            1.01K 100%    7.77kB/s    0:00:00 (xfr#72, to-chk=12282/12648)
+portal17/var/cache/dev/Container8d8VYvl/getConsole_Command_PublicAlias_DoctrineMigrations_StatusCommandService.php
+            700  69%    5.38kB/s    0:00:00            1.01K 100%    7.74kB/s    0:00:00 (xfr#73, to-chk=12281/12648)
+portal17/var/cache/dev/Container8d8VYvl/getConsole_Command_PublicAlias_DoctrineMigrations_VersionCommandService.php
+            700  69%    5.38kB/s    0:00:00            1.01K 100%    7.77kB/s    0:00:00 (xfr#74, to-chk=12280/12648)
+portal17/var/cache/dev/Container8d8VYvl/getConsole_Command_RouterDebugService.php
+            700  93%    5.34kB/s    0:00:00              745 100%    5.68kB/s    0:00:00 (xfr#75, to-chk=12279/12648)
+portal17/var/cache/dev/Container8d8VYvl/getConsole_Command_RouterMatchService.php
+            700  93%    5.34kB/s    0:00:00              745 100%    5.68kB/s    0:00:00 (xfr#76, to-chk=12278/12648)
+portal17/var/cache/dev/Container8d8VYvl/getConsole_Command_YamlLintService.php
+            700  92%    5.34kB/s    0:00:00              756 100%    5.77kB/s    0:00:00 (xfr#77, to-chk=12277/12648)
+portal17/var/cache/dev/Container8d8VYvl/getConsole_ErrorListenerService.php
+            628 100%    4.79kB/s    0:00:00              628 100%    4.79kB/s    0:00:00 (xfr#78, to-chk=12276/12648)
+portal17/var/cache/dev/Container8d8VYvl/getDashboardControllerService.php
+            700  76%    5.34kB/s    0:00:00              918 100%    7.00kB/s    0:00:00 (xfr#79, to-chk=12275/12648)
+portal17/var/cache/dev/Container8d8VYvl/getDependencyInjection_Config_ContainerParametersResourceCheckerService.php
+            700  92%    5.34kB/s    0:00:00              756 100%    5.77kB/s    0:00:00 (xfr#80, to-chk=12274/12648)
+portal17/var/cache/dev/Container8d8VYvl/getDoctrineCache_Providers_Doctrine_Orm_DefaultMetadataCacheService.php
+            700  45%    5.34kB/s    0:00:00            1.55K 100%   11.85kB/s    0:00:00 (xfr#81, to-chk=12273/12648)
+portal17/var/cache/dev/Container8d8VYvl/getDoctrineCache_Providers_Doctrine_Orm_DefaultQueryCacheService.php
+            700  45%    5.30kB/s    0:00:00            1.55K 100%   11.71kB/s    0:00:00 (xfr#82, to-chk=12272/12648)
+portal17/var/cache/dev/Container8d8VYvl/getDoctrineCache_Providers_Doctrine_Orm_DefaultResultCacheService.php
+            700  45%    5.30kB/s    0:00:00            1.55K 100%   11.73kB/s    0:00:00 (xfr#83, to-chk=12271/12648)
+portal17/var/cache/dev/Container8d8VYvl/getDoctrineService.php
+            700  62%    5.30kB/s    0:00:00            1.12K 100%    8.46kB/s    0:00:00 (xfr#84, to-chk=12270/12648)
+portal17/var/cache/dev/Container8d8VYvl/getDoctrine_CacheClearMetadataCommandService.php
+            700  78%    5.30kB/s    0:00:00              894 100%    6.77kB/s    0:00:00 (xfr#85, to-chk=12269/12648)
+portal17/var/cache/dev/Container8d8VYvl/getDoctrine_CacheClearQueryCacheCommandService.php
+            700  78%    5.30kB/s    0:00:00              888 100%    6.72kB/s    0:00:00 (xfr#86, to-chk=12268/12648)
+portal17/var/cache/dev/Container8d8VYvl/getDoctrine_CacheClearResultCommandService.php
+            700  79%    5.30kB/s    0:00:00              882 100%    6.68kB/s    0:00:00 (xfr#87, to-chk=12267/12648)
+portal17/var/cache/dev/Container8d8VYvl/getDoctrine_CacheCollectionRegionCommandService.php
+            700  79%    5.26kB/s    0:00:00              881 100%    6.62kB/s    0:00:00 (xfr#88, to-chk=12266/12648)
+portal17/var/cache/dev/Container8d8VYvl/getDoctrine_ClearEntityRegionCommandService.php
+            700  80%    5.26kB/s    0:00:00              871 100%    6.54kB/s    0:00:00 (xfr#89, to-chk=12265/12648)
+portal17/var/cache/dev/Container8d8VYvl/getDoctrine_ClearQueryRegionCommandService.php
+            700  80%    5.26kB/s    0:00:00              866 100%    6.51kB/s    0:00:00 (xfr#90, to-chk=12264/12648)
+portal17/var/cache/dev/Container8d8VYvl/getDoctrine_DatabaseCreateCommandService.php
+            700  67%    5.26kB/s    0:00:00            1.03K 100%    7.77kB/s    0:00:00 (xfr#91, to-chk=12263/12648)
+portal17/var/cache/dev/Container8d8VYvl/getDoctrine_DatabaseDropCommandService.php
+
+            700  68%    5.26kB/s    0:00:00            1.02K 100%    7.70kB/s    0:00:00 (xfr#92, to-chk=12262/12648)
+portal17/var/cache/dev/Container8d8VYvl/getDoctrine_DatabaseImportCommandService.php
+            700  82%    5.26kB/s    0:00:00              844 100%    6.34kB/s    0:00:00 (xfr#93, to-chk=12261/12648)
+portal17/var/cache/dev/Container8d8VYvl/getDoctrine_Dbal_DefaultConnectionService.php
+            700  28%    5.22kB/s    0:00:00            2.42K 100%   18.06kB/s    0:00:00 (xfr#94, to-chk=12260/12648)
+portal17/var/cache/dev/Container8d8VYvl/getDoctrine_EnsureProductionSettingsCommandService.php
+            700  75%    5.22kB/s    0:00:00              929 100%    6.93kB/s    0:00:00 (xfr#95, to-chk=12259/12648)
+portal17/var/cache/dev/Container8d8VYvl/getDoctrine_GenerateEntitiesCommandService.php
+            700  66%    5.22kB/s    0:00:00            1.04K 100%    7.79kB/s    0:00:00 (xfr#96, to-chk=12258/12648)
+portal17/var/cache/dev/Container8d8VYvl/getDoctrine_MappingConvertCommandService.php
+            700  80%    5.22kB/s    0:00:00              866 100%    6.46kB/s    0:00:00 (xfr#97, to-chk=12257/12648)
+portal17/var/cache/dev/Container8d8VYvl/getDoctrine_MappingImportCommandService.php
+            700  67%    5.22kB/s    0:00:00            1.03K 100%    7.68kB/s    0:00:00 (xfr#98, to-chk=12256/12648)
+portal17/var/cache/dev/Container8d8VYvl/getDoctrine_MappingInfoCommandService.php
+            700  84%    5.22kB/s    0:00:00              827 100%    6.17kB/s    0:00:00 (xfr#99, to-chk=12255/12648)
+portal17/var/cache/dev/Container8d8VYvl/getDoctrine_Orm_DefaultEntityManagerService.php
+            700  14%    5.22kB/s    0:00:00            4.67K 100%   34.81kB/s    0:00:00 (xfr#100, to-chk=12254/12648)
+portal17/var/cache/dev/Container8d8VYvl/getDoctrine_Orm_ProxyCacheWarmerService.php
+            700  97%    5.18kB/s    0:00:00              721 100%    5.33kB/s    0:00:00 (xfr#101, to-chk=12253/12648)
+portal17/var/cache/dev/Container8d8VYvl/getDoctrine_QueryDqlCommandService.php
+            700  84%    5.18kB/s    0:00:00              824 100%    6.10kB/s    0:00:00 (xfr#102, to-chk=12252/12648)
+portal17/var/cache/dev/Container8d8VYvl/getDoctrine_QuerySqlCommandService.php
+            700  84%    5.18kB/s    0:00:00              826 100%    6.11kB/s    0:00:00 (xfr#103, to-chk=12251/12648)
+portal17/var/cache/dev/Container8d8VYvl/getDoctrine_SchemaCreateCommandService.php
+            700  70%    5.18kB/s    0:00:00              987 100%    7.30kB/s    0:00:00 (xfr#104, to-chk=12250/12648)
+portal17/var/cache/dev/Container8d8VYvl/getDoctrine_SchemaDropCommandService.php
+            700  71%    5.18kB/s    0:00:00              975 100%    7.21kB/s    0:00:00 (xfr#105, to-chk=12249/12648)
+portal17/var/cache/dev/Container8d8VYvl/getDoctrine_SchemaUpdateCommandService.php
+            700  70%    5.18kB/s    0:00:00              987 100%    7.30kB/s    0:00:00 (xfr#106, to-chk=12248/12648)
+portal17/var/cache/dev/Container8d8VYvl/getDoctrine_SchemaValidateCommandService.php
+            700  82%    5.18kB/s    0:00:00              850 100%    6.29kB/s    0:00:00 (xfr#107, to-chk=12247/12648)
+portal17/var/cache/dev/Container8d8VYvl/getEasyDeploy_Command_DeployService.php
+            700  51%    5.18kB/s    0:00:00            1.36K 100%   10.09kB/s    0:00:00 (xfr#108, to-chk=12246/12648)
+portal17/var/cache/dev/Container8d8VYvl/getEasyDeploy_Command_RollbackService.php
+            700  81%    5.14kB/s    0:00:00              863 100%    6.34kB/s    0:00:00 (xfr#109, to-chk=12245/12648)
+portal17/var/cache/dev/Container8d8VYvl/getEmailControllerService.php
+            700  77%    5.14kB/s    0:00:00              902 100%    6.62kB/s    0:00:00 (xfr#110, to-chk=12244/12648)
+portal17/var/cache/dev/Container8d8VYvl/getExamControllerService.php
+            700  77%    5.14kB/s    0:00:00              898 100%    6.59kB/s    0:00:00 (xfr#111, to-chk=12243/12648)
+portal17/var/cache/dev/Container8d8VYvl/getFileControllerService.php
+            700  77%    5.14kB/s    0:00:00              898 100%    6.59kB/s    0:00:00 (xfr#112, to-chk=12242/12648)
+portal17/var/cache/dev/Container8d8VYvl/getFileLocatorService.php
+            700  88%    5.14kB/s    0:00:00              788 100%    5.79kB/s    0:00:00 (xfr#113, to-chk=12241/12648)
+portal17/var/cache/dev/Container8d8VYvl/getFilesystemService.php
+            470 100%    3.45kB/s    0:00:00              470 100%    3.45kB/s    0:00:00 (xfr#114, to-chk=12240/12648)
+portal17/var/cache/dev/Container8d8VYvl/getFragment_Renderer_InlineService.php
+            700  73%    5.14kB/s    0:00:00              958 100%    7.03kB/s    0:00:00 (xfr#115, to-chk=12239/12648)
+portal17/var/cache/dev/Container8d8VYvl/getIndexControllerService.php
+            700  77%    5.10kB/s    0:00:00              902 100%    6.57kB/s    0:00:00 (xfr#116, to-chk=12238/12648)
+portal17/var/cache/dev/Container8d8VYvl/getMaker_AutoCommand_MakeAuthService.php
+            700  59%    5.10kB/s    0:00:00            1.19K 100%    8.64kB/s    0:00:00 (xfr#117, to-chk=12237/12648)
+portal17/var/cache/dev/Container8d8VYvl/getMaker_AutoCommand_MakeCommandService.php
+            700  59%    5.10kB/s    0:00:00            1.18K 100%    8.61kB/s    0:00:00 (xfr#118, to-chk=12236/12648)
+portal17/var/cache/dev/Container8d8VYvl/getMaker_AutoCommand_MakeControllerService.php
+            700  57%    5.10kB/s    0:00:00            1.21K 100%    8.81kB/s    0:00:00 (xfr#119, to-chk=12235/12648)
+portal17/var/cache/dev/Container8d8VYvl/getMaker_AutoCommand_MakeCrudService.php
+            700  55%    5.10kB/s    0:00:00            1.26K 100%    9.20kB/s    0:00:00 (xfr#120, to-chk=12234/12648)
+portal17/var/cache/dev/Container8d8VYvl/getMaker_AutoCommand_MakeEntityService.php
+            700  49%    5.10kB/s    0:00:00            1.42K 100%   10.35kB/s    0:00:00 (xfr#121, to-chk=12233/12648)
+portal17/var/cache/dev/Container8d8VYvl/getMaker_AutoCommand_MakeFixturesService.php
+            700  58%    5.06kB/s    0:00:00            1.19K 100%    8.59kB/s    0:00:00 (xfr#122, to-chk=12232/12648)
+portal17/var/cache/dev/Container8d8VYvl/getMaker_AutoCommand_MakeFormService.php
+            700  55%    5.06kB/s    0:00:00            1.26K 100%    9.13kB/s    0:00:00 (xfr#123, to-chk=12231/12648)
+portal17/var/cache/dev/Container8d8VYvl/getMaker_AutoCommand_MakeFunctionalTestService.php
+            700  57%    5.06kB/s    0:00:00            1.22K 100%    8.83kB/s    0:00:00 (xfr#124, to-chk=12230/12648)
+portal17/var/cache/dev/Container8d8VYvl/getMaker_AutoCommand_MakeMigrationService.php
+            700  53%    5.06kB/s    0:00:00            1.32K 100%    9.53kB/s    0:00:00 (xfr#125, to-chk=12229/12648)
+portal17/var/cache/dev/Container8d8VYvl/getMaker_AutoCommand_MakeSerializerEncoderService.php
+            700  56%    5.06kB/s    0:00:00            1.24K 100%    8.93kB/s    0:00:00 (xfr#126, to-chk=12228/12648)
+portal17/var/cache/dev/Container8d8VYvl/getMaker_AutoCommand_MakeSubscriberService.php
+            700  49%    5.06kB/s    0:00:00            1.41K 100%   10.18kB/s    0:00:00 (xfr#127, to-chk=12227/12648)
+portal17/var/cache/dev/Container8d8VYvl/getMaker_AutoCommand_MakeTwigExtensionService.php
+            700  57%    5.06kB/s    0:00:00            1.22K 100%    8.79kB/s    0:00:00 (xfr#128, to-chk=12226/12648)
+portal17/var/cache/dev/Container8d8VYvl/getMaker_AutoCommand_MakeUnitTestService.php
+            700  58%    5.03kB/s    0:00:00            1.19K 100%    8.54kB/s    0:00:00 (xfr#129, to-chk=12225/12648)
+portal17/var/cache/dev/Container8d8VYvl/getMaker_AutoCommand_MakeValidatorService.php
+            700  58%    5.03kB/s    0:00:00            1.19K 100%    8.56kB/s    0:00:00 (xfr#130, to-chk=12224/12648)
+portal17/var/cache/dev/Container8d8VYvl/getMaker_AutoCommand_MakeVoterService.php
+            700  59%    5.03kB/s    0:00:00            1.17K 100%    8.42kB/s    0:00:00 (xfr#131, to-chk=12223/12648)
+portal17/var/cache/dev/Container8d8VYvl/getMaker_ConsoleErrorListenerService.php
+            547 100%    3.93kB/s    0:00:00              547 100%    3.93kB/s    0:00:00 (xfr#132, to-chk=12222/12648)
+portal17/var/cache/dev/Container8d8VYvl/getMaker_DoctrineHelperService.php
+            608 100%    4.37kB/s    0:00:00              608 100%    4.37kB/s    0:00:00 (xfr#133, to-chk=12221/12648)
+portal17/var/cache/dev/Container8d8VYvl/getMaker_FileManagerService.php
+            700  68%    5.03kB/s    0:00:00            1.02K 100%    7.35kB/s    0:00:00 (xfr#134, to-chk=12220/12648)
+portal17/var/cache/dev/Container8d8VYvl/getMaker_GeneratorService.php
+            579 100%    4.13kB/s    0:00:00              579 100%    4.13kB/s    0:00:00 (xfr#135, to-chk=12219/12648)
+portal17/var/cache/dev/Container8d8VYvl/getManagementCompanyMasterControllerService.php
+
+            700  71%    4.75kB/s    0:00:00              974 100%    6.61kB/s    0:00:00 (xfr#136, to-chk=12218/12648)
+portal17/var/cache/dev/Container8d8VYvl/getManagementControllerService.php
+            700  75%    4.75kB/s    0:00:00              922 100%    6.25kB/s    0:00:00 (xfr#137, to-chk=12217/12648)
+portal17/var/cache/dev/Container8d8VYvl/getManagementFirmsControllerService.php
+            700  74%    4.75kB/s    0:00:00              942 100%    6.39kB/s    0:00:00 (xfr#138, to-chk=12216/12648)
+portal17/var/cache/dev/Container8d8VYvl/getManagementPostinControllerService.php
+            700  73%    4.75kB/s    0:00:00              946 100%    6.42kB/s    0:00:00 (xfr#139, to-chk=12215/12648)
+portal17/var/cache/dev/Container8d8VYvl/getManagementPostoutControllerService.php
+            700  73%    4.75kB/s    0:00:00              950 100%    6.44kB/s    0:00:00 (xfr#140, to-chk=12214/12648)
+portal17/var/cache/dev/Container8d8VYvl/getManagementUserControllerService.php
+            700  74%    4.71kB/s    0:00:00              938 100%    6.32kB/s    0:00:00 (xfr#141, to-chk=12213/12648)
+portal17/var/cache/dev/Container8d8VYvl/getOAuthService.php
+            465 100%    3.13kB/s    0:00:00              465 100%    3.13kB/s    0:00:00 (xfr#142, to-chk=12212/12648)
+portal17/var/cache/dev/Container8d8VYvl/getP17FirmsRepositoryService.php
+            700  61%    4.71kB/s    0:00:00            1.14K 100%    7.66kB/s    0:00:00 (xfr#143, to-chk=12211/12648)
+portal17/var/cache/dev/Container8d8VYvl/getPHPMailerService.php
+            481 100%    3.24kB/s    0:00:00              481 100%    3.24kB/s    0:00:00 (xfr#144, to-chk=12210/12648)
+portal17/var/cache/dev/Container8d8VYvl/getPdfParserService.php
+            700  79%    4.71kB/s    0:00:00              878 100%    5.91kB/s    0:00:00 (xfr#145, to-chk=12209/12648)
+portal17/var/cache/dev/Container8d8VYvl/getPrintControllerService.php
+            700  77%    4.71kB/s    0:00:00              902 100%    6.03kB/s    0:00:00 (xfr#146, to-chk=12208/12648)
+portal17/var/cache/dev/Container8d8VYvl/getPurchaseControllerService.php
+            700  76%    4.68kB/s    0:00:00              914 100%    6.11kB/s    0:00:00 (xfr#147, to-chk=12207/12648)
+portal17/var/cache/dev/Container8d8VYvl/getRedirectControllerService.php
+            681 100%    4.56kB/s    0:00:00              681 100%    4.56kB/s    0:00:00 (xfr#148, to-chk=12206/12648)
+portal17/var/cache/dev/Container8d8VYvl/getRouter_CacheWarmerService.php
+            700  82%    4.68kB/s    0:00:00              844 100%    5.65kB/s    0:00:00 (xfr#149, to-chk=12205/12648)
+portal17/var/cache/dev/Container8d8VYvl/getRouting_LoaderService.php
+            700  18%    4.68kB/s    0:00:00            3.71K 100%   24.84kB/s    0:00:00 (xfr#150, to-chk=12204/12648)
+portal17/var/cache/dev/Container8d8VYvl/getSMTPService.php
+            461 100%    3.08kB/s    0:00:00              461 100%    3.08kB/s    0:00:00 (xfr#151, to-chk=12203/12648)
+portal17/var/cache/dev/Container8d8VYvl/getSellingControllerService.php
+            700  76%    4.65kB/s    0:00:00              910 100%    6.05kB/s    0:00:00 (xfr#152, to-chk=12202/12648)
+portal17/var/cache/dev/Container8d8VYvl/getSessionService.php
+            700  29%    4.65kB/s    0:00:00            2.34K 100%   15.53kB/s    0:00:00 (xfr#153, to-chk=12201/12648)
+portal17/var/cache/dev/Container8d8VYvl/getStoreControllerService.php
+            700  77%    4.65kB/s    0:00:00              902 100%    5.99kB/s    0:00:00 (xfr#154, to-chk=12200/12648)
+portal17/var/cache/dev/Container8d8VYvl/getSysAdminControllerService.php
+            700  76%    4.65kB/s    0:00:00              914 100%    6.07kB/s    0:00:00 (xfr#155, to-chk=12199/12648)
+portal17/var/cache/dev/Container8d8VYvl/getTemplateControllerService.php
+            684 100%    4.54kB/s    0:00:00              684 100%    4.54kB/s    0:00:00 (xfr#156, to-chk=12198/12648)
+portal17/var/cache/dev/Container8d8VYvl/getTicketControllerService.php
+            700  77%    4.65kB/s    0:00:00              906 100%    5.98kB/s    0:00:00 (xfr#157, to-chk=12197/12648)
+portal17/var/cache/dev/Container8d8VYvl/getTwigService.php
+            700  10%    4.62kB/s    0:00:01            6.93K 100%   45.72kB/s    0:00:00 (xfr#158, to-chk=12196/12648)
+portal17/var/cache/dev/Container8d8VYvl/getTwig_CacheWarmerService.php
+            700  83%    4.62kB/s    0:00:00              837 100%    5.52kB/s    0:00:00 (xfr#159, to-chk=12195/12648)
+portal17/var/cache/dev/Container8d8VYvl/getTwig_Command_DebugService.php
+            700  96%    4.62kB/s    0:00:00              723 100%    4.77kB/s    0:00:00 (xfr#160, to-chk=12194/12648)
+portal17/var/cache/dev/Container8d8VYvl/getTwig_Command_LintService.php
+            700  88%    4.62kB/s    0:00:00              791 100%    5.22kB/s    0:00:00 (xfr#161, to-chk=12193/12648)
+portal17/var/cache/dev/Container8d8VYvl/getTwig_Controller_ExceptionService.php
+            606 100%    4.00kB/s    0:00:00              606 100%    4.00kB/s    0:00:00 (xfr#162, to-chk=12192/12648)
+portal17/var/cache/dev/Container8d8VYvl/getTwig_Controller_PreviewErrorService.php
+            658 100%    4.31kB/s    0:00:00              658 100%    4.31kB/s    0:00:00 (xfr#163, to-chk=12191/12648)
+portal17/var/cache/dev/Container8d8VYvl/getTwig_ExceptionListenerService.php
+            692 100%    4.54kB/s    0:00:00              692 100%    4.54kB/s    0:00:00 (xfr#164, to-chk=12190/12648)
+portal17/var/cache/dev/Container8d8VYvl/getTwig_Runtime_HttpkernelService.php
+            700  60%    4.59kB/s    0:00:00            1.16K 100%    7.58kB/s    0:00:00 (xfr#165, to-chk=12189/12648)
+portal17/var/cache/dev/Container8d8VYvl/getTwig_TemplateCacheWarmerService.php
+            700  65%    4.59kB/s    0:00:00            1.07K 100%    6.99kB/s    0:00:00 (xfr#166, to-chk=12188/12648)
+portal17/var/cache/dev/Container8d8VYvl/getWebServer_Command_ServerRunService.php
+            700  96%    4.59kB/s    0:00:00              725 100%    4.75kB/s    0:00:00 (xfr#167, to-chk=12187/12648)
+portal17/var/cache/dev/Container8d8VYvl/getWebServer_Command_ServerStartService.php
+            700  95%    4.56kB/s    0:00:00              735 100%    4.79kB/s    0:00:00 (xfr#168, to-chk=12186/12648)
+portal17/var/cache/dev/Container8d8VYvl/getWebServer_Command_ServerStatusService.php
+            700  99%    4.56kB/s    0:00:00              701 100%    4.56kB/s    0:00:00 (xfr#169, to-chk=12185/12648)
+portal17/var/cache/dev/Container8d8VYvl/getWebServer_Command_ServerStopService.php
+            691 100%    4.50kB/s    0:00:00              691 100%    4.50kB/s    0:00:00 (xfr#170, to-chk=12184/12648)
+portal17/var/cache/dev/Container8d8VYvl/get_ServiceLocator_Gtvl53QService.php
+            610 100%    3.97kB/s    0:00:00              610 100%    3.97kB/s    0:00:00 (xfr#171, to-chk=12183/12648)
+portal17/var/cache/dev/Container8d8VYvl/get_ServiceLocator_MC3nbCqService.php
+            615 100%    3.98kB/s    0:00:00              615 100%    3.98kB/s    0:00:00 (xfr#172, to-chk=12182/12648)
+portal17/var/cache/dev/Container8d8VYvl/get_ServiceLocator_UEpceA5Service.php
+            558 100%    3.61kB/s    0:00:00              558 100%    3.61kB/s    0:00:00 (xfr#173, to-chk=12181/12648)
+portal17/var/cache/dev/Container8d8VYvl/removed-ids.php
+            700   3%    4.53kB/s    0:00:03           18.51K 100%  119.74kB/s    0:00:00 (xfr#174, to-chk=12180/12648)
+portal17/var/cache/dev/Container8d8VYvl/srcDevDebugProjectContainer.php
+            700   1%    4.50kB/s    0:00:10           46.36K 100%  297.85kB/s    0:00:00 (xfr#175, to-chk=12179/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/
+portal17/var/cache/dev/pools/Yg0dVddO3E/+/B/
+portal17/var/cache/dev/pools/Yg0dVddO3E/+/B/QWTCRm4MBhOnZSNmAGGQ
+
+             74 100%    0.45kB/s    0:00:00               74 100%    0.45kB/s    0:00:00 (xfr#176, to-chk=12002/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/+/I/
+portal17/var/cache/dev/pools/Yg0dVddO3E/+/I/qHPOhqOvHPlrNobVtnQN
+
+             74 100%    0.43kB/s    0:00:00               74 100%    0.43kB/s    0:00:00 (xfr#177, to-chk=11994/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/+/N/
+portal17/var/cache/dev/pools/Yg0dVddO3E/+/N/wpm9xOVn7NIxzzsZ53pm
+
+             74 100%    0.43kB/s    0:00:00               74 100%    0.43kB/s    0:00:00 (xfr#178, to-chk=11985/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/+/Y/
+portal17/var/cache/dev/pools/Yg0dVddO3E/+/Y/tVXC+D995jjzohfCPTr3
+
+             70 100%    0.38kB/s    0:00:00               70 100%    0.38kB/s    0:00:00 (xfr#179, to-chk=11969/12648)
+
+portal17/var/cache/dev/pools/Yg0dVddO3E/-/F/
+portal17/var/cache/dev/pools/Yg0dVddO3E/-/F/RJ9vFeCw6a8pTxIduaZC
+             70 100%    0.38kB/s    0:00:00               70 100%    0.38kB/s    0:00:00 (xfr#180, to-chk=11944/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/-/W/
+portal17/var/cache/dev/pools/Yg0dVddO3E/-/W/WCLiIeS27DfFCZysbkVt
+             74 100%    0.40kB/s    0:00:00               74 100%    0.40kB/s    0:00:00 (xfr#181, to-chk=11917/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/0/9/
+portal17/var/cache/dev/pools/Yg0dVddO3E/0/9/XulJFBlETIwxy2A2BElQ
+             74 100%    0.40kB/s    0:00:00               74 100%    0.40kB/s    0:00:00 (xfr#182, to-chk=11901/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/0/C/
+portal17/var/cache/dev/pools/Yg0dVddO3E/0/C/NwRzx5sXl6xfqDynrEyL
+             70 100%    0.38kB/s    0:00:00               70 100%    0.38kB/s    0:00:00 (xfr#183, to-chk=11896/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/0/M/
+portal17/var/cache/dev/pools/Yg0dVddO3E/0/M/AJf3QMnKA4mAbHz6-PdO
+             74 100%    0.40kB/s    0:00:00               74 100%    0.40kB/s    0:00:00 (xfr#184, to-chk=11880/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/0/N/
+portal17/var/cache/dev/pools/Yg0dVddO3E/0/N/wupFpFsgiZWdvJrrD9fY
+
+             70 100%    0.36kB/s    0:00:00               70 100%    0.36kB/s    0:00:00 (xfr#185, to-chk=11878/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/0/U/
+
+portal17/var/cache/dev/pools/Yg0dVddO3E/0/U/8L0TnTvGIslcVsL7j1eJ
+             74 100%    0.38kB/s    0:00:00               74 100%    0.38kB/s    0:00:00 (xfr#186, to-chk=11869/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/1/E/
+portal17/var/cache/dev/pools/Yg0dVddO3E/1/E/ZZgCmCMsLD2p-uH2YKBo
+             70 100%    0.36kB/s    0:00:00               70 100%    0.36kB/s    0:00:00 (xfr#187, to-chk=11836/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/1/I/
+portal17/var/cache/dev/pools/Yg0dVddO3E/1/I/kOzK+yiIQDSVANi28UsK
+
+             74 100%    0.37kB/s    0:00:00               74 100%    0.37kB/s    0:00:00 (xfr#188, to-chk=11832/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/1/R/
+portal17/var/cache/dev/pools/Yg0dVddO3E/1/R/cbqiCoZdfx-GyKkT4kOg
+
+             74 100%    0.35kB/s    0:00:00               74 100%    0.35kB/s    0:00:00 (xfr#189, to-chk=11820/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/1/U/
+portal17/var/cache/dev/pools/Yg0dVddO3E/1/U/oTjXzJE2F9saXfWc3fIY
+
+             70 100%    0.32kB/s    0:00:00               70 100%    0.32kB/s    0:00:00 (xfr#190, to-chk=11814/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/1/Z/
+portal17/var/cache/dev/pools/Yg0dVddO3E/1/Z/yAAZuzIvDCJRzFoGogz-
+
+             74 100%    0.34kB/s    0:00:00               74 100%    0.34kB/s    0:00:00 (xfr#191, to-chk=11808/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/2/B/
+portal17/var/cache/dev/pools/Yg0dVddO3E/2/B/vnpeQGMMJ0mhueSbAbBU
+             70 100%    0.32kB/s    0:00:00               70 100%    0.32kB/s    0:00:00 (xfr#192, to-chk=11790/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/2/H/
+portal17/var/cache/dev/pools/Yg0dVddO3E/2/H/K21zI+c7sE86BwVlsTKw
+             70 100%    0.32kB/s    0:00:00               70 100%    0.32kB/s    0:00:00 (xfr#193, to-chk=11783/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/2/J/
+portal17/var/cache/dev/pools/Yg0dVddO3E/2/J/R9E6RH2vhQDdAvGDscGf
+             70 100%    0.32kB/s    0:00:00               70 100%    0.32kB/s    0:00:00 (xfr#194, to-chk=11780/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/3/7/
+portal17/var/cache/dev/pools/Yg0dVddO3E/3/7/RYZdeVuU-RlM-BqBE991
+
+             70 100%    0.31kB/s    0:00:00               70 100%    0.31kB/s    0:00:00 (xfr#195, to-chk=11747/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/4/G/
+portal17/var/cache/dev/pools/Yg0dVddO3E/4/G/4bn5BNpL-esjojpDvKVU
+
+             74 100%    0.33kB/s    0:00:00               74 100%    0.33kB/s    0:00:00 (xfr#196, to-chk=11695/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/4/Y/
+portal17/var/cache/dev/pools/Yg0dVddO3E/4/Y/PnUW+IDAl5EngSEJBod8
+             70 100%    0.31kB/s    0:00:00               70 100%    0.31kB/s    0:00:00 (xfr#197, to-chk=11667/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/5/6/
+portal17/var/cache/dev/pools/Yg0dVddO3E/5/6/wV38PkTrIbzW3Q4niDWM
+             70 100%    0.31kB/s    0:00:00               70 100%    0.31kB/s    0:00:00 (xfr#198, to-chk=11657/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/5/B/
+portal17/var/cache/dev/pools/Yg0dVddO3E/5/B/E+ve6Us8TGCS-8a4ZI1Y
+             74 100%    0.33kB/s    0:00:00               74 100%    0.33kB/s    0:00:00 (xfr#199, to-chk=11653/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/5/J/
+portal17/var/cache/dev/pools/Yg0dVddO3E/5/J/IT9i9PEnZgTiV55Wo+Er
+             70 100%    0.31kB/s    0:00:00               70 100%    0.31kB/s    0:00:00 (xfr#200, to-chk=11642/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/6/M/
+portal17/var/cache/dev/pools/Yg0dVddO3E/6/M/wfH3vGnYpNBzO9+t99F0
+             74 100%    0.33kB/s    0:00:00               74 100%    0.33kB/s    0:00:00 (xfr#201, to-chk=11580/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/7/4/
+portal17/var/cache/dev/pools/Yg0dVddO3E/7/4/+yIhv-hPuHj9t3npSZ1A
+             70 100%    0.31kB/s    0:00:00               70 100%    0.31kB/s    0:00:00 (xfr#202, to-chk=11555/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/7/4/5W9W1TyGCt-AWxFXYGMA
+
+            700  66%    3.02kB/s    0:00:00            1.05K 100%    4.52kB/s    0:00:00 (xfr#203, to-chk=11554/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/7/G/
+portal17/var/cache/dev/pools/Yg0dVddO3E/7/G/W4etvqTA7Msj1JjPu3ok
+             70 100%    0.30kB/s    0:00:00               70 100%    0.30kB/s    0:00:00 (xfr#204, to-chk=11537/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/7/I/
+portal17/var/cache/dev/pools/Yg0dVddO3E/7/I/-0k0QRFamSmK-N-x-lvB
+             74 100%    0.32kB/s    0:00:00               74 100%    0.32kB/s    0:00:00 (xfr#205, to-chk=11534/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/7/J/
+portal17/var/cache/dev/pools/Yg0dVddO3E/7/J/oqSLcSYG2ta-galxNuHF
+             70 100%    0.30kB/s    0:00:00               70 100%    0.30kB/s    0:00:00 (xfr#206, to-chk=11531/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/7/W/
+portal17/var/cache/dev/pools/Yg0dVddO3E/7/W/ihy0+wd6e1-0GgEUwAEH
+             70 100%    0.30kB/s    0:00:00               70 100%    0.30kB/s    0:00:00 (xfr#207, to-chk=11510/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/8/4/
+portal17/var/cache/dev/pools/Yg0dVddO3E/8/4/HjkdzvGtNMM-ZpgxjSmn
+            700  67%    3.02kB/s    0:00:00            1.04K 100%    4.50kB/s    0:00:00 (xfr#208, to-chk=11494/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/8/T/
+portal17/var/cache/dev/pools/Yg0dVddO3E/8/T/qQPQflNKk7g9wFdpqn33
+             74 100%    0.32kB/s    0:00:00               74 100%    0.32kB/s    0:00:00 (xfr#209, to-chk=11460/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/9/7/
+portal17/var/cache/dev/pools/Yg0dVddO3E/9/7/JHLRRQBbXok6hXEzziFx
+             74 100%    0.32kB/s    0:00:00               74 100%    0.32kB/s    0:00:00 (xfr#210, to-chk=11436/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/9/A/
+portal17/var/cache/dev/pools/Yg0dVddO3E/9/A/ngyPX48Xc2U7Hs4bz2nN
+             70 100%    0.30kB/s    0:00:00               70 100%    0.30kB/s    0:00:00 (xfr#211, to-chk=11431/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/9/B/
+portal17/var/cache/dev/pools/Yg0dVddO3E/9/B/eXj-Wz3qnSNL4V6v8ZYO
+             74 100%    0.32kB/s    0:00:00               74 100%    0.32kB/s    0:00:00 (xfr#212, to-chk=11427/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/9/B/koQnSbpp2A2pETXQT5Em
+             70 100%    0.30kB/s    0:00:00               70 100%    0.30kB/s    0:00:00 (xfr#213, to-chk=11426/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/A/O/
+portal17/var/cache/dev/pools/Yg0dVddO3E/A/O/1ynB3KytMH+NoyQWbfxT
+             70 100%    0.30kB/s    0:00:00               70 100%    0.30kB/s    0:00:00 (xfr#214, to-chk=11332/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/A/W/
+portal17/var/cache/dev/pools/Yg0dVddO3E/A/W/on3aiUy+EMgDPn3CJd5u
+             74 100%    0.32kB/s    0:00:00               74 100%    0.32kB/s    0:00:00 (xfr#215, to-chk=11315/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/A/Z/
+portal17/var/cache/dev/pools/Yg0dVddO3E/A/Z/rgDKIhrROw7iLYMBY4C4
+             70 100%    0.30kB/s    0:00:00               70 100%    0.30kB/s    0:00:00 (xfr#216, to-chk=11308/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/B/5/
+portal17/var/cache/dev/pools/Yg0dVddO3E/B/5/RuIuyeUl8hJjbXUPxwgm
+             74 100%    0.32kB/s    0:00:00               74 100%    0.32kB/s    0:00:00 (xfr#217, to-chk=11292/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/B/8/
+portal17/var/cache/dev/pools/Yg0dVddO3E/B/8/jS2Fi5drIpyNoe5IhBfx
+             70 100%    0.30kB/s    0:00:00               70 100%    0.30kB/s    0:00:00 (xfr#218, to-chk=11288/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/B/C/
+portal17/var/cache/dev/pools/Yg0dVddO3E/B/C/1o9PnqeDNKiQOzaPLFXB
+             70 100%    0.30kB/s    0:00:00               70 100%    0.30kB/s    0:00:00 (xfr#219, to-chk=11281/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/B/G/
+portal17/var/cache/dev/pools/Yg0dVddO3E/B/G/ClSV3rVjv0jfiBKy-541
+             70 100%    0.30kB/s    0:00:00               70 100%    0.30kB/s    0:00:00 (xfr#220, to-chk=11274/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/B/M/
+portal17/var/cache/dev/pools/Yg0dVddO3E/B/M/ImS1HrsbberkVARLvSec
+
+             74 100%    0.30kB/s    0:00:00               74 100%    0.30kB/s    0:00:00 (xfr#221, to-chk=11264/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/B/U/
+
+portal17/var/cache/dev/pools/Yg0dVddO3E/B/U/8YDuUxNRSo0PCjDF11hy
+             70 100%    0.29kB/s    0:00:00               70 100%    0.29kB/s    0:00:00 (xfr#222, to-chk=11247/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/B/W/
+portal17/var/cache/dev/pools/Yg0dVddO3E/B/W/FowzeKDx6sZ4W6e9itPK
+
+             74 100%    0.29kB/s    0:00:00               74 100%    0.29kB/s    0:00:00 (xfr#223, to-chk=11242/12648)
+
+portal17/var/cache/dev/pools/Yg0dVddO3E/B/Y/
+portal17/var/cache/dev/pools/Yg0dVddO3E/B/Y/tmVBLXvUhW1Ef-0HpYm7
+             74 100%    0.29kB/s    0:00:00               74 100%    0.29kB/s    0:00:00 (xfr#224, to-chk=11237/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/C/1/
+portal17/var/cache/dev/pools/Yg0dVddO3E/C/1/FLNnwtNVfSvGDvor-JQd
+             70 100%    0.27kB/s    0:00:00               70 100%    0.27kB/s    0:00:00 (xfr#225, to-chk=11225/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/C/C/
+portal17/var/cache/dev/pools/Yg0dVddO3E/C/C/+lKv7kLIdgOpzIj7fO0G
+             70 100%    0.27kB/s    0:00:00               70 100%    0.27kB/s    0:00:00 (xfr#226, to-chk=11209/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/C/D/
+portal17/var/cache/dev/pools/Yg0dVddO3E/C/D/kQE77PkzSU0ce2sqg6SG
+             74 100%    0.29kB/s    0:00:00               74 100%    0.29kB/s    0:00:00 (xfr#227, to-chk=11200/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/C/Q/
+portal17/var/cache/dev/pools/Yg0dVddO3E/C/Q/g6phdBfFTR3cTWSB1QJd
+             70 100%    0.27kB/s    0:00:00               70 100%    0.27kB/s    0:00:00 (xfr#228, to-chk=11174/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/C/V/
+portal17/var/cache/dev/pools/Yg0dVddO3E/C/V/RbCNiP9cwgKeMPJpS1gK
+
+             74 100%    0.28kB/s    0:00:00               74 100%    0.28kB/s    0:00:00 (xfr#229, to-chk=11166/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/C/X/
+
+portal17/var/cache/dev/pools/Yg0dVddO3E/C/X/BPN8VN1qVOWoMZISTsva
+             70 100%    0.26kB/s    0:00:00               70 100%    0.26kB/s    0:00:00 (xfr#230, to-chk=11161/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/D/0/
+portal17/var/cache/dev/pools/Yg0dVddO3E/D/0/g04NQYyVS43A9LhcvBcQ
+             74 100%    0.28kB/s    0:00:00               74 100%    0.28kB/s    0:00:00 (xfr#231, to-chk=11153/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/D/4/
+portal17/var/cache/dev/pools/Yg0dVddO3E/D/4/fToPnBY3rZ9i5eyZJsjt
+
+             70 100%    0.25kB/s    0:00:00               70 100%    0.25kB/s    0:00:00 (xfr#232, to-chk=11148/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/D/6/
+
+portal17/var/cache/dev/pools/Yg0dVddO3E/D/6/emrnllYV-h1+ZBydefas
+
+             70 100%    0.25kB/s    0:00:00               70 100%    0.25kB/s    0:00:00 (xfr#233, to-chk=11144/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/D/A/
+
+portal17/var/cache/dev/pools/Yg0dVddO3E/D/A/8lu4TDHyWe5AjyzORDM8
+             74 100%    0.26kB/s    0:00:00               74 100%    0.26kB/s    0:00:00 (xfr#234, to-chk=11138/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/D/E/
+portal17/var/cache/dev/pools/Yg0dVddO3E/D/E/aBg4OeC3U6Qt8aov4++e
+             70 100%    0.25kB/s    0:00:00               70 100%    0.25kB/s    0:00:00 (xfr#235, to-chk=11129/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/D/J/
+portal17/var/cache/dev/pools/Yg0dVddO3E/D/J/aECSF2UIPWV8E32hoIOw
+             70 100%    0.25kB/s    0:00:00               70 100%    0.25kB/s    0:00:00 (xfr#236, to-chk=11116/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/D/K/
+portal17/var/cache/dev/pools/Yg0dVddO3E/D/K/81B4BpX3Roxrd2QY5j0k
+             70 100%    0.25kB/s    0:00:00               70 100%    0.25kB/s    0:00:00 (xfr#237, to-chk=11114/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/D/M/
+portal17/var/cache/dev/pools/Yg0dVddO3E/D/M/j+vgT6mkmfBysK7WpXqW
+             74 100%    0.26kB/s    0:00:00               74 100%    0.26kB/s    0:00:00 (xfr#238, to-chk=11107/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/D/R/
+portal17/var/cache/dev/pools/Yg0dVddO3E/D/R/seAk-229XemJXzMEVPwc
+            700  66%    2.48kB/s    0:00:00            1.05K 100%    3.72kB/s    0:00:00 (xfr#239, to-chk=11098/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/D/S/
+portal17/var/cache/dev/pools/Yg0dVddO3E/D/S/IArdNHRV77nbRZi+ae01
+
+             74 100%    0.26kB/s    0:00:00               74 100%    0.26kB/s    0:00:00 (xfr#240, to-chk=11096/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/D/T/
+portal17/var/cache/dev/pools/Yg0dVddO3E/D/T/z38uS-qXphU-pv3bFr+A
+             74 100%    0.26kB/s    0:00:00               74 100%    0.26kB/s    0:00:00 (xfr#241, to-chk=11092/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/D/X/
+portal17/var/cache/dev/pools/Yg0dVddO3E/D/X/EKDLUaJtUSIjHj9YGaoV
+             70 100%    0.24kB/s    0:00:00               70 100%    0.24kB/s    0:00:00 (xfr#242, to-chk=11079/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/E/6/
+portal17/var/cache/dev/pools/Yg0dVddO3E/E/6/WKfRP8PM7vZRMTRrMfXi
+             70 100%    0.24kB/s    0:00:00               70 100%    0.24kB/s    0:00:00 (xfr#243, to-chk=11060/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/E/B/
+portal17/var/cache/dev/pools/Yg0dVddO3E/E/B/-h4MM0NWaZK6OQmk4w2o
+             70 100%    0.24kB/s    0:00:00               70 100%    0.24kB/s    0:00:00 (xfr#244, to-chk=11056/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/E/C/
+portal17/var/cache/dev/pools/Yg0dVddO3E/E/C/5rKr09FKnZ-j-u0hYVMq
+             74 100%    0.26kB/s    0:00:00               74 100%    0.26kB/s    0:00:00 (xfr#245, to-chk=11053/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/E/D/
+portal17/var/cache/dev/pools/Yg0dVddO3E/E/D/LpiuM1E5P3a6OMZ7eOh4
+             70 100%    0.24kB/s    0:00:00               70 100%    0.24kB/s    0:00:00 (xfr#246, to-chk=11049/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/E/G/
+portal17/var/cache/dev/pools/Yg0dVddO3E/E/G/MVShKMa2pCYqGF8vpJ9Z
+             70 100%    0.24kB/s    0:00:00               70 100%    0.24kB/s    0:00:00 (xfr#247, to-chk=11039/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/E/H/
+portal17/var/cache/dev/pools/Yg0dVddO3E/E/H/GC6H0widrwdBHxfOMd2q
+             74 100%    0.26kB/s    0:00:00               74 100%    0.26kB/s    0:00:00 (xfr#248, to-chk=11037/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/E/J/
+portal17/var/cache/dev/pools/Yg0dVddO3E/E/J/-SyML2Vm7a-Mo9-jmov+
+             70 100%    0.24kB/s    0:00:00               70 100%    0.24kB/s    0:00:00 (xfr#249, to-chk=11031/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/E/L/
+portal17/var/cache/dev/pools/Yg0dVddO3E/E/L/7cVX0dze783SypHGLglC
+             74 100%    0.26kB/s    0:00:00               74 100%    0.26kB/s    0:00:00 (xfr#250, to-chk=11025/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/E/P/
+portal17/var/cache/dev/pools/Yg0dVddO3E/E/P/731UFDRsAwdq9xKakk8l
+             70 100%    0.24kB/s    0:00:00               70 100%    0.24kB/s    0:00:00 (xfr#251, to-chk=11017/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/E/U/
+portal17/var/cache/dev/pools/Yg0dVddO3E/E/U/rciabJu0ngiVfIevASzL
+             70 100%    0.24kB/s    0:00:00               70 100%    0.24kB/s    0:00:00 (xfr#252, to-chk=11007/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/F/B/
+portal17/var/cache/dev/pools/Yg0dVddO3E/F/B/Hc66TVhrFPgybZCdmzvL
+             74 100%    0.26kB/s    0:00:00               74 100%    0.26kB/s    0:00:00 (xfr#253, to-chk=10977/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/F/E/
+portal17/var/cache/dev/pools/Yg0dVddO3E/F/E/erTCQ3We5vHCeH6fUpwE
+             70 100%    0.24kB/s    0:00:00               70 100%    0.24kB/s    0:00:00 (xfr#254, to-chk=10970/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/F/F/
+portal17/var/cache/dev/pools/Yg0dVddO3E/F/F/C8vMo09iGW-7XcPJuboI
+             74 100%    0.26kB/s    0:00:00               74 100%    0.26kB/s    0:00:00 (xfr#255, to-chk=10967/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/F/H/
+
+portal17/var/cache/dev/pools/Yg0dVddO3E/F/H/N1i3xDS6RI4dSiarOFXe
+             74 100%    0.25kB/s    0:00:00               74 100%    0.25kB/s    0:00:00 (xfr#256, to-chk=10960/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/F/J/
+portal17/var/cache/dev/pools/Yg0dVddO3E/F/J/nq86QJtBPiDR8gH7vKnr
+             70 100%    0.24kB/s    0:00:00               70 100%    0.24kB/s    0:00:00 (xfr#257, to-chk=10953/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/F/Y/
+portal17/var/cache/dev/pools/Yg0dVddO3E/F/Y/OG0M64hnavd3QERlZAYb
+             70 100%    0.24kB/s    0:00:00               70 100%    0.24kB/s    0:00:00 (xfr#258, to-chk=10914/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/G/D/
+portal17/var/cache/dev/pools/Yg0dVddO3E/G/D/jTq9lMRolgGStUTb3Zqm
+             74 100%    0.25kB/s    0:00:00               74 100%    0.25kB/s    0:00:00 (xfr#259, to-chk=10883/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/G/J/
+portal17/var/cache/dev/pools/Yg0dVddO3E/G/J/8rTF9Fu+CKz37jtBABaF
+             70 100%    0.24kB/s    0:00:00               70 100%    0.24kB/s    0:00:00 (xfr#260, to-chk=10872/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/G/P/
+portal17/var/cache/dev/pools/Yg0dVddO3E/G/P/L7tJuaUW+O28zwidhxRq
+             74 100%    0.25kB/s    0:00:00               74 100%    0.25kB/s    0:00:00 (xfr#261, to-chk=10860/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/H/+/
+portal17/var/cache/dev/pools/Yg0dVddO3E/H/+/Jt7Ym9B9nLiuTR1o3yM0
+             70 100%    0.24kB/s    0:00:00               70 100%    0.24kB/s    0:00:00 (xfr#262, to-chk=10838/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/H/0/
+portal17/var/cache/dev/pools/Yg0dVddO3E/H/0/lCAPhWO3v6rgqZ1Y94df
+            700  65%    2.40kB/s    0:00:00            1.06K 100%    3.64kB/s    0:00:00 (xfr#263, to-chk=10833/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/H/9/
+portal17/var/cache/dev/pools/Yg0dVddO3E/H/9/ObWd1qozbWyflGQwSHMN
+
+             70 100%    0.23kB/s    0:00:00               70 100%    0.23kB/s    0:00:00 (xfr#264, to-chk=10820/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/H/9/v9jeuh-NJWtJ7psLn7T3
+             74 100%    0.25kB/s    0:00:00               74 100%    0.25kB/s    0:00:00 (xfr#265, to-chk=10819/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/H/E/
+portal17/var/cache/dev/pools/Yg0dVddO3E/H/E/8I6txfKi7rFx+EPTrERf
+             74 100%    0.25kB/s    0:00:00               74 100%    0.25kB/s    0:00:00 (xfr#266, to-chk=10809/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/H/E/UKUsltq4me15m7KdSlyu
+             74 100%    0.25kB/s    0:00:00               74 100%    0.25kB/s    0:00:00 (xfr#267, to-chk=10808/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/H/H/
+portal17/var/cache/dev/pools/Yg0dVddO3E/H/H/JX697de6yc1XKU8bO9lE
+             70 100%    0.23kB/s    0:00:00               70 100%    0.23kB/s    0:00:00 (xfr#268, to-chk=10796/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/H/P/
+portal17/var/cache/dev/pools/Yg0dVddO3E/H/P/V+vXF5wq0u-1TwL4dG62
+             70 100%    0.23kB/s    0:00:00               70 100%    0.23kB/s    0:00:00 (xfr#269, to-chk=10782/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/H/V/
+portal17/var/cache/dev/pools/Yg0dVddO3E/H/V/YGL5jhbODR7z6lmF3IvT
+             74 100%    0.25kB/s    0:00:00               74 100%    0.25kB/s    0:00:00 (xfr#270, to-chk=10765/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/I/A/
+portal17/var/cache/dev/pools/Yg0dVddO3E/I/A/P5hPe-Ew3nMOiZqumvE6
+             70 100%    0.23kB/s    0:00:00               70 100%    0.23kB/s    0:00:00 (xfr#271, to-chk=10740/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/I/E/
+portal17/var/cache/dev/pools/Yg0dVddO3E/I/E/0HMGQ+CLODAhtqPsB+-w
+             74 100%    0.25kB/s    0:00:00               74 100%    0.25kB/s    0:00:00 (xfr#272, to-chk=10729/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/I/I/
+portal17/var/cache/dev/pools/Yg0dVddO3E/I/I/dq1WUbrm24o+z2KshsmE
+             70 100%    0.23kB/s    0:00:00               70 100%    0.23kB/s    0:00:00 (xfr#273, to-chk=10717/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/I/M/
+portal17/var/cache/dev/pools/Yg0dVddO3E/I/M/JSqHwtM6iu-pGWgLcclW
+             70 100%    0.23kB/s    0:00:00               70 100%    0.23kB/s    0:00:00 (xfr#274, to-chk=10706/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/I/P/
+portal17/var/cache/dev/pools/Yg0dVddO3E/I/P/M8fdjeyQRTXWvXE+oEMj
+             74 100%    0.25kB/s    0:00:00               74 100%    0.25kB/s    0:00:00 (xfr#275, to-chk=10693/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/I/R/
+portal17/var/cache/dev/pools/Yg0dVddO3E/I/R/1k2g7RgyyWPtqH6FyNVc
+             74 100%    0.25kB/s    0:00:00               74 100%    0.25kB/s    0:00:00 (xfr#276, to-chk=10688/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/I/T/
+portal17/var/cache/dev/pools/Yg0dVddO3E/I/T/H6TP5QUbZwLE+11hU99g
+             70 100%    0.23kB/s    0:00:00               70 100%    0.23kB/s    0:00:00 (xfr#277, to-chk=10683/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/I/T/Kw99Fd-ykUXPyXRGWYI2
+             74 100%    0.25kB/s    0:00:00               74 100%    0.25kB/s    0:00:00 (xfr#278, to-chk=10682/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/I/X/
+portal17/var/cache/dev/pools/Yg0dVddO3E/I/X/odiR-VS+FeNOalqJGTBF
+             70 100%    0.23kB/s    0:00:00               70 100%    0.23kB/s    0:00:00 (xfr#279, to-chk=10672/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/J/7/
+portal17/var/cache/dev/pools/Yg0dVddO3E/J/7/M0hQ9YZr-ngIi4Y-SRMF
+
+             70 100%    0.22kB/s    0:00:00               70 100%    0.22kB/s    0:00:00 (xfr#280, to-chk=10651/12648)
+
+portal17/var/cache/dev/pools/Yg0dVddO3E/J/A/
+portal17/var/cache/dev/pools/Yg0dVddO3E/J/A/SEM+viOcDzSFQN-j0uFO
+             74 100%    0.24kB/s    0:00:00               74 100%    0.24kB/s    0:00:00 (xfr#281, to-chk=10647/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/J/C/
+portal17/var/cache/dev/pools/Yg0dVddO3E/J/C/oQXxh+LPZBh1E3b7XqkK
+            700  66%    2.25kB/s    0:00:00            1.05K 100%    3.36kB/s    0:00:00 (xfr#282, to-chk=10643/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/J/D/
+portal17/var/cache/dev/pools/Yg0dVddO3E/J/D/kb7Nqnw6GpGfkek47kIH
+             70 100%    0.22kB/s    0:00:00               70 100%    0.22kB/s    0:00:00 (xfr#283, to-chk=10640/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/J/K/
+portal17/var/cache/dev/pools/Yg0dVddO3E/J/K/+tqPi+hzsd3p8lhHy+Z9
+             74 100%    0.24kB/s    0:00:00               74 100%    0.24kB/s    0:00:00 (xfr#284, to-chk=10624/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/J/W/
+portal17/var/cache/dev/pools/Yg0dVddO3E/J/W/15+IT985ye-nGxiPJ44Q
+
+             70 100%    0.22kB/s    0:00:00               70 100%    0.22kB/s    0:00:00 (xfr#285, to-chk=10596/12648)
+
+portal17/var/cache/dev/pools/Yg0dVddO3E/J/W/f+XnAfRVYehLB46-l4D9
+             74 100%    0.23kB/s    0:00:00               74 100%    0.23kB/s    0:00:00 (xfr#286, to-chk=10595/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/J/X/
+portal17/var/cache/dev/pools/Yg0dVddO3E/J/X/cjkGuTO9Z2S3W72rSjUA
+             70 100%    0.22kB/s    0:00:00               70 100%    0.22kB/s    0:00:00 (xfr#287, to-chk=10593/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/J/X/m74fwJmFMbLN2HIXORT-
+             70 100%    0.22kB/s    0:00:00               70 100%    0.22kB/s    0:00:00 (xfr#288, to-chk=10592/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/K/0/
+portal17/var/cache/dev/pools/Yg0dVddO3E/K/0/Ievh+l-YdFIixkCbZ8fs
+             74 100%    0.23kB/s    0:00:00               74 100%    0.23kB/s    0:00:00 (xfr#289, to-chk=10581/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/K/7/
+portal17/var/cache/dev/pools/Yg0dVddO3E/K/7/4T9Bdk6ceTROweQLUMu1
+             70 100%    0.22kB/s    0:00:00               70 100%    0.22kB/s    0:00:00 (xfr#290, to-chk=10568/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/K/F/
+portal17/var/cache/dev/pools/Yg0dVddO3E/K/F/i3wLgLNAT9ThGhh8zwsz
+             74 100%    0.23kB/s    0:00:00               74 100%    0.23kB/s    0:00:00 (xfr#291, to-chk=10554/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/K/G/
+portal17/var/cache/dev/pools/Yg0dVddO3E/K/G/+hDSp9wxYkU2O4BfeNoA
+             74 100%    0.23kB/s    0:00:00               74 100%    0.23kB/s    0:00:00 (xfr#292, to-chk=10552/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/K/I/
+portal17/var/cache/dev/pools/Yg0dVddO3E/K/I/PUokiR5QH80KVhDUPgyw
+
+             74 100%    0.23kB/s    0:00:00               74 100%    0.23kB/s    0:00:00 (xfr#293, to-chk=10544/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/K/V/
+portal17/var/cache/dev/pools/Yg0dVddO3E/K/V/x94UcByYDWWjWYvfUDdb
+             70 100%    0.21kB/s    0:00:00               70 100%    0.21kB/s    0:00:00 (xfr#294, to-chk=10520/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/L/0/
+portal17/var/cache/dev/pools/Yg0dVddO3E/L/0/yX5hPp53j-ZTguefaycH
+
+             70 100%    0.21kB/s    0:00:00               70 100%    0.21kB/s    0:00:00 (xfr#295, to-chk=10507/12648)
+
+portal17/var/cache/dev/pools/Yg0dVddO3E/L/C/
+portal17/var/cache/dev/pools/Yg0dVddO3E/L/C/OGH32L0sVPG0uxN7saLh
+             70 100%    0.21kB/s    0:00:00               70 100%    0.21kB/s    0:00:00 (xfr#296, to-chk=10485/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/L/I/
+portal17/var/cache/dev/pools/Yg0dVddO3E/L/I/9nNX0SeO7jQc498EjTLm
+             74 100%    0.22kB/s    0:00:00               74 100%    0.22kB/s    0:00:00 (xfr#297, to-chk=10471/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/L/Q/
+portal17/var/cache/dev/pools/Yg0dVddO3E/L/Q/SpRIfRVNLhJGsVnFiZ1V
+             74 100%    0.22kB/s    0:00:00               74 100%    0.22kB/s    0:00:00 (xfr#298, to-chk=10457/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/M/0/
+portal17/var/cache/dev/pools/Yg0dVddO3E/M/0/nRwfOBo0ICldVuIFjwC-
+             74 100%    0.22kB/s    0:00:00               74 100%    0.22kB/s    0:00:00 (xfr#299, to-chk=10431/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/M/I/
+portal17/var/cache/dev/pools/Yg0dVddO3E/M/I/8wsaILWxWk-af2lr92EN
+            700  66%    2.10kB/s    0:00:00            1.05K 100%    3.15kB/s    0:00:00 (xfr#300, to-chk=10396/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/M/P/
+portal17/var/cache/dev/pools/Yg0dVddO3E/M/P/PkEm4QiAjj2VW2Ka32yc
+
+             74 100%    0.22kB/s    0:00:00               74 100%    0.22kB/s    0:00:00 (xfr#301, to-chk=10381/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/M/W/
+portal17/var/cache/dev/pools/Yg0dVddO3E/M/W/M6vLmSwnoBQYzAnSbR19
+             70 100%    0.21kB/s    0:00:00               70 100%    0.21kB/s    0:00:00 (xfr#302, to-chk=10366/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/M/Z/
+portal17/var/cache/dev/pools/Yg0dVddO3E/M/Z/NlvW0E7MwmdmU-u-w8l3
+
+             74 100%    0.22kB/s    0:00:00               74 100%    0.22kB/s    0:00:00 (xfr#303, to-chk=10362/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/N/+/
+portal17/var/cache/dev/pools/Yg0dVddO3E/N/+/B+OVBbMZHJ8thDj+qxrN
+             70 100%    0.21kB/s    0:00:00               70 100%    0.21kB/s    0:00:00 (xfr#304, to-chk=10355/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/N/2/
+portal17/var/cache/dev/pools/Yg0dVddO3E/N/2/TYoIsEKE1vdKzPVJqlHF
+             74 100%    0.22kB/s    0:00:00               74 100%    0.22kB/s    0:00:00 (xfr#305, to-chk=10348/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/N/4/
+portal17/var/cache/dev/pools/Yg0dVddO3E/N/4/Mg0jUbSHaxreldVOWVwX
+             74 100%    0.22kB/s    0:00:00               74 100%    0.22kB/s    0:00:00 (xfr#306, to-chk=10344/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/N/C/
+portal17/var/cache/dev/pools/Yg0dVddO3E/N/C/P4LgXPCXTeUfdgy5bcNa
+
+             70 100%    0.20kB/s    0:00:00               70 100%    0.20kB/s    0:00:00 (xfr#307, to-chk=10335/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/N/J/
+portal17/var/cache/dev/pools/Yg0dVddO3E/N/J/TWlcGr0CVH6YQmqs2V5k
+             70 100%    0.20kB/s    0:00:00               70 100%    0.20kB/s    0:00:00 (xfr#308, to-chk=10322/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/N/L/
+portal17/var/cache/dev/pools/Yg0dVddO3E/N/L/WmJ+a2iVuxcgGEU3e2N9
+             74 100%    0.21kB/s    0:00:00               74 100%    0.21kB/s    0:00:00 (xfr#309, to-chk=10316/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/N/O/
+portal17/var/cache/dev/pools/Yg0dVddO3E/N/O/TENkyAwe-QPrBupwbsEI
+             74 100%    0.21kB/s    0:00:00               74 100%    0.21kB/s    0:00:00 (xfr#310, to-chk=10310/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/N/T/
+portal17/var/cache/dev/pools/Yg0dVddO3E/N/T/rLQprRGLkHcVrEdedB8J
+
+             74 100%    0.21kB/s    0:00:00               74 100%    0.21kB/s    0:00:00 (xfr#311, to-chk=10299/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/N/X/
+
+portal17/var/cache/dev/pools/Yg0dVddO3E/N/X/KzlIbZajXPy8YZLAPQPq
+             70 100%    0.19kB/s    0:00:00               70 100%    0.19kB/s    0:00:00 (xfr#312, to-chk=10285/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/O/U/
+portal17/var/cache/dev/pools/Yg0dVddO3E/O/U/gvSnt82jgij-I64yIvS8
+             70 100%    0.19kB/s    0:00:00               70 100%    0.19kB/s    0:00:00 (xfr#313, to-chk=10211/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/O/X/
+portal17/var/cache/dev/pools/Yg0dVddO3E/O/X/CiL7Ro8BE-raiwRuZ02i
+             74 100%    0.21kB/s    0:00:00               74 100%    0.21kB/s    0:00:00 (xfr#314, to-chk=10206/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/P/2/
+portal17/var/cache/dev/pools/Yg0dVddO3E/P/2/E+BGHNnWZwqutXi6paWD
+             74 100%    0.21kB/s    0:00:00               74 100%    0.21kB/s    0:00:00 (xfr#315, to-chk=10195/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/P/A/
+portal17/var/cache/dev/pools/Yg0dVddO3E/P/A/DwHgaPStXwMDzgfbofiS
+             70 100%    0.19kB/s    0:00:00               70 100%    0.19kB/s    0:00:00 (xfr#316, to-chk=10180/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/P/O/
+portal17/var/cache/dev/pools/Yg0dVddO3E/P/O/j2f6-gpprSdXMcSIh88L
+             70 100%    0.19kB/s    0:00:00               70 100%    0.19kB/s    0:00:00 (xfr#317, to-chk=10150/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/P/U/
+portal17/var/cache/dev/pools/Yg0dVddO3E/P/U/xXQUeoJgrjDVG4aHixWp
+             74 100%    0.21kB/s    0:00:00               74 100%    0.21kB/s    0:00:00 (xfr#318, to-chk=10137/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/P/W/
+portal17/var/cache/dev/pools/Yg0dVddO3E/P/W/uJsX7WwlepZr5tdu+INQ
+             74 100%    0.21kB/s    0:00:00               74 100%    0.21kB/s    0:00:00 (xfr#319, to-chk=10130/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/P/X/
+portal17/var/cache/dev/pools/Yg0dVddO3E/P/X/kginyCXA3C-BHwlszzn6
+             70 100%    0.19kB/s    0:00:00               70 100%    0.19kB/s    0:00:00 (xfr#320, to-chk=10127/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/P/Y/
+portal17/var/cache/dev/pools/Yg0dVddO3E/P/Y/LL2tVxXUkbzjhTpyByYJ
+             70 100%    0.19kB/s    0:00:00               70 100%    0.19kB/s    0:00:00 (xfr#321, to-chk=10124/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/P/Z/
+portal17/var/cache/dev/pools/Yg0dVddO3E/P/Z/dcTCm12OhBgEw5UK+u07
+             70 100%    0.19kB/s    0:00:00               70 100%    0.19kB/s    0:00:00 (xfr#322, to-chk=10120/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/Q/E/
+portal17/var/cache/dev/pools/Yg0dVddO3E/Q/E/6gX3qV4LuT1CRtQLhzvs
+             74 100%    0.21kB/s    0:00:00               74 100%    0.21kB/s    0:00:00 (xfr#323, to-chk=10097/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/Q/F/
+portal17/var/cache/dev/pools/Yg0dVddO3E/Q/F/UJwSaTwKgCS0rArZhmnI
+
+            700  65%    1.91kB/s    0:00:00            1.06K 100%    2.90kB/s    0:00:00 (xfr#324, to-chk=10094/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/Q/J/
+portal17/var/cache/dev/pools/Yg0dVddO3E/Q/J/Weuc7sZX7rxMCDrOkjFZ
+             74 100%    0.20kB/s    0:00:00               74 100%    0.20kB/s    0:00:00 (xfr#325, to-chk=10083/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/R/5/
+portal17/var/cache/dev/pools/Yg0dVddO3E/R/5/J+TGzNIFog+4XPupmCQ8
+             70 100%    0.19kB/s    0:00:00               70 100%    0.19kB/s    0:00:00 (xfr#326, to-chk=10030/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/R/F/
+portal17/var/cache/dev/pools/Yg0dVddO3E/R/F/5Irni+yDSZOwiRtkg6op
+             74 100%    0.20kB/s    0:00:00               74 100%    0.20kB/s    0:00:00 (xfr#327, to-chk=10013/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/R/H/
+portal17/var/cache/dev/pools/Yg0dVddO3E/R/H/tIAYb8rzzbtm0A1nXWOp
+             74 100%    0.20kB/s    0:00:00               74 100%    0.20kB/s    0:00:00 (xfr#328, to-chk=10010/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/R/M/
+portal17/var/cache/dev/pools/Yg0dVddO3E/R/M/ztAFw4pSlAKUFeEBamGn
+             74 100%    0.20kB/s    0:00:00               74 100%    0.20kB/s    0:00:00 (xfr#329, to-chk=9999/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/R/O/
+portal17/var/cache/dev/pools/Yg0dVddO3E/R/O/-zBUTMIv1bj9II2c3GsL
+             70 100%    0.19kB/s    0:00:00               70 100%    0.19kB/s    0:00:00 (xfr#330, to-chk=9994/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/R/R/
+portal17/var/cache/dev/pools/Yg0dVddO3E/R/R/tG5Bh0bvQHqxdKhzN4yt
+             74 100%    0.20kB/s    0:00:00               74 100%    0.20kB/s    0:00:00 (xfr#331, to-chk=9987/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/R/S/
+portal17/var/cache/dev/pools/Yg0dVddO3E/R/S/6Iow400S-HtIlCs5chdE
+             74 100%    0.20kB/s    0:00:00               74 100%    0.20kB/s    0:00:00 (xfr#332, to-chk=9985/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/R/S/K3c0rs50iIyyE+V5wHBb
+            700  65%    1.90kB/s    0:00:00            1.06K 100%    2.89kB/s    0:00:00 (xfr#333, to-chk=9984/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/R/Y/
+portal17/var/cache/dev/pools/Yg0dVddO3E/R/Y/+XjKXzbFIDd4oKiBMZcg
+             74 100%    0.20kB/s    0:00:00               74 100%    0.20kB/s    0:00:00 (xfr#334, to-chk=9962/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/S/3/
+portal17/var/cache/dev/pools/Yg0dVddO3E/S/3/57JPbEuTkM9fCUuh+vRT
+             70 100%    0.19kB/s    0:00:00               70 100%    0.19kB/s    0:00:00 (xfr#335, to-chk=9945/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/S/5/
+portal17/var/cache/dev/pools/Yg0dVddO3E/S/5/5D4WIk1nOY8NFk6aERyw
+            700  66%    1.90kB/s    0:00:00            1.05K 100%    2.85kB/s    0:00:00 (xfr#336, to-chk=9941/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/S/D/
+portal17/var/cache/dev/pools/Yg0dVddO3E/S/D/rrwFIseLX9MMt9klaTFF
+             74 100%    0.20kB/s    0:00:00               74 100%    0.20kB/s    0:00:00 (xfr#337, to-chk=9921/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/S/E/
+portal17/var/cache/dev/pools/Yg0dVddO3E/S/E/2+zFwOeUisGvEwkeNiF6
+
+             70 100%    0.19kB/s    0:00:00               70 100%    0.19kB/s    0:00:00 (xfr#338, to-chk=9919/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/S/G/
+portal17/var/cache/dev/pools/Yg0dVddO3E/S/G/eB0Lj2Z3ulb5Pnmvvui1
+             74 100%    0.20kB/s    0:00:00               74 100%    0.20kB/s    0:00:00 (xfr#339, to-chk=9911/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/S/G/tIQwch8eXH8PseTYn5Pd
+             74 100%    0.20kB/s    0:00:00               74 100%    0.20kB/s    0:00:00 (xfr#340, to-chk=9909/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/S/J/
+portal17/var/cache/dev/pools/Yg0dVddO3E/S/J/mmrbxYL5CZuizc6LH9ZO
+             70 100%    0.19kB/s    0:00:00               70 100%    0.19kB/s    0:00:00 (xfr#341, to-chk=9899/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/S/O/
+portal17/var/cache/dev/pools/Yg0dVddO3E/S/O/dpryXSftoUKc8tjhdOPW
+             70 100%    0.19kB/s    0:00:00               70 100%    0.19kB/s    0:00:00 (xfr#342, to-chk=9886/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/S/Q/
+portal17/var/cache/dev/pools/Yg0dVddO3E/S/Q/gc1VY963++LkmWTlhuzg
+             74 100%    0.20kB/s    0:00:00               74 100%    0.20kB/s    0:00:00 (xfr#343, to-chk=9882/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/T/D/
+portal17/var/cache/dev/pools/Yg0dVddO3E/T/D/rq1ie6oE8TN8he0v32Wl
+             74 100%    0.20kB/s    0:00:00               74 100%    0.20kB/s    0:00:00 (xfr#344, to-chk=9831/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/T/Z/
+portal17/var/cache/dev/pools/Yg0dVddO3E/T/Z/4cNBzlqsiidjOahwrE3B
+             70 100%    0.19kB/s    0:00:00               70 100%    0.19kB/s    0:00:00 (xfr#345, to-chk=9780/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/T/Z/mHwaJYEephmqps5AviDV
+             74 100%    0.20kB/s    0:00:00               74 100%    0.20kB/s    0:00:00 (xfr#346, to-chk=9778/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/U/B/
+portal17/var/cache/dev/pools/Yg0dVddO3E/U/B/Lk3vwCTyj531mDK8q7E9
+             74 100%    0.20kB/s    0:00:00               74 100%    0.20kB/s    0:00:00 (xfr#347, to-chk=9752/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/U/D/
+portal17/var/cache/dev/pools/Yg0dVddO3E/U/D/qThUskQgw3p80Mq6dZP0
+             74 100%    0.20kB/s    0:00:00               74 100%    0.20kB/s    0:00:00 (xfr#348, to-chk=9746/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/U/E/
+portal17/var/cache/dev/pools/Yg0dVddO3E/U/E/Com1replL9TrT9R8fAH+
+             74 100%    0.20kB/s    0:00:00               74 100%    0.20kB/s    0:00:00 (xfr#349, to-chk=9743/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/U/P/
+portal17/var/cache/dev/pools/Yg0dVddO3E/U/P/1WbTZwKUSbnZ0Ybo2Ie3
+             74 100%    0.20kB/s    0:00:00               74 100%    0.20kB/s    0:00:00 (xfr#350, to-chk=9711/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/U/R/
+portal17/var/cache/dev/pools/Yg0dVddO3E/U/R/h2mTrnelLryNbCri4nu1
+             74 100%    0.20kB/s    0:00:00               74 100%    0.20kB/s    0:00:00 (xfr#351, to-chk=9705/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/U/R/p2miifJ4J3B65i6wMucs
+             70 100%    0.19kB/s    0:00:00               70 100%    0.19kB/s    0:00:00 (xfr#352, to-chk=9704/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/U/U/
+portal17/var/cache/dev/pools/Yg0dVddO3E/U/U/uUIStPp2i+ffdf77-o6U
+             70 100%    0.19kB/s    0:00:00               70 100%    0.19kB/s    0:00:00 (xfr#353, to-chk=9700/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/U/V/
+portal17/var/cache/dev/pools/Yg0dVddO3E/U/V/klqiE1sYZDbhZI2DaUpl
+
+             70 100%    0.18kB/s    0:00:00               70 100%    0.18kB/s    0:00:00 (xfr#354, to-chk=9696/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/U/Y/
+portal17/var/cache/dev/pools/Yg0dVddO3E/U/Y/q9QLKfQ90ZP9SORBUtb5
+             74 100%    0.19kB/s    0:00:00               74 100%    0.19kB/s    0:00:00 (xfr#355, to-chk=9691/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/U/Z/
+portal17/var/cache/dev/pools/Yg0dVddO3E/U/Z/460Qtr7bUUN7GyQ7LmXo
+             74 100%    0.19kB/s    0:00:00               74 100%    0.19kB/s    0:00:00 (xfr#356, to-chk=9689/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/U/Z/cRtqAZ492ved0NyaoxlX
+             70 100%    0.18kB/s    0:00:00               70 100%    0.18kB/s    0:00:00 (xfr#357, to-chk=9686/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/V/C/
+portal17/var/cache/dev/pools/Yg0dVddO3E/V/C/TM-7rZiBm6lzkKm+Rzx9
+             70 100%    0.18kB/s    0:00:00               70 100%    0.18kB/s    0:00:00 (xfr#358, to-chk=9658/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/V/U/
+portal17/var/cache/dev/pools/Yg0dVddO3E/V/U/0QAEGWSTKG6hnOxum9cl
+             70 100%    0.18kB/s    0:00:00               70 100%    0.18kB/s    0:00:00 (xfr#359, to-chk=9619/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/W/D/
+portal17/var/cache/dev/pools/Yg0dVddO3E/W/D/TQlUi+JbNGkDN7HTX4gz
+             70 100%    0.18kB/s    0:00:00               70 100%    0.18kB/s    0:00:00 (xfr#360, to-chk=9582/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/W/D/qERN6GdCacaGdgFYu5w+
+             70 100%    0.18kB/s    0:00:00               70 100%    0.18kB/s    0:00:00 (xfr#361, to-chk=9581/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/W/G/
+portal17/var/cache/dev/pools/Yg0dVddO3E/W/G/3gdfm4uIB8fNMFboTvjZ
+             70 100%    0.18kB/s    0:00:00               70 100%    0.18kB/s    0:00:00 (xfr#362, to-chk=9572/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/W/K/
+portal17/var/cache/dev/pools/Yg0dVddO3E/W/K/6RAqRikdJ3UXgboHy4La
+             70 100%    0.18kB/s    0:00:00               70 100%    0.18kB/s    0:00:00 (xfr#363, to-chk=9560/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/X/1/
+portal17/var/cache/dev/pools/Yg0dVddO3E/X/1/ZYcs75zgB+5Iswa5ftIx
+             74 100%    0.19kB/s    0:00:00               74 100%    0.19kB/s    0:00:00 (xfr#364, to-chk=9519/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/X/J/
+portal17/var/cache/dev/pools/Yg0dVddO3E/X/J/034R6HsHFTU6wpaQJNpP
+             70 100%    0.18kB/s    0:00:00               70 100%    0.18kB/s    0:00:00 (xfr#365, to-chk=9483/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/X/J/JZnkJaFSdXCRQ26JFVnQ
+             70 100%    0.18kB/s    0:00:00               70 100%    0.18kB/s    0:00:00 (xfr#366, to-chk=9481/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/X/J/QoU7pyIY5wq-ZsYpTCoH
+            700  66%    1.83kB/s    0:00:00            1.05K 100%    2.75kB/s    0:00:00 (xfr#367, to-chk=9479/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/X/R/
+portal17/var/cache/dev/pools/Yg0dVddO3E/X/R/JdBWi67Njctm5KOkRI-s
+             70 100%    0.18kB/s    0:00:00               70 100%    0.18kB/s    0:00:00 (xfr#368, to-chk=9463/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/X/U/
+portal17/var/cache/dev/pools/Yg0dVddO3E/X/U/HFZORB6MEoWym8b6sVKz
+             70 100%    0.18kB/s    0:00:00               70 100%    0.18kB/s    0:00:00 (xfr#369, to-chk=9453/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/X/V/
+portal17/var/cache/dev/pools/Yg0dVddO3E/X/V/2Ee5QQw9ZzC8XaD0eEUU
+             70 100%    0.18kB/s    0:00:00               70 100%    0.18kB/s    0:00:00 (xfr#370, to-chk=9451/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/Y/0/
+portal17/var/cache/dev/pools/Yg0dVddO3E/Y/0/tdoHNPOlRjSS24fVJdIr
+             74 100%    0.19kB/s    0:00:00               74 100%    0.19kB/s    0:00:00 (xfr#371, to-chk=9441/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/Y/4/
+portal17/var/cache/dev/pools/Yg0dVddO3E/Y/4/fc1nTGknu3TUB0fNZbPR
+             74 100%    0.19kB/s    0:00:00               74 100%    0.19kB/s    0:00:00 (xfr#372, to-chk=9432/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/Y/C/
+portal17/var/cache/dev/pools/Yg0dVddO3E/Y/C/PuEhhp-nyulYV1M-kJkc
+             74 100%    0.19kB/s    0:00:00               74 100%    0.19kB/s    0:00:00 (xfr#373, to-chk=9419/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/Y/G/
+portal17/var/cache/dev/pools/Yg0dVddO3E/Y/G/FCn7joKHwSvaoICJmZJa
+             70 100%    0.18kB/s    0:00:00               70 100%    0.18kB/s    0:00:00 (xfr#374, to-chk=9410/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/Y/L/
+portal17/var/cache/dev/pools/Yg0dVddO3E/Y/L/g9z3FLcm6hR407beFlBY
+             70 100%    0.18kB/s    0:00:00               70 100%    0.18kB/s    0:00:00 (xfr#375, to-chk=9399/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/Y/Q/
+portal17/var/cache/dev/pools/Yg0dVddO3E/Y/Q/PRlSNajhVexfQKCf+OH6
+             74 100%    0.19kB/s    0:00:00               74 100%    0.19kB/s    0:00:00 (xfr#376, to-chk=9388/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/Y/Q/kFAIF3W4h7TskaxnRRJJ
+
+             74 100%    0.19kB/s    0:00:00               74 100%    0.19kB/s    0:00:00 (xfr#377, to-chk=9386/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/Y/S/
+portal17/var/cache/dev/pools/Yg0dVddO3E/Y/S/ow+sXh3Hgc8SCdaPUdkk
+             70 100%    0.18kB/s    0:00:00               70 100%    0.18kB/s    0:00:00 (xfr#378, to-chk=9380/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/Y/X/
+portal17/var/cache/dev/pools/Yg0dVddO3E/Y/X/zl1J53jEs82h+0i1B0y-
+             70 100%    0.18kB/s    0:00:00               70 100%    0.18kB/s    0:00:00 (xfr#379, to-chk=9372/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/Z/5/
+portal17/var/cache/dev/pools/Yg0dVddO3E/Z/5/8Q+qk1swG3O+BEw4zqhR
+             70 100%    0.18kB/s    0:00:00               70 100%    0.18kB/s    0:00:00 (xfr#380, to-chk=9354/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/Z/6/
+portal17/var/cache/dev/pools/Yg0dVddO3E/Z/6/Pp8Q4IR+qvSJ7VCznOuZ
+             74 100%    0.19kB/s    0:00:00               74 100%    0.19kB/s    0:00:00 (xfr#381, to-chk=9352/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/Z/9/
+portal17/var/cache/dev/pools/Yg0dVddO3E/Z/9/8m0s2DKpmJIp5W6CvtHS
+             70 100%    0.18kB/s    0:00:00               70 100%    0.18kB/s    0:00:00 (xfr#382, to-chk=9347/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/Z/F/
+portal17/var/cache/dev/pools/Yg0dVddO3E/Z/F/2PmfrdYHIzolQPzFRpUY
+             70 100%    0.18kB/s    0:00:00               70 100%    0.18kB/s    0:00:00 (xfr#383, to-chk=9335/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/Z/L/
+portal17/var/cache/dev/pools/Yg0dVddO3E/Z/L/smq63utOAKUfEy7xhO-h
+             70 100%    0.18kB/s    0:00:00               70 100%    0.18kB/s    0:00:00 (xfr#384, to-chk=9319/12648)
+portal17/var/cache/dev/pools/Yg0dVddO3E/Z/M/
+portal17/var/cache/dev/pools/Yg0dVddO3E/Z/M/bzPtW0mB50i36M7HryR-
+             74 100%    0.19kB/s    0:00:00               74 100%    0.19kB/s    0:00:00 (xfr#385, to-chk=9317/12648)
+portal17/var/cache/dev/twig/95/
+portal17/var/cache/dev/twig/95/950645451c67fce390f954a45dc75f55401abb67ffc875ffedb46ef0f5ac9596.php
+
+            700   1%    1.71kB/s    0:00:30  
+         53.61K 100%  130.89kB/s    0:00:00 (xfr#386, to-chk=8870/12648)
+portal17/web/js/
+portal17/web/js/article.js
+          1.55K 100%    3.79kB/s    0:00:00            1.55K 100%    3.79kB/s    0:00:00 (xfr#387, to-chk=424/12648)
+portal17/web/js/articleMaster.js
+          1.48K  16%    3.61kB/s    0:00:02            9.00K 100%   21.93kB/s    0:00:00 (xfr#388, to-chk=423/12648)
+portal17/web/js/dashboard.js
+          1.43K   3%    3.48kB/s    0:00:11           41.38K 100%  100.77kB/s    0:00:00 (xfr#389, to-chk=417/12648)
+portal17/web/js/mainMenu.js
+            700   8%    1.70kB/s    0:00:04            8.17K 100%   19.90kB/s    0:00:00 (xfr#390, to-chk=407/12648)
+portal17/web/js/managementCompanyMaster.js
+          4.72K  59%   11.47kB/s    0:00:00            7.91K 100%   19.21kB/s    0:00:00 (xfr#391, to-chk=405/12648)
+portal17/web/js/managementFirms.js
+          2.63K  33%    6.38kB/s    0:00:00            7.86K 100%   19.08kB/s    0:00:00 (xfr#392, to-chk=403/12648)
+portal17/web/js/managementPost.js
+          1.93K  13%    4.70kB/s    0:00:02           14.40K 100%   34.97kB/s    0:00:00 (xfr#393, to-chk=402/12648)
+portal17/web/js/managementUser.js
+          2.57K  39%    6.25kB/s    0:00:00  
+          6.53K 100%   15.87kB/s    0:00:00 (xfr#394, to-chk=398/12648)
+portal17/web/js/notification.js
+
+             44 100%    0.11kB/s    0:00:00               44 100%    0.11kB/s    0:00:00 (xfr#395, to-chk=394/12648)
+portal17/web/js/standard.js
+            700   1%    1.67kB/s    0:00:30           51.95K 100%  123.73kB/s    0:00:00 (xfr#396, to-chk=383/12648)
+portal17/web/js/store.js
+          3.29K  31%    7.83kB/s    0:00:00           10.43K 100%   24.85kB/s    0:00:00 (xfr#397, to-chk=379/12648)
+
+deleting portal17/.luckybackup-snaphots/portalPlus.profile/logs/portalPlus-ssh-20180828230751.log
+deleting portal17/.luckybackup-snaphots/portalPlus.profile/snaps/portalPlus-ssh-20180828230751.changes.log
+
+
+Number of files: 12,648 (reg: 9,676, dir: 2,966, link: 6)
+Number of created files: 9 (reg: 9)
+Number of deleted files: 2 (reg: 2)
+Number of regular files transferred: 397
+
+Total file size: 224.67M bytes
+Total transferred file size: 1.50M bytes
+Literal data: 566.84K bytes
+Matched data: 935.76K bytes
+File list size: 393.20K
+File list generation time: 1.899 seconds
+File list transfer time: 0.000 seconds
+Total bytes sent: 997.60K
+Total bytes received: 18.93K
+
+sent 997.60K bytes  received 18.93K bytes  290.44K bytes/sec
+total size is 224.67M  speedup is 221.01
+
+
+<font color=cyan>&nbsp;&nbsp;&nbsp;&nbsp;-----| Backing-up profile, logfiles and snapshot data -> Ok |-----</font><br>
+<font color=magenta>execution of task	: <b>ssh</b>, finished</font>
+=====================================<br>

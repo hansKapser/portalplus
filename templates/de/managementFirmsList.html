@@ -1,0 +1,420 @@
+<div class="context-menu-one btn btn-neutral" id="gridFirms"
+	style="margin: 0px;">gridFirms</div>
+
+<!-- dialogPopUp -->
+<div id="dialogFirmsDiv" style="display: none">
+	<section id="Firms_tab-nav"
+		style="display: visible; position: relative; top: 0px">
+
+		<div id="navtabs">
+			<ul>
+				<li id="management:firm:products"><a
+					href="javascript:managementFirmsAddressInit()" title="Adresse">Adresse</a></li>
+				<li id="management:firm:products"><a
+					href="javascript:managementFirmsProductsInit()" title="Produkte">Produkte</a></li>
+				<li id="management:firm:faktura"><a
+					href="javascript:managementFirmsFakturaInit()" title="Faktura">Faktura</a></li>
+			</ul>
+			<BR>
+		</div>
+
+	</section>
+	<form id="dialogFirms">
+	<input type=hidden name=firmID>
+		<div id="dialogFirmsRegisterDiv"></div>
+	</form>
+</div>
+
+
+<div id="dialogFirmsAddressDiv" style="display: none;">
+	<table>
+		<tr>
+			<td colspan=2><input type=text name=company style="width: 100%;"
+				disabled></td>
+		</tr>
+
+		<tr>
+			<td>
+				<table style="width: 100%">
+
+					<tr>
+						<td colspan=4 style="background-color: #eee; font-weight: bold;"
+							class=thd>Adresse</td>
+					</tr>
+					<tr>
+						<td class=fieldname>Firma</td>
+						<td colspan=3><input type=text name=company size=30></td>
+					</tr>
+					<tr>
+						<td class=fieldname></td>
+						<td colspan=3><input type=text name=company2 size=30></td>
+					</tr>
+					<tr>
+						<td class=fieldname>Straße</td>
+						<td colspan=3><input type=text name=street size=30></td>
+					</tr>
+					<tr>
+						<td class=fieldname>Land/PLZ/Ort</td>
+						<td><input type=text name=country size=2></td>
+						<td><input type=text name=postcode size=5></td>
+						<td><input type=text name=city size=30></td>
+					</tr>
+					<tr>
+						<td colspan=4 style="background-color: #eee; font-weight: bold;"
+							class=thd>Kommunikation</td>
+					</tr>
+					<tr>
+						<td class=fieldname>Geschäftsführer</td>
+						<td colspan=3><input type=text name=manager size=30></td>
+					</tr>
+
+					<tr>
+						<td class=fieldname>Telefon</td>
+						<td colspan=3><input type=text name=phone size=30></td>
+					</tr>
+					<tr>
+						<td class=fieldname>E-Mail</td>
+						<td colspan=3><input type=text name=email size=30></td>
+					</tr>
+
+					<tr>
+						<td colspan=4 style="background-color: #eee; font-weight: bold;"
+							class=thd>Steuer</td>
+					</tr>
+					<tr>
+						<td>UStID</td>
+						<td colspan=3><input type=text name=UStID size=30></td>
+					</tr>
+
+					<tr>
+						<td colspan=4 style="background-color: #eee; font-weight: bold;"
+							class=thd>Bankverbindung</td>
+					</tr>
+					<tr>
+						<td>Bank</td>
+						<td colspan=3><input type=text name=bank size=20
+							value='euroBankDirect'></td>
+					</tr>
+					<tr>
+						<td>IBAN</td>
+						<td colspan=3><input type=text name=IBAN size=30></td>
+					</tr>
+
+					<tr>
+						<td>GETIN</td>
+						<td colspan=3><input type=text name=getin_bank
+							value='GETIN Bank' size=20></td>
+					</tr>
+					<tr>
+						<td>IBAN</td>
+						<td colspan=3><input type=text name=getin_IBAN size=30></td>
+					</tr>
+				</table>
+			</td>
+			<td valign=top>
+				<table>
+					<thead>
+						<tr>
+							<td>WoTag</td>
+							<td>von</td>
+							<td>bis</td>
+						</tr>
+					</thead>
+					<tbody id=rowsWBTime>
+						<tr>
+							<td>{cdow([dow])}</td>
+							<td>[bt_from]</td>
+							<td>[bt_to]</td>
+						</tr>
+					</tbody>
+				</table>
+			</td>
+		</tr>
+	</table>
+
+</div>
+
+<div id="dialogFirmsFakturaDiv" style="display: none;">
+	<table style="width: 100%" valign=top>
+		<tr>
+			<td colspan=5><input type=text name=company style="width: 100%;"
+				disabled></td>
+		</tr>
+
+		<tr>
+			<td colspan=2 style="background-color: #eee; font-weight: bold;"
+				class=thd>Lieferant</td>
+			<td width=20px style="background-color: #eee; font-weight: bold;"
+				class=thd>&nbsp;</td>
+			<td colspan=2 style="background-color: #eee; font-weight: bold;"
+				class=thd>Kunde</td>
+		</tr>
+
+		<tr>
+			<td>CreditorNo.</td>
+			<td><input type=text name=creditor size=5></td>
+			<td></td>
+			<td>DebitorNo.</td>
+			<td><input type=text name=debitor size=5></td>
+		</tr>
+
+		<tr>
+			<td>Mindestbestellwert</td>
+			<td><input class=inputRight type=text name=C_minOrderValue
+				size=5 disabled></td>
+			<td></td>
+			<td>Mindestbestellwert</td>
+			<td><input class=inputRight type=text name=D_minOrderValue
+				size=5></td>
+		</tr>
+
+		<tr>
+			<td>frei Haus ab</td>
+			<td><input class=inputRight type=text name=C_carriageFree size=5
+				disabled></td>
+			<td></td>
+			<td>frei Haus ab</td>
+			<td><input class=inputRight type=text name=D_carriageFree size=5></td>
+		</tr>
+
+		<tr>
+			<td colspan=5><HR></td>
+		</tr>
+
+		<tr>
+			<td>Lieferer-Rabatt</td>
+			<td><input class=inputRight type=text name=C_rebate size=3
+				disabled></td>
+			<td></td>
+			<td>Kunden-Rabatt</td>
+			<td><input class=inputRight type=text name=D_rebate size=3></td>
+		</tr>
+
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>Zahlungsbedingung</td>
+			<td><select name=D_termPayment></select></td>
+		</tr>
+
+
+		<tr>
+			<td>Skonto Tg.</td>
+			<td><input class=inputRight type=text name=C_discount_days
+				size=3 disabled></td>
+			<td></td>
+			<td>Skonto Tg.</td>
+			<td><input class=inputRight type=text name=D_discount_days
+				size=3 disabled></td>
+		</tr>
+
+		<tr>
+			<td>Skonto %</td>
+			<td><input class=inputRight type=text name=C_discount size=3
+				disabled></td>
+			<td></td>
+			<td>Skonto %</td>
+			<td><input class=inputRight type=text name=D_discount size=3
+				disabled></td>
+		</tr>
+
+		<tr>
+			<td>netto Tg.</td>
+			<td><input class=inputRight type=text name=C_net_days size=3
+				disabled></td>
+			<td></td>
+			<td>netto Tg.</td>
+			<td><input class=inputRight type=text name=D_net_days size=3
+				disabled></td>
+		</tr>
+
+		<tr>
+			<td colspan=5><HR></td>
+		</tr>
+
+		<tr>
+			<td>Lieferantenbewertung</td>
+			<td><select name=C_rating>
+					<option value="">noch keine Bewertung</option>
+					<option value="A">sehr gut</option>
+					<option value="B">mittelmäßig</option>
+					<option value="C">Achtung!</option>
+			</select></td>
+			<td></td>
+			<td>Kundenbewertung</td>
+			<td><select name=D_rating>
+					<option value="">noch keine Bewertung</option>
+					<option value="A">sehr gut</option>
+					<option value="B">mittelmäßig</option>
+					<option value="C">Achtung!</option>
+			</select></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>Vorauskasse</td>
+			<td><input type=checkbox value=1 name=D_prepayment></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><input
+				class=inputButton type=button name=buttonSave onclick=managementFirmsFakturaSaveRecord()
+				value='update'>
+			</td>
+		</tr>
+
+	</table>
+</div>
+
+<div id="dialogFirmsProductsDiv" style="display: none;">
+
+	<table style="width: 100%" valign=top>
+		<tr>
+			<td><input type=text name=company value="[company]"
+				style="width: 100%;" disabled></td>
+		</tr>
+
+		<tr>
+			<td id=viewCatalogue></td>
+		</tr>
+
+		<tr>
+			<td>
+				<table>
+					<thead>
+						<tr style='background-color: #a4ffa6;'>
+							<th
+								style="text-align: left; background-color: #eee; font-weight: bold;"
+								class=thd>Angebot</th>
+						</tr>
+					<thead>
+					<tbody id=rowsProducts>
+						<tr>
+							<td>[name]</td>
+						</tr>
+					</tbody>
+				</table>
+		</tr>
+
+		<tr>
+			<td>
+				<table>
+					<thead>
+						<tr style='background-color: #a4ffa6;'>
+							<th style="background-color: #eee; font-weight: bold;" class=thd>Nummer</th>
+							<th style="background-color: #eee; font-weight: bold;" class=thd>Bezeichnung</th>
+							<th style="background-color: #eee; font-weight: bold;" class=thd>Einheit</th>
+							<th style="background-color: #eee; font-weight: bold;" class=thd>Preis</th>
+							<th style="background-color: #eee; font-weight: bold;" class=thd>USt.</th>
+						</tr>
+					</thead>
+					<tbody id=rowsArticles>
+						<tr>
+							<td>[article_code]</td>
+							<td>[name]</td>
+							<td>[quantity_unit]</td>
+							<td style="text-align: right;">[price]</td>
+							<td style="text-align: right;">[percentage]</td>
+						</tr>
+					</tbody>
+				</table>
+			</td>
+		</tr>
+
+	</table>
+</div>
+
+<div id="dialogFirmsNewDiv" style="display: none;width:700px">
+<form id="dialogFirmsNew">
+<input type=hidden name=newFirmID=-1>
+	<table style="width:100%">
+		<tr>
+			<td colspan=2><input type=text name=company style="width: 100%;"
+				disabled></td>
+		</tr>
+
+		<tr>
+			<td>
+				<table style="width: 100%">
+
+					<tr>
+						<td colspan=4 style="background-color: #eee; font-weight: bold;"
+							class=thd>Adresse</td>
+					</tr>
+					<tr>
+						<td class=fieldname>Firma</td>
+						<td colspan=3><input type=text name=company size=30></td>
+					</tr>
+					<tr>
+						<td class=fieldname></td>
+						<td colspan=3><input type=text name=company2 size=30></td>
+					</tr>
+					<tr>
+						<td class=fieldname>Straße</td>
+						<td colspan=3><input type=text name=street size=30></td>
+					</tr>
+					<tr>
+						<td class=fieldname>Land/PLZ/Ort</td>
+						<td><input type=text name=country size=2></td>
+						<td><input type=text name=postcode size=5></td>
+						<td><input type=text name=city size=30></td>
+					</tr>
+					<tr>
+						<td colspan=4 style="background-color: #eee; font-weight: bold;"
+							class=thd>Kommunikation</td>
+					</tr>
+					<tr>
+						<td class=fieldname>Geschäftsführer</td>
+						<td colspan=3><input type=text name=manager size=30></td>
+					</tr>
+
+					<tr>
+						<td class=fieldname>Telefon</td>
+						<td colspan=3><input type=text name=phone size=30></td>
+					</tr>
+					<tr>
+						<td class=fieldname>E-Mail</td>
+						<td colspan=3><input type=text name=email size=30></td>
+					</tr>
+
+					<tr>
+						<td colspan=4 style="background-color: #eee; font-weight: bold;"
+							class=thd>Steuer</td>
+					</tr>
+					<tr>
+						<td>UStID</td>
+						<td colspan=3><input type=text name=UStID size=30></td>
+					</tr>
+
+					<tr>
+						<td colspan=4 style="background-color: #eee; font-weight: bold;"
+							class=thd>Bankverbindung</td>
+					</tr>
+					<tr>
+						<td>eurobank IBAN</td>
+						<td colspan=3><input type=text name=IBAN size=30></td>
+					</tr>
+					<tr>
+						<td>getIN IBAN</td>
+						<td colspan=3><input type=text name=getin_IBAN size=30></td>
+					</tr>
+
+					<tr>
+						<td>Partnerbank</td>
+						<td colspan=3><select name=BICP size=1></select></td>
+					</tr>
+					<tr>
+						<td>Partnerbank IBAN</td>
+						<td colspan=3><input type=text name=IBANP size=30></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+</form>
+</div>

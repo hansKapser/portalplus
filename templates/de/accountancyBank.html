@@ -1,0 +1,27 @@
+<div id="navtabs" style="width: 1000px">
+	<ul>
+		<li id="registerAccountancyOverviewJournalList"><a
+			href="javascript:registerMenuAccountancy('accountancyBankJournalListInit')"
+			title="Sachkonten">euroBank</a></li>
+		<li id="registerAccountancyOverviewOutstandingList"><a
+			href="javascript:registerMenuAccountancy('accountancyPayFriendListInit')"
+			title="Offen Posten">payFriend</a></li>
+</div>
+
+<ul id="accountancyOverviewIconMenu"
+	style='display: none; background-color: #fff; z-index: 1; position: absolute; top: 180px; border-width: 1px; border-style: solid; border-color: #000;'>
+	<li onclick="javascript:accountancyIconMenuControl('print')">
+		<div>
+			<span class="ui-icon ui-icon-print"></span>print
+		</div>
+	</li>
+	<li onclick="javascript:accountancyIconMenuControl('print')">
+		<div>
+			<span class="ui-icon ui-icon-mail-open"></span>E-Mail
+		</div>
+	</li>
+</ul>
+
+
+
+<div class=contentAccountancy style="position: relative; top: 0px"></div>

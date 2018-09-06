@@ -1,0 +1,614 @@
+var rowsTickets=new Array;
+var tbodyTicketFiles="";
+var tbodyTicketFilesInternal="";
+
+var $grid;
+
+function managementPostinInit() {
+	registerMenuManagementPostin('managementPostinBoxInit')
+} // end function mainMenu
+
+function registerMenuManagementPostin(registerModul) {
+
+	switch (registerModul) {
+	default:
+		break;
+	
+	} // end switch modul
+	var data = {
+			"action" : "init"
+		};
+
+		$.ajax({
+			type : "POST",
+			dataType : "json",
+			url : "/"+registerModul,
+			async: true,
+			data : JSON.stringify(data),
+			success : function(data) {
+				array_data = getDataContent(data);
+				content=array_data["html"];
+				
+				$('div.contentPostin').html(content);
+				var jsModul=registerModul+"()";
+				
+				eval(jsModul);
+			},
+			 error: function(xhr, status, text) {
+			        console.log(text);
+			    }
+		});
+	
+} // end registerMenuManagementCompanyMaster
+
+function managementPostinBoxInit() {
+	$("#dialogPostinBoxDiv").dialog({
+		width : 850,
+		modal : true,
+		open : function() {
+			$(".ui-dialog").position({
+				of : "#gridPostinBox"
+			});
+		},
+		autoOpen : false
+	});
+	
+	//ticketDocuments in base.html
+	$("#ticketDocuments").dialog({
+		width : 850,
+		modal : true,
+		open : function() {
+			$(".ui-dialog").position({
+				of : "#gridPostinBox"
+			});
+		},
+		autoOpen : false
+	});
+
+
+	var Grid=JSON.parse(JSON.stringify(array_data["rowGrid"]));	
+	var obj = JSON.parse(Grid.objGrid);
+	
+	Grid.toolbar=Grid.toolbar.replace(/(\r\n\t|\n|\r\t)/gm,"");
+	
+	obj.toolbar = JSON.parse('{'+Grid.toolbar+'}');
+	for (var i=0;i<obj.toolbar.items.length;i++) 
+			obj.toolbar.items[i].listeners[0].click=eval(obj.toolbar.items[i].listeners[0].click)
+
+	Grid.colModel = Grid.colModel.replace(/(\r\n\t|\n|\r\t)/gm,"");
+
+	var colModel=JSON.parse(Grid.colModel);
+	
+
+	for (var i=0;i<colModel.length;i++) {
+		if (colModel[i].render!=undefined && colModel[i].render!="") {
+
+			var render=colModel[i].render;
+			colModel[i].render=function(ui) {
+				return (eval(render));}			
+		}
+
+	}
+
+	obj.colModel = colModel;
+
+	/*
+			obj.colModel = [
+				{
+					title : "ID",
+					dataType : "integer",
+					dataIndx : "ID",
+					width : '50',
+					hidden : true
+				},
+				{
+					title : "ticketID",
+					dataType : "integer",
+					dataIndx : "ticketID",
+					width : '50',
+					hidden : true
+				},
+				{
+					title : "from_firmID",
+					dataType : "integer",
+					dataIndx : "from_firmID",
+					width : '50',
+					hidden : true
+				},
+				{
+					title : "userID",
+					dataType : "integer",
+					dataIndx : "userID",
+					width : '50',
+					hidden : true
+				},
+				{
+					title : "teamID",
+					dataType : "integer",
+					dataIndx : "teamID",
+					width : '50',
+					hidden : true
+				},
+				{
+					title : "E-Mail",
+					dataType : "integer",
+					dataIndx : "email",
+					width : '50',
+					render : function(ui) {
+						return (ui.data[ui.rowIndx].email == 1 ? '<span class="ui-icon ui-icon-mail-open"></span>'
+								: '');
+					}
+				}, {
+					title : "imap",
+					dataType : "integer",
+					dataIndx : "uid",
+					width : '50'
+				}, {
+					title : "Datum",
+					dataType : "string",
+					dataIndx : "date",
+					width : '80',
+					render : function(ui) {
+						return (dateSql2German(ui.data[ui.rowIndx].date));
+					},
+					filter : {
+						type : 'select',
+						condition : 'equal',
+						valueIndx : "date",
+						labelIndx : "date",
+						prepend : {
+							'' : '--Select--'
+						},
+						listeners : [ 'change' ]
+					}
+				}, {
+					title : "Absender",
+					dataType : "string",
+					dataIndx : "from_company",
+					width : '150',
+					filter : {
+						type : 'select',
+						condition : 'equal',
+						valueIndx : "from_company",
+						labelIndx : "from_company",
+						prepend : {
+							'' : '--Select--'
+						},
+						listeners : [ 'change' ]
+					}
+				}, {
+					title : "Beleg",
+					dataType : "string",
+					align : "left",
+					dataIndx : "voucher",
+					width : '150'
+				}, {
+					title : "BelegNr.",
+					dataType : "string",
+					align : "left",
+					dataIndx : "voucherNo",
+					width : '100',
+					filter : {
+						type : 'textbox',
+						condition : "contain",
+						listeners : [ 'keyup' ]
+					}
+				}, {
+					title : "Beleg Datum",
+					dataType : "string",
+					align : "left",
+					dataIndx : "voucherDate",
+					width : '90',
+					render : function(ui) {
+						return (dateSql2German(ui.data[ui.rowIndx].voucherDate));
+					}
+				}, {
+					title : "Abt.",
+					dataType : "string",
+					align : "center",
+					dataIndx : "division",
+					width : '50',
+					filter : {
+						type : 'select',
+						condition : 'equal',
+						valueIndx : "division",
+						labelIndx : "division",
+						prepend : {
+							'' : '--Select--'
+						},
+						listeners : [ 'change' ]
+					}
+				}, {
+					title : "ticket#",
+					dataType : "string",
+					align : "left",
+					dataIndx : "ticketID",
+					width : '70'
+				}, {
+					title : "Bearbeiter",
+					dataType : "string",
+					align : "left",
+					dataIndx : "ticket_user",
+					width : '100',
+					filter : {
+						type : 'select',
+						condition : 'equal',
+						valueIndx : "ticket_user",
+						labelIndx : "ticket_user",
+						prepend : {
+							'' : '--Select--'
+						},
+						listeners : [ 'change' ]
+					}
+				}, {
+					title : "Team",
+					dataType : "string",
+					align : "left",
+					dataIndx : "ticket_team",
+					width : '100',
+					filter : {
+						type : 'select',
+						condition : 'equal',
+						valueIndx : "ticket_team",
+						labelIndx : "ticket_team",
+						prepend : {
+							'' : '--Select--'
+						},
+						listeners : [ 'change' ]
+					}
+				} ];
+		*/
+	
+		obj.dataModel = {
+			data : array_data["rowsPostin"],
+			recIndx : "ID",
+			sorting : "local",
+			sortIndx : "date",
+			sortDir : "down"
+		};
+
+		var $grid = $("#gridPostinBox").pqGrid(obj);
+		$("#gridPostinBox").pqGrid({
+			rowDblClick : function(event, ui) {
+				editRow();
+			}
+		});
+
+		//$grid.pqGrid("showLoading");
+		if (array_data["rowsPostin"].length > 0) {
+			// load from_company dropdowns.
+			for (var i=0;i<colModel.length;i++) {
+				if (colModel[i].filter!=undefined && colModel[i].filter!="") {
+					var column = $grid.pqGrid("getColumn", {
+						dataIndx : colModel[i].dataIndx
+					});
+				var filter = column.filter;
+					filter.cache = null;
+					filter.options = $grid.pqGrid("getData", {
+						dataIndx : [ colModel[i].dataIndx ]
+					});
+	
+				}
+			}
+
+			$grid.pqGrid("refreshDataAndView");
+		}
+		
+		$grid.pqGrid("hideLoading");
+
+		var dialogId = $("form#dialogPostinBox");
+
+		var array=new Array();
+		var arrayA=new Array();
+
+		arrayA[0]={};
+			arrayA[0].field='from_company';
+			arrayA[0].rows=array_data["rowsFirms"];
+			arrayA[0].autocomplete=1;
+			arrayA[0].label='company';
+			arrayA[0].value='company';
+		dialogInitAutocomplete(dialogId,arrayA)
+
+		
+		array[0]={};
+			array[0].field='division';
+			array[0].rows=array_data["rowsDivisions"];
+			array[0].label='name';
+			array[0].value='division';
+			
+		array[1]={};
+			array[1].field='teamID';
+			array[1].rows=array_data["rowsTeam"];
+			array[1].label='name';
+			array[1].value='id';
+		
+		dialogInitSelect(dialogId,array)
+
+		array[0]={};
+			array[0].field='userID';
+			array[0].groupField='class_name';
+			array[0].rows=array_data["rowsUser"];
+			array[0].label='user_name';
+			array[0].value='userID';
+		dialogInitSelectG(dialogId,array)
+
+		// edit Row
+		function editRow() {
+
+			var rowIndx = getRowIndx();
+
+			if (rowIndx == null) 
+				return;
+
+				var row = $grid.pqGrid('getRowData', {
+					rowIndx : rowIndx
+				});
+
+				
+				var dialogId = $("form#dialogPostinBox");
+
+				/* set all input values to NULL
+				 * 
+				 */
+				dialogId.find("input").val("");
+				
+				dialogId.find('input[type=file]').on('change', prepareUpload);
+				
+				dialogId.find("select[name='division']").change(function() {
+					changePostinBox(dialogId,'division', this.value);
+				});
+
+				dialogId.find("select[name='voucher']").change(function() {
+					changePostinBox(dialogId,'voucher', this.value);
+				});
+
+				dialogId.find("select[name='voucherNoInternal']").change(function() {
+					changePostinBox(dialogId,'voucherNoInternal', this.value);
+				});
+
+				changePostinBox(dialogId,'division', row.division);
+				dialogInit(dialogId,row);
+				changePostinBox(dialogId,'voucher', row.voucher);
+				
+				$("#dialogPostinBoxDiv").dialog(
+						{
+							title : "Edit Record (#" + row.id + ")",
+							buttons : {
+								Update : function() {
+									
+									var row = dialogGetRow(dialogId);
+									$grid.pqGrid('updateRow', {
+										rowIndx : rowIndx,
+										row : row,
+										checkEditable : false
+									});
+									
+									dialogSave(dialogId,row.id,"managementPostinBoxSave")
+
+									$(this).dialog("close");
+								},
+								Cancel : function() {
+									$(this).dialog("close");
+								}
+							}
+						}).dialog("open");
+			
+		} // editRow
+
+		function addRow() {
+
+				var dialogId = $("form#dialogPostinBox");
+				dialogId.find('input[name="id"]').val(-1);
+				
+				
+
+				/* set all input values to NULL
+				 * 
+				 */
+				dialogId.find("input").val("");
+				dialogId.find('input[name="date"]').val(today);
+				
+				
+				dialogId.find('input[type=file]').on('change', prepareUpload);
+				
+				dialogId.find("select[name='division']").change(function() {
+					changePostinBox(dialogId,'division', this.value);
+				});
+
+				dialogId.find("select[name='voucher']").change(function() {
+					changePostinBox(dialogId,'voucher', this.value);
+				});
+
+				dialogId.find("select[name='voucherNoInternal']").change(function() {
+					changePostinBox(dialogId,'voucherNoInternal', this.value);
+				});
+
+				changePostinBox(dialogId,'division', 'E');
+				//dialogId.find('select[name="voucherNoInternal"]').find('option').remove().end();
+				dialogId.find('input[name="from_company"]').focus();
+				
+				$("#dialogPostinBoxDiv").dialog(
+						{
+							title : "* neuer Eintrag *",
+							buttons : {
+								Add : function() {
+									
+									
+									var row = dialogGetRow(dialogId);
+									
+									if (checkFirmID(row.from_company)<0)
+										return;
+									var newRow = $grid.pqGrid('addRow', {
+										rowData : row
+									});
+									
+									dialogSave(dialogId,-1,"managementPostinBoxSave","managementPostinBoxSavePost(array_data['row'])");
+
+									$(this).dialog("close");
+								},
+								Cancel : function() {
+									$(this).dialog("close");
+								}
+							}
+						}).dialog("open");
+			
+		} // addRow
+
+		function deleteRow() {
+			if (confirm('delete, are you sure?')) {
+				var rowIndx = getRowIndx();
+				if (rowIndx != null) {
+					saveRow(rowIndx, 'delete');
+					$grid.pqGrid("deleteRow", {
+						rowIndx : rowIndx
+					});
+					$grid.pqGrid("setSelection", {
+						rowIndx : rowIndx
+					});
+
+				}
+			}
+		}
+
+		function getRowIndx() {
+			var arr = $grid.pqGrid("selection", {
+				type : 'row',
+				method : 'getSelection'
+			});
+			if (arr && arr.length > 0) {
+				return arr[0].rowIndx;
+			} else {
+				alert("Select a row.");
+				return null;
+			}
+		}
+
+		function saveRow(rowIndx, action) {
+			console.log("saveRow");
+		} // end function saveRow
+
+} // end managementPostinBoxInit
+
+function changePostinBox(dialogId,field,value='') {
+	
+	switch (field) {
+	
+	case "division":
+		var array=new Array();
+		array[0]={};
+		array[0].field='voucher';
+		array[0].rows=array_data["rowsVoucher"];
+		array[0].label='voucher';
+		array[0].value='voucher';
+		array[0].filter='rows[i].division=="'+value+'"';
+		dialogInitSelect(dialogId,array)
+
+		break;
+		
+	case "voucher":
+		
+		if (value=='') {
+			value=dialogId.find("select[name='voucher']").val();
+		};
+		var data = {
+				"action" : "init",
+				"company": dialogId.find("input[name='from_company']").val(),
+				"division":dialogId.find("select[name='division']").val(),
+				"voucher": value
+				
+			};
+		//data=JSON.stringify(data);
+		data = $.param(data);
+			$.ajax({
+				type : "POST",
+				dataType : "json",
+				url : "/ticketsGetByDivision",
+				async: true,
+				data : data,
+				success : function(data) {
+					var array_data = getDataContent(data);
+					rowsTickets=array_data["rowsTickets"];
+					var array=new Array();
+					array[0]={};
+					array[0].field='voucherNoInternal';
+					array[0].rows=rowsTickets;
+					array[0].label='{dateSql2German(rows[i].date)+" "+rows[i].voucherNoInternal}';
+					array[0].value='ticketID';
+					array[0].blank={};
+					array[0].blank.label='* new *';
+					array[0].blank.value='';
+				
+				dialogInitSelect(dialogId,array)
+
+					
+				}
+			});
+		
+		break;
+		
+	case "voucherNoInternal":
+		
+		dialogId.find("input[name='ticketID']").val(value);
+		for (var i=0;i<rowsTickets.length;i++) {
+			if (rowsTickets[i].ticketID==value) {
+				dialogId.find("select[name='userID']").val(rowsTickets[i].userID);
+				dialogId.find("select[name='teamID']").val(rowsTickets[i].teamID);
+				break;
+			}
+		}
+		break;
+	}
+}
+
+function showDocuments() {
+	var dialogId = $("form#dialogPostinBox");
+	var ticketID=dialogId.find("input[name='ticketID']").val();
+	ticketFiles(ticketID);
+}
+
+
+
+function prepareUpload(event) {
+	files = event.target.files;
+}
+
+function managementPostinFileUpload() {
+	var dialogId=$("form#dialogPostinBox");
+	var ticketID=dialogId.find("input[name='ticketID']").val();
+	dialogId.find("input[name='file']").val('');
+	ticketFileUpload('',ticketID);
+}
+
+
+
+function moveTicketFile(id,postblock='') {
+	/*
+	var dialogId=$("form#dialogFiles");
+	var ticketID=dialogId.find("input[name='ticketID']").val();
+	
+	var data = {
+			"id": id
+		};
+	data = $.param(data);
+		$.ajax({
+			type : "POST",
+			dataType : "json",
+			url : "/moveTicketFile",
+			async: true,
+			data : data,
+			success : function(data) {
+				if (postblock!='') eval(postblock);
+			}
+		});
+	*/
+}
+
+function managementPostinBoxSavePost(row) {
+	var newRow = $grid.pqGrid('addRow', {
+		rowData : row
+	});
+	$grid.pqGrid("refreshDataAndView");
+	
+	var dialogId = $("form#dialogPostinBox");
+	ticketFileUpload('',row.ticketID,dialogId);
+}

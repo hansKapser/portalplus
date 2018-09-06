@@ -1,0 +1,188 @@
+
+<form id="dialogPurchaseOrder" action="">
+<input type=hidden name=orderID>
+	<table style="width: 100%">
+		<tbody>
+			<tr>
+				<td class="fieldname">ticket#</td>
+				<td><input type="text" name="ticketID" size="8" disabled></td>
+				<td class="fieldname">letzte Nr.</td>
+				<td colspan="2" id=_lastNumber></td>
+				<td rowspan="4" width="50%">
+					<table
+						style="border-style: solid; border-color: #aaa; border-width: 1px; width: 100%;">
+						<tr>
+							<td class="fieldname">Straße</td>
+							<td colspan="3"><input type="text" name="street" size="25"></td>
+						</tr>
+						<tr>
+							<td class="fieldname">Land/PLZ/Ort</td>
+							<td><input type="text" name="country" size="2"></td>
+							<td><input type="text" name="postcode" size="2"></td>
+							<td><input type="text" name="city" size="15"></td>
+						</tr>
+						<tr>
+							<td class="fieldname">E-Mail</td>
+							<td colspan="3"><input type="text" name="email" size="20"></td>
+						</tr>
+						<tr>
+							<td class="fieldname">UStID</td>
+							<td colspan="3"><input type="text" name="UStID" size="10"></td>
+						</tr>
+					</table>
+				</td>
+
+			</tr>
+			<tr>
+				<td class="fieldname">Bestelldatum</td>
+				<td><input type="text" name="purchaseDate" size="8"></td>
+				<td class="fieldname">Bestellnummer</td>
+				<td><input type="text" name="purchaseNo" size="8"
+					maxlength="25"></td>
+				<td id="newPurchaseNo" style='font-size: 10px;'></td>
+			</tr>
+			<tr>
+				<td class="fieldname">LiefererNr.</td>
+				<td><input type=hidden name=supplier_firmID value=-1> <input
+					type="text" name="creditor" size="3"></td>
+				<td class="fieldname">Lieferant</td>
+				<td colspan="2">
+					<div class="ui-widget">
+						<input type="text" name="supplier_company" size="20"
+							maxlength="50">
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td class="fieldname">Liefererrating</td>
+				<td><input class=inputCenter type="text" name="C_rating"
+					size="4" disabled></td>
+				<td class="fieldname">Liefererrabatt</td>
+				<td><input class=inputRight type="text" name="rebate" size=4
+					disabled>%</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td colspan="6"><HR></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<table>
+		<thead>
+			<tr>
+				<td style="background-color: #eee;" class="thd" width="25%">Einkauf</td>
+				<td style="background-color: #eee;" class="thd" width="25%">Versand</td>
+				<td style="background-color: #eee;" class="thd" width="25%">Auftragssumme</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td valign="top">
+					<table>
+						<tr>
+							<td class="fieldname">Bestellgrund</td>
+							<td colspan="3"><select name="reason">
+									<option value='S'>Schriftliche Bestellung</option>
+									<option value='W'>webshop Bestellung</option>
+									<option value='M'>Messeauftrag</option>
+							</select></td>
+						</tr>
+						<tr>
+							<td class="fieldname">Preisgrundlage</td>
+							<td colspan="3"><select name="basisPrice">
+									<option value='Katalog'>Katalog</option>
+									<option value='Angebot'>persönliches Angebot</option>
+									<option value='Sonderangebot'>Sonderangebot</option>
+							</select></td>
+						</tr>
+						<tr>
+							<td class="fieldname">Angebot Nr.</td>
+							<td><input type="text" name="offerNo" size="8"></td>
+							<td class="fieldname">vom</td>
+							<td><input type="text" name="offerDate" size="4"></td>
+						</tr>
+						<tr>
+							<td class="fieldname">Lieferung KW</td>
+							<td colspan="3"><input type="text" name="week" size="1"></td>
+						</tr>
+						<tr>
+							<td class="fieldname">AuftragsNr.</td>
+							<td><input type="text" name="confirmationNo" size="8"
+								maxlength="25"></td>
+							<td class="fieldname">ticket#</td>
+							<td><input type="text" name="supplier_ticketID" size="4"
+								maxlength="11"></td>
+						</tr>
+						<tr>
+							<td class="fieldname">Auftragsdatum</td>
+							<td colspan="3"><input type="text" name="confirmationDate"
+								size="4"></td>
+						</tr>
+					</table>
+				</td>
+				<td valign="top">
+					<table>
+						<tr>
+							<td class="fieldname"><a
+								href="javascript:deliveryAddress()">Versandanschrift</a></td>
+							<td><input type="text" name="postNumberReceiver" size="10"
+								disabled></td>
+						</tr>
+						<tr>
+							<td class="fieldname">frei Haus ab</td>
+							<td><input class=inputRight type=text name=carriageFree
+								size=5 disabled></td>
+						</tr>
+
+						<tr>
+							<td class="fieldname">Versandbedingung</td>
+							<td><select name="deliveryCondition">
+									<option value='frei'>frei Haus</option>
+									<option value='unfrei'>unfrei</option>
+							</select></td>
+						</tr>
+						<tr>
+							<td class="fieldname">Versandart</td>
+							<td><select name="dispatch">
+									<option value='DHLP'>DHL-Packstation</option>
+									<option value='DHL'>DHL-Hauslieferung</option>
+									<option value='baysped'>Spedition</option>
+									<option value='LKW'>LKW Werksverkehr</option>
+							</select></td>
+						</tr>
+
+						<tr>
+							<td class="fieldname">Bezugskosten</td>
+							<td><input type="text" name="shippingCosts" size="4"></td>
+						</tr>
+						<tr>
+							<td class="fieldname">Vorauskasse</td>
+							<td><input type="checkbox" name="prepayment"></td>
+						</tr>
+						<tr>
+							<td class="fieldname">Zahlungsbedingungen</td>
+							<td><select name="termPayment"></select></td>
+						</tr>
+
+						<tr>
+							<td></td>
+							<td><input class="inputButton" type="button"
+								name="saveOrder" value='save'></td>
+						</tr>
+					</table>
+				</td>
+				<td valign="top" id=baseTotalSumDiv style="text-align:right"></td>
+			</tr>
+		</tbody>
+	</table>
+</form>
+
+
+
+<form id="dialogPurchaseOrderPositions" action="">
+	<b>Bestellung - Positionen</b>
+	<div id=basePurchaseOrderPositionsDiv></div>
+</form>
+
+

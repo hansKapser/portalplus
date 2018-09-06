@@ -1,0 +1,61 @@
+
+=====================================<br><font color=magenta>execution of task	: <b>ssh</b>, starting</font><br>Source	: <b><font color=blue>/home/hansk/public_html/portal17</font></b><br>Destination	: <b><font color=blue>/home/hansk/public_html/</font></b>
+portal17/.luckybackup-snaphots/portalPlus.profile/logs/
+portal17/.luckybackup-snaphots/portalPlus.profile/logs/portalPlus-portalPlus-20180824150608.log
+
+         32.77K  16%    0.00kB/s    0:00:00          204.06K 100%  163.35MB/s    0:00:00 (xfr#1, to-chk=12614/12643)
+portal17/.luckybackup-snaphots/portalPlus.profile/logs/portalPlus-ssh-20180826071437.log
+            259 100%  126.46kB/s    0:00:00              259 100%  126.46kB/s    0:00:00 (xfr#2, to-chk=12613/12643)
+portal17/.luckybackup-snaphots/portalPlus.profile/logs/portalPlus-ssh-20180827214230.log
+         32.77K  13%   15.62MB/s    0:00:00          239.60K 100%   45.70MB/s    0:00:00 (xfr#3, to-chk=12612/12643)
+portal17/.luckybackup-snaphots/portalPlus.profile/snaps/
+portal17/.luckybackup-snaphots/portalPlus.profile/snaps/portalPlus-portalPlus-20180824150608.changes.log
+              0 100%    0.00kB/s    0:00:00 (xfr#4, to-chk=12608/12643)
+portal17/.luckybackup-snaphots/portalPlus.profile/snaps/portalPlus-ssh-20180827214230.changes.log
+              0 100%    0.00kB/s    0:00:00 (xfr#5, to-chk=12607/12643)
+portal17/var/cache/dev/
+portal17/var/cache/dev/pools/Yg0dVddO3E/
+portal17/var/cache/dev/pools/Yg0dVddO3E/+/N/
+portal17/var/cache/dev/pools/Yg0dVddO3E/-/W/
+portal17/var/cache/dev/pools/Yg0dVddO3E/0/N/
+portal17/var/cache/dev/pools/Yg0dVddO3E/0/U/
+portal17/var/cache/dev/pools/Yg0dVddO3E/1/Z/
+portal17/var/cache/dev/pools/Yg0dVddO3E/5/6/
+portal17/var/cache/dev/pools/Yg0dVddO3E/9/B/
+portal17/var/cache/dev/pools/Yg0dVddO3E/B/G/
+portal17/var/cache/dev/pools/Yg0dVddO3E/F/F/
+portal17/var/cache/dev/pools/Yg0dVddO3E/H/0/
+portal17/var/cache/dev/pools/Yg0dVddO3E/I/T/
+portal17/var/cache/dev/pools/Yg0dVddO3E/J/D/
+portal17/var/cache/dev/pools/Yg0dVddO3E/P/Y/
+portal17/var/cache/dev/pools/Yg0dVddO3E/U/B/
+portal17/var/cache/dev/pools/Yg0dVddO3E/X/J/
+
+portal17/var/cache/dev/pools/Yg0dVddO3E/Y/Q/
+
+deleting portal17/.luckybackup-snaphots/portalPlus.profile/logs/portalPlus-ssh-20180828103551.log
+deleting portal17/.luckybackup-snaphots/portalPlus.profile/snaps/portalPlus-ssh-20180828103551.changes.log
+
+
+Number of files: 12,643 (reg: 9,671, dir: 2,966, link: 6)
+Number of created files: 4 (reg: 4)
+Number of deleted files: 2 (reg: 2)
+Number of regular files transferred: 5
+Total file size: 224.65M bytes
+Total transferred file size: 443.92K bytes
+Literal data: 443.66K bytes
+Matched data: 259 bytes
+File list size: 393.16K
+File list generation time: 1.447 seconds
+File list transfer time: 0.000 seconds
+Total bytes sent: 849.75K
+Total bytes received: 232
+
+sent 849.75K bytes  received 232 bytes  242.85K bytes/sec
+
+total size is 224.65M  speedup is 264.31
+
+
+<font color=cyan>&nbsp;&nbsp;&nbsp;&nbsp;-----| Backing-up profile, logfiles and snapshot data -> Ok |-----</font><br>
+<font color=magenta>execution of task	: <b>ssh</b>, finished</font>
+=====================================<br>

@@ -1,0 +1,123 @@
+
+<form id="dialog-accountancy">
+	<table>
+		<tr>
+			<td valign=top>
+				<table>
+					<tr>
+						<td colspan=2 style="background-color: #eee; font-weight: bold;"
+							class=thd>Steuerdaten</td>
+					</tr>
+					<tr>
+						<td class=fieldname>Finanzamt</td>
+						<td><input type=text name=financeOffice value='Memmingen'
+							size=8></td>
+					</tr>
+					<tr>
+						<td class=fieldname>Steuernummer</td>
+						<td><input type=text name=taxNo size=20></td>
+					</tr>
+					<tr>
+						<td class=fieldname>Lohnsteuernummer</td>
+						<td><input type=text name=wageTaxNo size=20></td>
+					</tr>
+					<tr>
+						<td class=fieldname>UStID</td>
+						<td><input type=text name=UStID size=20></td>
+					</tr>
+
+					<tr>
+						<td colspan=2 style="background-color: #eee; font-weight: bold;"
+							class=thd>Handelsregister</td>
+					</tr>
+					<tr>
+						<td class=fieldname>Abteilung</td>
+						<td><input class=inputCenter type=text name=HRDivision size=1></td>
+					</tr>
+					<tr>
+						<td class=fieldname>HR Nummer</td>
+						<td><input type=text name=HRNo size=8></td>
+					</tr>
+
+					<tr>
+						<td colspan=2 style="background-color: #eee; font-weight: bold;"
+							class=thd>Sozialversicherungsdaten</td>
+					</tr>
+					<tr>
+						<td class=fieldname>Betriebsnummer AOK</td>
+						<td><input type=text name=AOKNo size=20></td>
+					</tr>
+					<tr>
+						<td class=fieldname>Betriebsnummer DAK</td>
+						<td><input type=text name=DAKNo size=20></td>
+					</tr>
+
+				</table>
+			</td>
+			<td valign=top>
+				<table>
+					<tr>
+						<td colspan=3 style="background-color: #eee; font-weight: bold;"
+							class=thd>Fibu-Einstellungen</td>
+					</tr>
+					<tr>
+						<td class=fieldname>Debitoren von - bis</td>
+						<td><input class=inputRight type=text name=debitor_from
+							size=4></td>
+						<td><input class=inputRight type=text name=debitor_to size=4></td>
+					</tr>
+					<tr>
+						<td class=fieldname>Kreditoren von - bis</td>
+						<td><input class=inputRight type=text name=creditor_from
+							size=4></td>
+						<td><input class=inputRight type=text name=creditor_to size=4></td>
+					</tr>
+					<tr>
+						<td class=fieldname>Nummernautomatik</td>
+						<td><input type=checkbox name=serialNumber value=1></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class=fieldname>EBK</td>
+						<td><input class=inputRight type=text name=EBK size=4></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td colspan=3><HR></td>
+					</tr>
+				</table>
+			</td>
+			<td valign=top>
+				<table>
+					<tr>
+						<td colspan=3 style="background-color: #eee; font-weight: bold;"
+							class=thd>Mahnwesen</td>
+					</tr>
+					<tr>
+						<td>Erinnerung</td>
+						<td><input class=inputRight type=text name=M1_days size=2></td>
+						<td>Tage</td>
+					</tr>
+					<tr>
+						<td>1. Mahnung</td>
+						<td><input class=inputRight type=text name=M2_days size=2></td>
+						<td>Tage</td>
+					</tr>
+					<tr>
+						<td>2. Mahnung</td>
+						<td><input class=inputRight type=text name=M3_days size=2></td>
+						<td>Tage</td>
+					</tr>
+					<tr>
+						<td colspan=3><HR></td>
+					</tr>
+					<tr>
+						<td colspan=3 align=center><input class=inputButton
+							type=button onclick=accountancySaveRecord() value='save'></td>
+					</tr>
+
+				</table>
+			</td>
+		</tr>
+	</table>
+</form>

@@ -1,0 +1,181 @@
+<table>
+<tr>
+<td valign=top>
+<div class="context-menu-one btn btn-neutral" id="gridStoreMaster"
+	style="margin: 0px;">gridStore
+</div>
+</td>
+<td valign=top style="width:450">
+<form id="dialogStoreTransactions" action="">
+<input type=hidden name=orderID>
+<input type=hidden name=article_id>
+<input type=hidden name=variation1_id>
+<input type=hidden name=variation2_id>
+
+<div id="storeTransactions"
+	style="margin: 0px;">
+</div>
+</form>
+</td>
+</tr>
+</table>
+<div id=storeTransactionsArticle style="display:none">
+	<table width:100% style="border-width:1px;border-color:#ccc;border-style:solid">
+	<thead style="display:table;
+    
+    table-layout:fixed;">
+	<tr>
+	<th colspan=4>
+		<table>
+		<tr>
+		<td class=fieldname>ArtikelNr.</td>
+		<td><input type=text name=article_code disabled size=13></td>
+		<td class=fieldname>Gesamt</td>
+		<td><input class=inputRight type=text name=totalConsumption disabled size=2></td>
+		<td><input class=inputRight style="color:#777;" type=text name=totalConsumptionA disabled size=2></td>
+		</tr>
+		<tr>
+		<td class=fieldname>Bezeichnung</td>
+		<td><input type=text name=name disabled size=13></td>
+		<td class=fieldname>&empty; Monat</td>
+		<td><input class=inputRight type=text name=monthlyConsumption disabled size=2></td>
+		<td><input class=inputRight style="color:#777;" type=text name=monthlyConsumptionA disabled size=2></td>
+		</tr>
+		<tr>
+		<td class=fieldname>Variation</td>
+		<td><input type=text name=variation disabled size=13></td>
+		<td class=fieldname>Uh</td>
+		<td><input class=inputRight type=text name=turnoverRatio disabled size=2></td>
+		<td><input class=inputRight style="color:#777;" type=text name=turnoverRatioA disabled size=2></td>
+		
+		</tr>
+		<tr>
+		<td colspan=5><hr></td>
+		</tr>
+		<tr>
+		<td class=fieldname>verfügbar</td>
+		<td style="text-align:left;"><input class=inputRight type=text name=available disabled size=3></td>
+		<td class=fieldname>Meldebestand</td>
+		<td><input class=inputRight type=text name=reorder_stock disabled size=2></td>
+		<td></td>
+		</tr>
+		<tr>
+		<td class=fieldname>tatsächlich</td>
+		<td style="text-align:left;"><input class=inputRight type=text name=real disabled size=3></td>
+		<td class=fieldname>Mindestbestand</td>
+		<td><input class=inputRight type=text name=min_stock disabled size=2></td>
+		<td></td>
+		</tr>
+		</table>
+	</th>
+	</tr>
+	<tr>
+		<th colspan=7 style="background:#d8e8fa;    
+    border-width:1px;border-color:#ccc;border-style:solid">Lagerbewegungen</th>
+	</tr>
+	<tr style="background-color:#d8e8fa;">
+		<th style="text-align:left;width:20%;">Auftrag</th>
+		<th style="text-align:left;width:15%;">Datum</th>
+		<th style="text-align:right;width:15%;">Menge</th>
+		<th style="text-align:center;width:10%;">Art</th>
+		<th style="text-align:center;width:20%;">ok</th>
+		<th style="text-align:left;width:20%;">SB</th>
+		<th></th>
+	</tr>
+	</thead>
+	<tbody style="width:100%;display:block;height:300px;overflow:scroll" id=tbodyStoreTransactions>
+		<tr>
+		<td style="width:20%;"><a href=javascript:changeStoreView([orderID],"O","[division]")>[orderNo]</a></td>
+		<td style="width:15%;">{dateSql2German("[date]")}</td>
+		<td style="width:15%;text-align:right">{germanDezimal([quantity])}</td>
+		<td style="width:10%;text-align:center">[transaction]</td>
+		<td style="width:10%;text-align:center">{[OK]==1 ?
+												'<span class="ui-icon ui-icon-check"></span>' :
+												'<span class="ui-icon ui-icon-alert"></span>'
+												}
+		</td>
+		<td style="width:20%;text-align:LEFT">[user]</td>
+		<td style="width:10%;"><a href=javascript:storeTransactionDelete([id],'A')>delete</a></td>
+		</tr>
+	</tbody>
+	</table>
+</div>
+
+<div id=storeTransactionsOrder style="display:none">
+	<table width:100% style="text-size:10;border-width:1px;border-color:#ccc;border-style:solid">
+	<thead style="display:table;table-layout:fixed;">
+	<tr>
+	<th colspan=7>
+		<table>
+		<tr>
+		<td class=fieldname>AuftragsNr.</td>
+		<td style="text-align:left;"><input type=text name=orderNo disabled size=10></td>
+		<td class=fieldname>orderID</td>
+		<td style="text-align:left;"><input type=text name=orderDate disabled size=10></td>
+		</tr>
+		<tr>
+		<td class=fieldname>Kunde/Lieferant</td>
+		<td colspan=3 style="text-align:left;"><input type=text name=partnerCompany disabled size=15></td>
+		</tr>
+		<tr>
+		<th colspan=4>
+			<table style="font-weight:normal;width:100%">
+			<thead>
+			<tr id=titleOrderPositionsTr style="font-weight:normal;">
+				<th align=left>Pos</th>
+				<th align=left>Nummer</th>
+				<th align=left>Bezeichnung</th>
+				<th align=left>Var1</th>
+				<th align=left>Var2</th>
+				<th style='text-align: right;'>Menge</th>
+				<th style='text-align: left;'>EH</th>
+			</tr>
+			</thead>
+			<tbody id=tbodyStoreOrderPositions>
+				<tr>
+				<td></td>
+				<td style="text-align: left;">[article_code]</td>
+				<td style="text-align: left;">[name]</td>
+				<td style="text-align: left; width: 100px;">[variation1]</td>
+				<td style="text-align: left; width: 100px;">[variation2]</td>
+				<td style="text-align: right;">{germanDezimal([quantity])}</td>
+				<td style="text-align: left;">[quantity_unit]</td>
+				</tr>
+			</tbody>
+			</table>
+		</th>
+		</tr>
+		</table>
+		</th>
+	
+	<tr>
+		<th colspan=6 style="background:#d8e8fa;    
+    border-width:1px;border-color:#ccc;border-style:solid">Lagerbewegungen</th>
+	</tr>
+	<tr style="background-color:#d8e8fa;">
+		<th style="text-align:left;width:20%;">ArtikelNr.</th>
+		<th style="text-align:left;width:20%;">Datum</th>
+		<th style="text-align:right;width:20%;">Menge</th>
+		<th style="text-align:center;width:20%;">Art</th>
+		<th style="text-align:center;width:20%;">ok</th>
+		<th style="text-align:center;width:20%;">SB</th>
+		<th></th>
+	</tr>
+	</thead>
+	<tbody style="width:100%;display:block;height:300px;overflow:scroll" id=tbodyStoreTransactionsOrder>
+		<tr>
+		<td style="width:20%;"><a href=javascript:changeStoreView([article_id],"A")>[article_code]</a></td>
+		<td style="width:15%;">{dateSql2German("[date]")}</td>
+		<td style="width:15%;text-align:right">{germanDezimal([quantity])}</td>
+		<td style="width:10%;text-align:center">[transaction]</td>
+		<td style="width:10%;text-align:center">{[OK]==1 ?
+												'<span class="ui-icon ui-icon-check"></span>' :
+												'<span class="ui-icon ui-icon-alert"></span>'
+												}
+		</td>
+		<td style="width:20%;text-align:left">[user]</td>
+		<td style="width:10%;"><a href=javascript:storeTransactionDelete([id],'O')>delete</a></td>
+		</tr>
+	</tbody>
+	</table>
+</div>

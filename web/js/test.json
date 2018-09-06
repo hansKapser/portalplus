@@ -1,0 +1,55 @@
+[
+	{
+		"divId": "#dialogPostinBoxDiv",
+		"gridId": "#gridPostinBox",
+		"dialogBox": {
+			"width": "850",
+			"modal": true,
+			"autoopen": false
+		},
+		"editDialog": {
+			"title": "Edit Record",
+			"dialogId": "form#dialogPostinBox",
+			"select": [
+				{
+				"field": "division",
+				"rows": "array_data['rowsDivisions']",
+				"label": "name",
+				"value": "division"
+				},
+				{
+				"field": "voucher",
+			        "rows": "array_data['rowsVoucher']",
+			         "label": "voucher",
+			        "value": "voucher"
+		               },
+	                       {
+          		      "field": "from_company",
+   		              "autocomplete": 1,
+		              "label" : "company",
+		              "value" : "company",	       
+		              "rows": "array_data['rowsFirms']"
+		              }
+               ],
+
+               change: {
+                        [
+                        {
+                        "field"    : "division",
+                        "udfFunction" :  "postinTest()"
+                        }
+                        ]
+
+	       				}
+	    }
+	},
+	{"divId": "#ticketDocuments",
+    "gridId" : "#gridPostinBox",
+    "dialogBox" : {
+       "width" : "850",
+       "height" : "350",
+       "modal" : true,
+       "autoopen" : false
+       }
+    }
+]
